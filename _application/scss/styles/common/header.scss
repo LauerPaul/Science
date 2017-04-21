@@ -1,0 +1,75 @@
+header {
+	a {
+		> span {
+			border-bottom: 1px solid $link-border-bottom-color;
+			height: 17px;
+	        display: inline-block;	
+		}
+
+		&:hover {
+			> span {
+				border-color: transparent;
+			}
+		}
+	}
+	/* Лента записей (header)*/
+	ul.nav.navbar-nav.event-ribbon {
+	    letter-spacing: -0.3px;
+	    width: 175px;
+	    text-align: right;
+	    padding-right: 13px;
+		
+		li {
+		    width: 100%;
+		    	    
+		    a {
+		    	span {
+				    position: relative;	
+			    	.count {
+			    		position: absolute;
+						width: 19px;
+						height: 18px;
+						border-radius: 50%;
+						background: #e04f5f;
+						color: #ffffff;
+						font-size: 10px;
+						text-align: center;
+						top: -9px;
+						right: -17px;
+						line-height: 20px;
+			    	}
+			    }
+		    }
+		}
+	}
+	/* AUTH BUTTONS */
+	.navbar-nav.navbar-right {
+		span.auth-buttons {
+		    margin-right: 15px;
+		    font-size: 12px;
+		    padding: 14px;
+		    display: inline-block;
+		    letter-spacing: -0.1px;
+		    
+		   	>span {
+			    margin: 0 3px;
+			    color: #bababa;
+			}
+
+			> a {
+				color: #939393;
+				
+				>span {
+					border-color: rgba(186, 186, 186, 0.43);
+				}
+
+				&:hover {
+					>span {
+						border-color: transparent;
+					}
+				}
+			}
+		}
+	}
+
+}
