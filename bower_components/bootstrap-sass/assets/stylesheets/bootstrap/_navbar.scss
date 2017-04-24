@@ -31,9 +31,9 @@
 .navbar-header {
   @include clearfix;
 
-  @media (min-width: $grid-float-breakpoint) {
+  // @media (min-width: $grid-float-breakpoint) {
     float: left;
-  }
+  // }
 }
 
 
@@ -162,7 +162,7 @@
 
 .navbar-brand {
   float: left;
-  padding: 5px 78px 5px 0px;
+  padding: 5px 50px 5px 0px;
   font-size: $font-size-large;
   line-height: $line-height-computed;
   height: $navbar-height;
@@ -268,7 +268,7 @@
   }
 
   // Uncollapse the nav
-  @media (min-width: $grid-float-breakpoint) {
+  // @media (min-width: $grid-float-breakpoint) {
     float: left;
     margin: 0;
 
@@ -279,7 +279,7 @@
         padding-bottom: $navbar-padding-vertical;
       }
     }
-  }
+  // }
 }
 
 
@@ -380,7 +380,7 @@
 //
 // Declared after the navbar components to ensure more specificity on the margins.
 
-@media (min-width: $grid-float-breakpoint) {
+// @media (min-width: $grid-float-breakpoint) {
   .navbar-left {
     float: left !important;
   }
@@ -392,7 +392,7 @@
       margin-right: 0;
     }
   }
-}
+// }
 
 
 // Alternate navbars
@@ -420,11 +420,11 @@
     > li > a {
       color: $navbar-default-link-color;
 
-      &:hover,
-      &:focus {
-        color: $navbar-default-link-hover-color;
-        background-color: $navbar-default-link-hover-bg;
-      }
+      // &:hover,
+      // &:focus {
+      //   color: $navbar-default-link-hover-color;
+      //   background-color: $navbar-default-link-hover-bg;
+      // }
     }
     > .active > a {
       &,

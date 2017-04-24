@@ -8,13 +8,17 @@ header
 
 			#navbar
 				.nav.navbar-nav.navbar-right.user-block
-					// AUTH 
-					span.auth-buttons
-						a(href="#") 
-							span Войдите
-						span или
-						a(href="#")
-							span Зарегистрируйтесь
+					// PROFILE 
+					.profile
+						.user-wrapp
+							.user-icon
+								img(src="images/test-content/profile-photo.png", alt="user-name")
+							.user-nick-name
+								a(href="#") 
+									span alexander999
+						.profile-action-buttons
+							a.events(href="#")
+							a.settings(href="#")
 				.search-section.nav.navbar-nav.navbar-right.header-section-search
 					// SEARCH 
 					button.header-button-search(type="button")
@@ -91,3 +95,8 @@ header
 							li.all-records
 								a(href="#") 
 									span Все записи
+				ul.nav.navbar-nav.navbar-right.event-ribbon
+					li
+						a(href="#") 
+							span Лента записей
+								div.count 22
