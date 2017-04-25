@@ -4,6 +4,126 @@
 // font-family: 'Rubik-Medium';
 // font-family: 'Rubik-Light';
 // font-family: 'Rubik-MediumItalic';
+* {
+	outline: none !important;
+}
+h4 {
+    font-family: 'Rubik-Medium';
+}
+input {
+	font-size: 13px !important;
+	font-family: 'Rubik-Regular'
+
+	:focus, :active {
+		box-shadow: none;
+	}
+}
+
+.input-group.with-icon {
+	background: #f9f9f9;
+	margin-top: 18px;
+	position: relative;	
+	border-top: 3px solid #efefef;
+	border-left: 3px solid #efefef;
+	margin-left: 3px;
+	width: calc(100% - 3px);
+	
+	.input-group-addon {
+		position: absolute;
+		top: -50%;
+		bottom: -50%;
+		margin: auto;
+		height: 80%;
+		width: 40px;
+	    z-index: 10;
+	    background: transparent;
+	}
+
+	.form-control {
+		margin-top: -4px;
+		margin-left: -4px;
+		background: transparent;
+		padding-left: 40px;
+		width: calc(100% + 3px);
+		padding-top: 8px;
+	}
+}
+.input-group.whit-info {
+	.form-control {
+		padding-right: 40px;
+	}
+}
+
+// ICONS
+.user-icon {
+	width: 10px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/auth-sprite.png) no-repeat left top;
+}
+.pass-icon {
+	width: 8px;
+	height: 10px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/auth-sprite.png) no-repeat left bottom;
+}
+.mail-icon {
+	width: 10px;
+	height: 7px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/auth-sprite.png) no-repeat left -14px;
+	margin-top: 2px;
+}
+span.input-group-addon.tooltip-addon {
+	right: 0;
+}
+.info-icon-tooltip{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/validate-info-sprite.png) no-repeat left top;
+	cursror: pointer;
+	
+	&:active, &:hover {
+		background-position: right top;
+	}
+}
+
+
+.line-link {
+	cursor: pointer;
+	
+	> span {
+		border-bottom: 1px solid $link-border-bottom-color;
+	}
+
+	&:hover {
+		> span {
+			border-color: transparent;
+		}
+	}
+}
+
+.succsses {
+	color: #69c93e !important;
+}
+a.btn {
+	display: table-cell;
+}
+
+
+
+
+
+
 .container {
     width:1230px !important;
 }

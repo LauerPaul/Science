@@ -27,7 +27,7 @@
         <div class="navbar-header"><a class="navbar-brand" href="#"><img src="images/logo/logo_science.png"/></a></div>
         <div id="navbar">
           <div class="nav navbar-nav navbar-right user-block">
-            <!-- AUTH --><span class="auth-buttons"><a href="#"> <span>Войдите</span></a><span>или</span><a href="#"><span>Зарегистрируйтесь</span></a></span>
+            <!-- AUTH --><span class="auth-buttons"><a data-toggle="modal" data-target="#modal-sm"> <span>Войдите</span></a><span>или</span><a data-toggle="modal" data-target="#modal-sm-registration"> <span>Зарегистрируйтесь</span></a></span>
           </div>
           <div class="search-section nav navbar-nav navbar-right header-section-search">
             <!-- SEARCH -->
@@ -86,6 +86,93 @@
       </div>
     </nav>
   </header>
+  <!-- ************** AUTH MODAL **************-->
+  <div class="modal fade" id="modal-sm" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form class="auth-form" action="">
+          <h4>Авторизация</h4>
+          <div class="clearfix"></div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="user-icon"></i></span>
+            <input class="form-control" type="text" placeholder="Логин или Email"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="pass-icon"></i></span>
+            <input class="form-control" type="text" placeholder="Пароль"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group">
+            <button class="btn btn-default" type="button">Авторизироваться</button>
+          </div><a class="line-link pass-reestablish" data-toggle="modal" data-target="#modal-sm-recovery"><span>Забыли пароль? Восстановить!</span></a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- *********** =AUTH MODAL END= *********** -->
+  <!-- ************** AUTH MODAL **************-->
+  <div class="modal fade" id="modal-sm-recovery" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form class="auth-form" action="">
+          <h4>Восстановление пароля</h4>
+          <div class="clearfix"></div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="mail-icon"></i></span>
+            <input class="form-control" type="mail" placeholder="Электронная почта"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group">
+            <button class="btn btn-default" type="button">Восстановить пароль</button>
+          </div>
+          <div class="input-group"><a class="line-link"><span>Вернуться к авторизации</span></a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- *********** =AUTH MODAL END= *********** -->
+  <!-- ************** REGISTRATION MODAL **************-->
+  <div class="modal fade" id="modal-sm-registration" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form class="auth-form">
+          <h4>Регистрация</h4>
+          <div class="clearfix"></div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="user-icon"></i></span>
+            <input class="form-control" type="text" placeholder="Логин пользователя"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="mail-icon"></i></span>
+            <input class="form-control" type="text" placeholder="Электронная почта"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="pass-icon"></i></span>
+            <input class="form-control" type="text" placeholder="Пароль"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group with-icon whit-info"><span class="input-group-addon"><i class="pass-icon"></i></span>
+            <input class="form-control" type="text" placeholder="Повторите пароль"/><span class="input-group-addon tooltip-addon"><i class="info-icon-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip"></i></span>
+          </div>
+          <div class="input-group">
+            <button class="btn btn-default" type="button">Зарегистрироваться</button>
+          </div>
+          <div class="input-group"><a class="line-link pass-reestablish" data-toggle="modal" data-target="#modal-sm-recovery"><span>Уже есть аккаунт?</span></a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- *********** =REGISTRATION MODAL END= *********** -->
+  <!-- ************** registration_succsses MODAL **************-->
+  <div class="modal fade" id="modal-sm-reg-succsses" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <form class="auth-form" action="">
+          <h4 class="succsses">Вы успешно зарегистрировались на нашем сайте</h4>
+          <div class="clearfix"></div>
+          <div class="input-group">
+            <p>
+              Теперь Вы можете войти в свой аккаунт
+              и создать первую запись
+            </p>
+          </div>
+          <div class="input-group"><a class="btn btn-default">Войти в личный кабинет</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- *********** =registration_succsses MODAL END= *********** -->
   <!-- /+++++++++++++++++++++ SCRIPTS +++++++++++++++++++++/-->
   <!-- SCRIPT ICHECK -->
   <script src="js/_lib/icheck.min.js"></script>

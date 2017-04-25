@@ -1,0 +1,19 @@
+// ************** AUTH MODAL **************
+.modal.fade#modal-sm-recovery(role="dialog")
+	.modal-dialog.modal-sm(role="document")
+		.modal-content
+			form.auth-form(action="")
+				h4 Восстановление пароля
+				.clearfix
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.mail-icon
+					input.form-control(type="mail", placeholder="Электронная почта")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group
+					button.btn.btn-default(type="button") Восстановить пароль
+				.input-group
+					a.line-link
+						span Вернуться к авторизации
+// *********** =AUTH MODAL END= *********** 

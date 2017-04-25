@@ -51,13 +51,31 @@
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
-  border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-  border: 1px solid $modal-content-border-color;
-  border-radius: $border-radius-large;
   @include box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+  padding: 60px 30px;
+    
+    form {
+      margin: 0 auto;
+    }
+
+    h4 {
+      margin-top: 0px;
+      font-size: 23px;
+      margin-bottom: 15px;
+      color: $gray-dark;
+    }
+
+    .input-group {
+      margin-top: 15px;
+      width: 100%;
+      
+      input {
+        width: 100%;
+      }
+    }
 }
 
 // Modal background
@@ -131,7 +149,7 @@
 }
 
 // Scale up the modal
-@media (min-width: $screen-sm-min) {
+// @media (min-width: $screen-sm-min) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     width: $modal-md;
@@ -142,8 +160,10 @@
   }
 
   // Modal sizes
-  .modal-sm { width: $modal-sm; }
-}
+  .modal-sm { 
+    width: $modal-sm;
+  }
+// }
 
 @media (min-width: $screen-md-min) {
   .modal-lg { width: $modal-lg; }

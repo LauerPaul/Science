@@ -1,0 +1,37 @@
+// ************** REGISTRATION MODAL **************
+.modal.fade#modal-sm-registration(role="dialog")
+	.modal-dialog.modal-sm(role="document")
+		.modal-content
+			form.auth-form
+				h4 Регистрация
+				.clearfix
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.user-icon
+					input.form-control(type="text", placeholder="Логин пользователя")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.mail-icon
+					input.form-control(type="text", placeholder="Электронная почта")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.pass-icon
+					input.form-control(type="text", placeholder="Пароль")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.pass-icon
+					input.form-control(type="text", placeholder="Повторите пароль")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group
+					button.btn.btn-default(type="button") Зарегистрироваться
+				.input-group
+					a.line-link.pass-reestablish(data-toggle="modal", data-target="#modal-sm-recovery")
+						span Уже есть аккаунт?
+// *********** =REGISTRATION MODAL END= *********** 

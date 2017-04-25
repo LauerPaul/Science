@@ -1,0 +1,24 @@
+// ************** AUTH MODAL **************
+.modal.fade#modal-sm(role="dialog")
+	.modal-dialog.modal-sm(role="document")
+		.modal-content
+			form.auth-form(action="")
+				h4 Авторизация
+				.clearfix
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.user-icon
+					input.form-control(type="text", placeholder="Логин или Email")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group.with-icon.whit-info
+					span.input-group-addon
+						i.pass-icon
+					input.form-control(type="text", placeholder="Пароль")
+					span.input-group-addon.tooltip-addon
+						i.info-icon-tooltip(data-toggle="tooltip", data-placement="right", title="Tooltip")
+				.input-group
+					button.btn.btn-default(type="button") Авторизироваться
+				a.line-link.pass-reestablish(data-toggle="modal", data-target="#modal-sm-recovery")
+					span Забыли пароль? Восстановить!
+// *********** =AUTH MODAL END= *********** 
