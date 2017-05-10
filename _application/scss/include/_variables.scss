@@ -28,7 +28,7 @@ $default-color-bg-menu: 		#1eb1cd;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               #f9f9f9;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -527,9 +527,9 @@ $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !
 //** Tooltip max width
 $tooltip-max-width:           200px !default;
 //** Tooltip text color
-$tooltip-color:               #4e4e4e;
+$tooltip-color:               #ffffff;
 //** Tooltip background color
-$tooltip-bg:                  #fff;
+$tooltip-bg:                  #4e4e4e;
 $tooltip-opacity:             1;
 
 //** Tooltip arrow width

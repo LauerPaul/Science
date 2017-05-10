@@ -33,7 +33,15 @@
                 <div class="user-icon"><img src="images/test-content/profile-photo.png" alt="user-name"/></div>
                 <div class="user-nick-name"><a href="#"> <span>alexander999</span></a></div>
               </div>
-              <div class="profile-action-buttons"><a class="events" href="#"></a><a class="settings" href="#"></a></div>
+              <div class="profile-action-buttons"><a class="events" href="#"></a><span class="relative"><a class="dropdown-toggle settings" href="#" data-toggle="dropdown"></a>
+                  <ul class="dropdown-menu">
+                    <li><span><a href="#"> <span>Настройки профиля</span></a></span></li>
+                    <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Создать запись">+</a><a href="#"> <span>Мой блог</span></a></span></li>
+                    <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">+</a><a href="#"> <span>Институт ИИПТ</span></a></span></li>
+                    <li><span><a href="#"> <span>Личные сообщения</span></a></span></li>
+                    <li><span><a href="#"> <span>Мое избранное</span></a></span></li>
+                    <li><span><a href="#"> <span>Подписка ленты</span></a></span></li>
+                  </ul></span></div>
             </div>
           </div>
           <div class="search-section nav navbar-nav navbar-right header-section-search">
@@ -97,6 +105,135 @@
       </div>
     </nav>
   </header>
+  <div class="carousel carousel-fade slide" id="myCarousel">
+    <ol class="carousel-indicators">
+      <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="fill" style="background-image:url('images/slider/slide_1.jpg');"></div>
+      </div>
+      <div class="item">
+        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&amp;text=Slide One');"></div>
+      </div>
+      <div class="item">
+        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&amp;text=Slide One');"></div>
+      </div>
+    </div>
+    <div class="wrapper-controls-slider container"><a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a><a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a></div>
+  </div>
+  <div class="container">
+    <div class="left-column">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="filters-group">
+            <div class="filter-section">
+              <select class="selectpicker" title="Выберите науку" data-size="6">
+                <option>Физика</option>
+                <option>Математика</option>
+                <option>Химия</option>
+                <option>Биология</option>
+                <option>История</option>
+                <option>Астрономия</option>
+                <option>География</option>
+                <option>Анатомия</option>
+              </select>
+            </div><span class="link-group"><i class="fa fa-link"></i></span>
+            <div class="filter-section">
+              <select class="selectpicker" data-live-search="true" title="Напишите либо выберите тему" data-width="284px">
+                <option data-tokens="Физика">Физика</option>
+                <option data-tokens="Математика">Математика</option>
+                <option data-tokens="Астрономия">Астрономия</option>
+                <option data-tokens="География">География</option>
+              </select>
+            </div><span class="link-group"><i class="fa fa-link"></i></span>
+            <div class="filter-section">
+              <select class="selectpicker" data-live-search="true" title="Все типы публикаций" multiple="multiple">
+                <option data-tokens="Физика">Физика</option>
+                <option data-tokens="Математика">Математика</option>
+                <option data-tokens="Астрономия">Астрономия</option>
+                <option data-tokens="География">География</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column"></div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row line-menu">
+            <div class="col-md-12">
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Публикации</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Новости</span></a></li>
+                <li><a class="line-link" href="#"> <span>События</span></a></li>
+                <li><a class="line-link" href="#"> <span>Статьи</span></a></li>
+                <li><a class="line-link" href="#"> <span>Записи</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Участники</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Институты</span></a></li>
+                <li><a class="line-link" href="#"> <span>Компании</span></a></li>
+                <li><a class="line-link" href="#"> <span>Ученые</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Коммерция</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Технологии</span></a></li>
+                <li><a class="line-link" href="#"> <span>Услуги</span></a></li>
+                <li><a class="line-link" href="#"> <span>Тендеры</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">База знаний</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Литература</span></a></li>
+                <li><a class="line-link" href="#"> <span>Словарь</span></a></li>
+                <li><a class="line-link" href="#"> <span>Исследования</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Портал</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>О нас</span></a></li>
+                <li><a class="line-link" href="#"> <span>Контакты</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col-md-12 copyright">© 2012 -2017   Институт  импульсных  процессов  и  технологий  НАН  Украины. Все права защищены.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="green-bg pull-right">
+            <ul class="list-unstyled list-inline language-buttons">
+              <li class="active"><a>Ru</a></li>
+              <li><a href="#">Eng</a></li>
+              <li><a href="#">Deu</a></li>
+              <li><a class="dot">...</a></li>
+            </ul>
+            <p class="description">По возникшим вопросам<br/>в работе портала обращайтесь<br/>в службу поддержки</p>
+            <ul class="list-unstyled contacts">
+              <li><a class="active" href="tel:0446788078" target="_blank">(044) 678-80-78</a></li>
+              <li><a href="tel:0961205645" target="_blank">(096) 120-56-45</a></li>
+              <li><a href="mailto:info@gmail.com" target="_blank">info@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- /+++++++++++++++++++++ SCRIPTS +++++++++++++++++++++/-->
   <!-- SCRIPT ICHECK -->
   <script src="js/_lib/icheck.min.js"></script>

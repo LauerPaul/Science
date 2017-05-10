@@ -18,7 +18,36 @@ header
 									span alexander999
 						.profile-action-buttons
 							a.events(href="#")
-							a.settings(href="#")
+							span.relative
+								a.dropdown-toggle.settings(href="#", data-toggle="dropdown")
+								ul.dropdown-menu
+									li
+										span
+											a(href="#") 
+												span Настройки профиля
+									li
+										span
+											a.plus(href="#", data-toggle="tooltip", data-placement="left", title="Создать запись") +
+											a(href="#") 
+												span Мой блог
+									li
+										span
+											a.plus(href="#", data-toggle="tooltip", data-placement="left", title="Tooltip on left") +
+											a(href="#") 
+												span Институт ИИПТ
+									li
+										span
+											a(href="#") 
+												span Личные сообщения
+									li
+										span
+											a(href="#") 
+												span Мое избранное
+									li
+										span
+											a(href="#") 
+												span Подписка ленты
+
 				.search-section.nav.navbar-nav.navbar-right.header-section-search
 					// SEARCH 
 					button.header-button-search(type="button")

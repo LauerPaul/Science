@@ -92,27 +92,29 @@
 
 .carousel-control {
   position: absolute;
-  top: 0;
   left: 0;
-  bottom: 0;
-  width: $carousel-control-width;
   @include opacity($carousel-control-opacity);
   font-size: $carousel-control-font-size;
   color: $carousel-control-color;
   text-align: center;
   text-shadow: $carousel-text-shadow;
   background-color: rgba(0, 0, 0, 0); // Fix IE9 click-thru bug
+    top: -50%;
+    bottom: -50%;
+    width: 19px;
+    height: 25px;
+    margin: auto;
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
   &.left {
-    @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
+    // @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
   }
   &.right {
     left: auto;
     right: 0;
-    @include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
+    // @include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
   }
 
   // Hover/focus state
@@ -156,12 +158,30 @@
 
   .icon-prev {
     &:before {
-      content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+      content: '';
+      background: url(../../images/icons/arrows.png) no-repeat;
+      display: block;
+      width: 19px;
+      height: 25px;
+    }
+    &:hover {
+      &::before {
+        background-position: left bottom;
+      }
     }
   }
   .icon-next {
     &:before {
-      content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+     content: '';
+      background: url(../../images/icons/arrows.png) no-repeat right top;
+      display: block;
+      width: 19px;
+      height: 25px;
+    }
+    &:hover {
+      &::before {
+        background-position: right bottom;
+      }
     }
   }
 }
@@ -186,7 +206,7 @@
     display: inline-block;
     width:  10px;
     height: 10px;
-    margin: 1px;
+    margin: 2px;
     text-indent: -999px;
     border: 1px solid $carousel-indicator-border-color;
     border-radius: 10px;
@@ -206,9 +226,11 @@
   }
   .active {
     margin: 0;
-    width:  12px;
-    height: 12px;
+    width:  15px;
+    height: 15px;
     background-color: $carousel-indicator-active-bg;
+    position: relative;
+    top: 1px;
   }
 }
 

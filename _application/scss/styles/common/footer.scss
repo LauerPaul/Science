@@ -1,0 +1,145 @@
+footer {
+	background: #4e4e4e;
+	color: white;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	height: 354px;
+	
+	.line-menu {
+		margin-bottom: 30px;
+
+		ul.list-menu {
+			margin-bottom: 0px;
+			display: inline-block;
+			float: left;
+			margin-right: 60px;
+			
+			li {
+				margin-top: 15px;
+
+				.title-section {
+					text-transform: uppercase;
+					color: #32bea6;
+					font-family: 'Rubik-Medium';
+					margin-top: 0px;
+					margin-bottom: 15px;
+					font-size: 15px;
+				}
+
+				a {
+					font-family: 'Rubik-Regular';
+					color: white;
+					
+					span {
+						border-color: #838383;
+					}
+
+					&:hover {
+						span {
+							border-color: transparent;
+						}
+					}
+				}
+			}
+		}
+		ul.list-menu:last-child {
+			margin-right: 0px;
+		}
+	}
+	.copyright {
+		margin-top: 30px;
+		color: rgba(254,254,254, 0.4);
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+
+	.green-bg {
+		margin-top: -45px;
+		padding-top: 45px;
+		margin-bottom: -50px;
+		padding-bottom: 50px;
+		background: #32bea6;
+		width: 300px;
+		padding-left: 30px;
+	    height: calc(100% + 95px);
+	    margin-right: -15px;
+		
+		.language-buttons {
+			margin-left: 0px;
+			margin-bottom: 0px;
+			position: relative;
+			overflow: hidden;
+		    margin-top: 15px;
+
+			li.active {
+				background: #ffffff;
+				
+				a {
+					color: #25b6d2;
+				}
+			}
+
+			li {
+				background: #25b6d2;
+				padding: 0px;
+				margin-right: 2px;
+				height: 24px;
+				float: left;
+				display: inline-block;
+				
+				a {
+					color: #ffffff;
+					padding: 5px 10px;
+					font-size: 12px;
+					height: 24px;
+					display: inline-block;
+					line-height: 14px;
+				}
+
+				a.dot {
+					line-height: 0px;
+					font-size: 20px;
+					position: relative;
+					margin-top: 2px;
+					float: left;
+					letter-spacing: 1px;
+				}
+
+				&:hover {
+					background: #ffffff;
+
+					a {
+						color: #25b6d2;
+					}
+				}
+			}
+		}
+
+		.description {
+			color: #bcfef3;
+			margin-top: 30px;
+			font-size: 15px;
+			margin-bottom: 0px;
+		}
+
+		.contacts {
+			margin-top: 30px;
+			margin-bottom: 0px;
+			
+			li {
+				margin-bottom: 10px;
+				
+				a {
+					color: #ffffff;
+				    letter-spacing: 1px;
+				    font-size: 16px;
+				    border-bottom: 1px solid transparent;
+				    
+				    &:hover {
+				    	border-color: rgba(254, 254, 254, 0.4);
+				    }
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,15 @@
 html(lang='ru')
 	include include/common/head
 	include include/common/header
+	include include/home/full-slider
+	
+	.container
+		.left-column
+			include include/home/filters
+		.right-column
+
+	include include/common/footer
+	
 
 	include include/modals/auth
 	include include/modals/pass-recovery

@@ -1,0 +1,31 @@
+//- ** FILTERS ** 
+.row
+	.col-md-12
+		.filters-group
+			.filter-section
+				select.selectpicker(title="Выберите науку", data-size="6")
+					option Физика
+					option Математика
+					option Химия
+					option Биология
+					option История
+					option Астрономия
+					option География
+					option Анатомия
+			span.link-group
+				i.fa.fa-link
+			.filter-section
+				select.selectpicker(data-live-search="true", title="Напишите либо выберите тему", data-width="284px")
+					option(data-tokens="Физика") Физика
+					option(data-tokens="Математика") Математика
+					option(data-tokens="Астрономия") Астрономия
+					option(data-tokens="География") География
+			span.link-group
+				i.fa.fa-link
+			.filter-section
+				select.selectpicker(data-live-search="true", title="Все типы публикаций", multiple)
+					option(data-tokens="Физика") Физика
+					option(data-tokens="Математика") Математика
+					option(data-tokens="Астрономия") Астрономия
+					option(data-tokens="География") География
+//- ** FILTERS END ** 

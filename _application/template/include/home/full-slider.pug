@@ -1,0 +1,22 @@
+#myCarousel.carousel.carousel-fade.slide
+	//- Indicators 
+	ol.carousel-indicators
+		li.active(data-target="#myCarousel", data-slide-to="0")
+		li(data-target="#myCarousel", data-slide-to="1")
+		li(data-target="#myCarousel", data-slide-to="2")
+
+	//- Wrapper for Slides 
+	.carousel-inner
+		.item.active
+			.fill(style="background-image:url('images/slider/slide_1.jpg')")
+		.item
+			.fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide One')")
+		.item
+			.fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide One')")
+	
+	//- Controls 
+	.wrapper-controls-slider.container
+		a.left.carousel-control(href="#myCarousel", data-slide="prev")
+			span.icon-prev
+		a.right.carousel-control(href="#myCarousel", data-slide="next")
+			span.icon-next

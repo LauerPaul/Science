@@ -156,7 +156,7 @@ header {
 			}
 		}
 		.profile {
-			padding: 10px 0px 8px 15px;
+			padding: 10px 0px 8px 25px;
 			display: inline-block;
 			width: 100%;
 			
@@ -206,12 +206,13 @@ header {
 
 			.profile-action-buttons {
 				margin-top: 4px;
-				
+			    float: right;
+			    
 				a {
 					display: inline-block;
 					float: left;
 					background: url(../../images/icons/profile-header-sprite.png) no-repeat;
-					margin: 0px 6px;
+					margin: 0px 3px;
 				}
 
 				.events {
@@ -235,14 +236,65 @@ header {
 				    }
 				}
 				.settings {
-					width: 15px;
-					height: 15px;
-				    background-position: right top;
-				    margin-top: 3px;
+					width: 21px;
+					height: 22px;
+					background-position: -27px 3px;
+					padding: 3px;
+					border: 1px solid white;
+					margin-top: -1px;
+					margin-right: 0px;
 				    
 				    &:hover {
-				    	background-position: right bottom;
+				    	background-position: -27px -16px;
 				    }
+				}
+
+				.open {
+					.settings {
+						border: 1px solid #efefef;
+					}
+				}
+
+				.dropdown-menu {
+					padding: 0px;
+				    margin-top: -1px;
+					min-width: 140px;
+					    
+					li { 
+						padding: 0px 15px;
+						
+						> span {
+							border-bottom: 1px solid #efefef;
+							display: block;
+							width: 100%;
+							
+							a {
+								background: transparent;
+								margin: 0 auto;
+								float: none;
+								color: #939393;
+								font-size: 11px;
+								font-family: 'Rubik-Light';
+								padding: 10px 0px;
+								
+								&:hover {
+									color: $default-color;
+								}
+							}
+
+							.plus {
+								font-size: 16px;
+								position: relative;
+								top: 1px;
+								line-height: 5px;
+								margin-right: 10px;
+							}
+						}
+					}
+
+					li:last-child > a {
+						border-bottom: 0px;
+					}
 				}
 
 			}
@@ -251,7 +303,7 @@ header {
 	}
 
 	.search-section.nav.navbar-nav.navbar-right.header-section-search {
-   		padding: 0 15px;
+   		padding: 0 15px 0 25px;
 		
 		.header-button-search {
 			border: none;

@@ -1,0 +1,21 @@
+.filters-group {
+	padding-top: 15px;
+
+	.filter-section {
+		padding-top: 15px;
+		display: inline-block;
+		float: left;
+		margin-right: 10px;
+	}
+	.link-group {
+	    display: inline-block;
+	    float: left;
+	    padding-top: 27px;
+	    margin-right: 10px;
+	    
+	    i {
+	    	color: #cacaca;
+	    }
+	}
+
+}

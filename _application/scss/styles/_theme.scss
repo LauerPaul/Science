@@ -118,10 +118,23 @@ span.input-group-addon.tooltip-addon {
 a.btn {
 	display: table-cell;
 }
+.relative {
+    display: inline-block;
+    position: relative;
+}
+.left-column, .right-column {
+	padding-top: 30px;	
+}
+.left-column {
+	float: left;
+	width: 840px;
+}
 
 
-
-
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+	color: #cdf1f8;
+	font-family: 'Rubik-LightItalic';
+}
 
 
 .container {
