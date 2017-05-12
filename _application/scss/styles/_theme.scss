@@ -135,6 +135,26 @@ a.btn {
 	color: #cdf1f8;
 	font-family: 'Rubik-LightItalic';
 }
+.btn-group.open .dropdown-toggle {
+	box-shadow: none;
+}
+.bs-searchbox .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(254, 254, 254, 0.4);
+    box-shadow: none;
+    color: #ffffff;
+    
+    &:focus {
+    	box-shadow: none;
+    }
+}
+.bootstrap-select.btn-group .no-results {
+	background: transparent;
+	color: #cdf1f8;
+	font-family: 'Rubik-Italic';
+	text-align: center;
+}
 
 
 .container {

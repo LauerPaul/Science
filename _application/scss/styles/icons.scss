@@ -1,0 +1,37 @@
+.bootstrap-select.btn-group .dropdown-menu li{
+	a[aria-selected="false"] {
+		.sceinceIcon.check-mark {
+			&::before {
+				content: '';
+				width: 11px;
+				display: block;
+				height: 11px;
+				background: url('../../images/icons/check.png') no-repeat center bottom;
+			}
+		}
+	}
+	a[aria-selected="true"], a.select-main {
+		.sceinceIcon.check-mark {
+			&::before {
+				content: '';
+				width: 11px;
+				height: 11px;
+				display: block;
+				background: url('../../images/icons/check.png') no-repeat center top;
+			}
+		}
+	}
+}
+
+.sceinceIcon.glyphicon-ok {
+	display: inline-block;
+    margin-right: 5px;
+	
+	&::before {
+		content: '';
+		width: 11px;
+		height: 11px;
+		display: block;
+		background: url('../../images/icons/check.png') no-repeat center top;
+	}
+}

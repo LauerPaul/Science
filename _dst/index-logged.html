@@ -126,40 +126,47 @@
   </div>
   <div class="container">
     <div class="left-column">
+      <!-- FILTERS -->
       <div class="row">
         <div class="col-md-12">
           <div class="filters-group">
-            <div class="filter-section">
-              <select class="selectpicker" title="Выберите науку" data-size="6">
-                <option>Физика</option>
-                <option>Математика</option>
-                <option>Химия</option>
-                <option>Биология</option>
-                <option>История</option>
-                <option>Астрономия</option>
-                <option>География</option>
-                <option>Анатомия</option>
+            <div class="filter-section select-parent" id="science">
+              <select class="selectpicker" title="Выберите науку">
+                <option value="physics">Физика</option>
+                <option value="mathematics"> Математика</option>
+                <option value="chemistry"> Химия</option>
+                <option value="biology"> Биология</option>
+                <option value="history"> История</option>
+                <option value="astronomy"> Астрономия</option>
+                <option value="geography"> География</option>
+                <option value="geology"> Геология</option>
+                <option value="botany"> Ботаника</option>
               </select>
             </div><span class="link-group"><i class="fa fa-link"></i></span>
-            <div class="filter-section">
-              <select class="selectpicker" data-live-search="true" title="Напишите либо выберите тему" data-width="284px">
-                <option data-tokens="Физика">Физика</option>
-                <option data-tokens="Математика">Математика</option>
-                <option data-tokens="Астрономия">Астрономия</option>
-                <option data-tokens="География">География</option>
-              </select>
-            </div><span class="link-group"><i class="fa fa-link"></i></span>
-            <div class="filter-section">
-              <select class="selectpicker" data-live-search="true" title="Все типы публикаций" multiple="multiple">
-                <option data-tokens="Физика">Физика</option>
-                <option data-tokens="Математика">Математика</option>
-                <option data-tokens="Астрономия">Астрономия</option>
-                <option data-tokens="География">География</option>
+            <div class="filter-section select-parent" id="science-themes">
+              <select class="selectpicker" data-live-search="true" title="Напишите либо выберите тему" data-width="284px" disabled="disabled"></select>
+            </div>
+            <div class="filter-section select-parent margin-group-select" id="types">
+              <select class="selectpicker" title="Все типы публикаций" multiple="multiple">
+                <option data-tokens="" value="all" data-icon="glyphicon-ok" selected="selected">Все типы публикаций</option>
+                <option data-tokens="Физика" value="news">Новости</option>
+                <option data-tokens="Математика" value="article">Статьи</option>
+                <option data-tokens="Астрономия" value="doing">События</option>
+                <option data-tokens="География" value="ready-made_technologies">Готовые технологии</option>
+                <option data-tokens="География" value="tenders">Тендеры</option>
+                <option data-tokens="География" value="services">Услуги</option>
               </select>
             </div>
+            <div class="clearfix"></div>
           </div>
         </div>
       </div>
+      <!-- * FILTERS END * -->
+      <!-- PUBLICATIONS WRAPPER-->
+      <div class="publications-wrapper">
+        <div class="result-wrapper"></div>
+      </div>
+      <!-- *PUBLICATIONS WRAPPER END*-->
     </div>
     <div class="right-column"></div>
   </div>
@@ -241,6 +248,10 @@
   <script src="js/_lib/bootstrap.min.js"></script>
   <!--Bootstrap select js-->
   <script src="js/_lib/bootstrap-select.js"></script>
+  <!--MouseWheel js-->
+  <script src="js/_lib/jquery.mousewheel.min.js"></script>
+  <!--Scroll pane js-->
+  <script src="js/_lib/jquery.jscrollpane.min.js"></script>
   <!--Control ELEMENTS js-->
   <script src="js/control_elements.js"></script>
   <!-- /++++++++++++++++++* SCRIPTS END *++++++++++++++++++++/-->

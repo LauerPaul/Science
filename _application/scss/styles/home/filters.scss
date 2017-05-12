@@ -19,3 +19,31 @@
 	}
 
 }
+.bootstrap-select {
+	div.dropdown-menu {
+		max-height: 150px !important;
+	}
+	.dropdown-menu.inner {
+		display: block;
+		position: relative !important;
+	}
+	.dropdown-menu > .active > a {
+		background: transparent;
+	}
+}
+.open > .btn-default.dropdown-toggle{
+	&:focus {
+		background: $default-color;
+	}
+}
+.margin-group-select {
+	margin-left: 23px;
+}
+
+.select-parent#types {
+	.dropdown-menu {
+		li[data-original-index="0"] {
+			display: none;
+		}
+	}
+}

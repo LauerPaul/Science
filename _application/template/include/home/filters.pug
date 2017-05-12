@@ -1,31 +1,30 @@
-//- ** FILTERS ** 
+// FILTERS 
 .row
 	.col-md-12
 		.filters-group
-			.filter-section
-				select.selectpicker(title="Выберите науку", data-size="6")
-					option Физика
-					option Математика
-					option Химия
-					option Биология
-					option История
-					option Астрономия
-					option География
-					option Анатомия
+			.filter-section.select-parent#science
+				select.selectpicker(title="Выберите науку")
+					option(value="physics") Физика
+					option(value="mathematics")  Математика
+					option(value="chemistry")  Химия
+					option(value="biology")  Биология
+					option(value="history")  История
+					option(value="astronomy")  Астрономия
+					option(value="geography")  География
+					option(value="geology")  Геология
+					option(value="botany")  Ботаника
 			span.link-group
 				i.fa.fa-link
-			.filter-section
-				select.selectpicker(data-live-search="true", title="Напишите либо выберите тему", data-width="284px")
-					option(data-tokens="Физика") Физика
-					option(data-tokens="Математика") Математика
-					option(data-tokens="Астрономия") Астрономия
-					option(data-tokens="География") География
-			span.link-group
-				i.fa.fa-link
-			.filter-section
-				select.selectpicker(data-live-search="true", title="Все типы публикаций", multiple)
-					option(data-tokens="Физика") Физика
-					option(data-tokens="Математика") Математика
-					option(data-tokens="Астрономия") Астрономия
-					option(data-tokens="География") География
-//- ** FILTERS END ** 
+			.filter-section.select-parent#science-themes
+				select.selectpicker(data-live-search="true", title="Напишите либо выберите тему", data-width="284px", disabled)
+			.filter-section.select-parent.margin-group-select#types
+				select.selectpicker(title="Все типы публикаций", multiple)
+					option(data-tokens="", value="all", data-icon="glyphicon-ok", selected) Все типы публикаций
+					option(data-tokens="Физика", value="news") Новости
+					option(data-tokens="Математика", value="article") Статьи
+					option(data-tokens="Астрономия", value="doing") События
+					option(data-tokens="География", value="ready-made_technologies") Готовые технологии
+					option(data-tokens="География", value="tenders") Тендеры
+					option(data-tokens="География", value="services") Услуги
+			.clearfix
+// * FILTERS END * 
