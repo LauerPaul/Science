@@ -3,7 +3,7 @@
 	.col-md-12
 		.filters-group
 			.filter-section.select-parent#science
-				select.selectpicker(title="Выберите науку")
+				select.selectpicker(title="Выберите науку", data-url="flows/",)
 					option(value="physics") Физика
 					option(value="mathematics")  Математика
 					option(value="chemistry")  Химия
@@ -16,9 +16,9 @@
 			span.link-group
 				i.fa.fa-link
 			.filter-section.select-parent#science-themes
-				select.selectpicker(data-live-search="true", title="Напишите либо выберите тему", data-width="284px", disabled)
+				select.selectpicker(data-live-search="true", title="Напишите либо выберите тему", data-width="284px", disabled, data-url="hub/")
 			.filter-section.select-parent.margin-group-select#types
-				select.selectpicker(title="Все типы публикаций", multiple)
+				select.selectpicker(title="Все типы публикаций", multiple, data-url="types/", data-single-url="top/")
 					option(data-tokens="", value="all", data-icon="glyphicon-ok", selected) Все типы публикаций
 					option(data-tokens="Физика", value="news") Новости
 					option(data-tokens="Математика", value="article") Статьи

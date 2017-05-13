@@ -1,3 +1,42 @@
+// ICONS
+.user-icon {
+	width: 10px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/auth-sprite.png) no-repeat left top;
+}
+.pass-icon {
+	width: 8px;
+	height: 10px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/auth-sprite.png) no-repeat left bottom;
+}
+.mail-icon {
+	width: 10px;
+	height: 7px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/auth-sprite.png) no-repeat left -14px;
+	margin-top: 2px;
+}
+.info-icon-tooltip{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	background: url(../../images/icons/validate-info-sprite.png) no-repeat left top;
+	cursror: pointer;
+	
+	&:active, &:hover {
+		background-position: right top;
+	}
+}
 .bootstrap-select.btn-group .dropdown-menu li{
 	a[aria-selected="false"] {
 		.sceinceIcon.check-mark {
@@ -34,4 +73,36 @@
 		display: block;
 		background: url('../../images/icons/check.png') no-repeat center top;
 	}
+}
+.icon-favorite {
+	width: 21px;
+	height: 19px;
+	background: url(../../images/icons/favorite.png) no-repeat center top;
+	display: inline-block;
+	cursor: pointer;
+	
+	&:hover{
+		background-position: center -20px;
+	}
+}
+.icon-favorite.active {
+	background-position: center bottom;
+	
+	&:hover {
+		background-position: center bottom;
+	}
+}
+.icon-view {
+	width: 13px;
+	height: 7px;
+	display: inline-block;
+	background: url(../../images/icons/posts-statistic.png) no-repeat left bottom;
+	margin-right: 10px;
+}
+.icon-comment {
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	background: url(../../images/icons/posts-statistic.png) no-repeat left top;
+	margin-right: 10px;
 }

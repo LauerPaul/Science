@@ -53,48 +53,8 @@ input {
 		padding-right: 40px;
 	}
 }
-
-// ICONS
-.user-icon {
-	width: 10px;
-	height: 13px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	background: url(../../images/icons/auth-sprite.png) no-repeat left top;
-}
-.pass-icon {
-	width: 8px;
-	height: 10px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	background: url(../../images/icons/auth-sprite.png) no-repeat left bottom;
-}
-.mail-icon {
-	width: 10px;
-	height: 7px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	background: url(../../images/icons/auth-sprite.png) no-repeat left -14px;
-	margin-top: 2px;
-}
 span.input-group-addon.tooltip-addon {
 	right: 0;
-}
-.info-icon-tooltip{
-	width: 13px;
-	height: 13px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	background: url(../../images/icons/validate-info-sprite.png) no-repeat left top;
-	cursror: pointer;
-	
-	&:active, &:hover {
-		background-position: right top;
-	}
 }
 
 
@@ -112,25 +72,7 @@ span.input-group-addon.tooltip-addon {
 	}
 }
 
-.succsses {
-	color: #69c93e !important;
-}
-a.btn {
-	display: table-cell;
-}
-.relative {
-    display: inline-block;
-    position: relative;
-}
-.left-column, .right-column {
-	padding-top: 30px;	
-}
-.left-column {
-	float: left;
-	width: 840px;
-}
-
-
+/* BOOTSTRAP SELECT */
 .bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
 	color: #cdf1f8;
 	font-family: 'Rubik-LightItalic';
@@ -155,7 +97,71 @@ a.btn {
 	font-family: 'Rubik-Italic';
 	text-align: center;
 }
+/* BOOTSTRAP SELECT END */
 
+.succsses {
+	color: #69c93e !important;
+}
+a.btn {
+	display: table-cell;
+}
+button.clear {
+	background: transparent;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+.relative {
+    display: inline-block;
+    position: relative;
+}
+.left-column, .right-column {
+	padding-top: 30px;	
+}
+.left-column {
+	float: left;
+	width: 840px;
+}
+
+// DROPDOWN_MENU_WHITE
+.dropdown-menu.white {
+	background: white;
+	border: 1px solid #efefef;
+	margin-top: -1px;
+	
+	li {
+		padding-left: 15px;
+		padding-right: 15px;
+		
+		.line {
+			border-bottom: 1px solid #efefef;
+			display: block;
+			width: 100%;
+			padding: 10px 0;
+			color: #939393;
+			
+			a {
+				color: #939393;
+				&:hover {
+					color: $link-color;
+				}
+			}
+			a.red {
+				color: #e04f5f;
+				&:hover {
+					color: $link-color;
+				}
+			}
+
+		}
+
+		&:last-child {
+			.line {
+				border-bottom: none;
+			}
+		}
+	}
+}
 
 .container {
     width:1230px !important;
