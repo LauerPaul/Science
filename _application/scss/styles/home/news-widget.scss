@@ -1,0 +1,109 @@
+.widgets-panel {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	
+	section {
+		background: #ffffff;
+		padding: 30px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		padding-right: 20px;
+		
+		> h2, > h3, > h4, > h1, > .title {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-size: 16px;
+			font-family: 'Rubik-Medium';
+		}
+
+		.item {
+			margin-top: 30px;
+		}
+	}
+}
+.news-widget {
+	.news-item {
+		margin-top: 30px;
+	}
+	.news-image-wrapper {
+		float: left;
+		width: 51px;
+		height: 51px;
+		overflow: hidden;
+		margin-right: 15px;
+		display: block;
+		img {
+			width: 100%;
+		}
+	}
+	.news-content {
+		float: left;
+		width: 185px;
+		
+		.news-date {
+			margin-top: -5px;
+		}
+		.news-title {
+			font-family: 'Rubik-Medium';
+			font-size: 15px;
+			color: #4e4e4e;
+			position: relative;
+			overflow: hidden;
+			
+			a {
+				color: #4e4e4e;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.news-more {
+		margin-top: 30px;
+	    margin-bottom: -5px;
+		display: block;
+		font-size: 12px;
+	}
+}
+section.news-single {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background: #ffffff;
+	padding: 30px;
+	
+	.news-banner {
+		margin-top: -30px;
+		margin-left: -30px;
+		margin-right: -30px;
+		width: calc(100% + 60px);
+		position: relative;
+		overflow: hidden;
+		max-height: 133px;
+		margin-bottom: 15px;
+		display: block;
+		
+		img {
+			min-width: 100%;
+		}
+	}
+
+	.news-title {
+		color: $brand-success;
+		text-transform: uppercase;
+		font-family: 'Rubik-Bold';
+		font-size: 10px;
+		letter-spacing: 1px;
+		font-weight: normal;
+		margin-top: 15px;
+	}
+	.news-description {
+		margin-top: 15px;
+		font-family: 'Rubik-Medium';
+		color: #4e4e4e;
+		display: block;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

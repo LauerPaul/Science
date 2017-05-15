@@ -60,14 +60,16 @@ span.input-group-addon.tooltip-addon {
 
 .line-link {
 	cursor: pointer;
+	position: relative;
+    top: 1px;
 	
 	> span {
-		border-bottom: 1px solid $link-border-bottom-color;
+		border-bottom: 1px solid transparent;
 	}
 
 	&:hover {
 		> span {
-			border-color: transparent;
+			border-color: $link-border-bottom-color;
 		}
 	}
 }
@@ -122,7 +124,10 @@ button.clear {
 	float: left;
 	width: 840px;
 }
-
+.right-column {
+	float: right;
+	width: 301px;
+}
 // DROPDOWN_MENU_WHITE
 .dropdown-menu.white {
 	background: white;
@@ -161,6 +166,13 @@ button.clear {
 			}
 		}
 	}
+}
+.gray-mini-description {
+	color: #bababa;
+	font-size: 13px;
+	font-family: 'Rubik-Light';
+	letter-spacing: -0.3px;
+	margin-right: 10px;
 }
 
 .container {

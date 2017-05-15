@@ -7,14 +7,6 @@
 	border-bottom: 1px solid #efefef;
 	
 	.post-header {
-
-		.gray-mini-description {
-			color: #bababa;
-			font-size: 13px;
-			font-family: 'Rubik-Light';
-			letter-spacing: -0.3px;
-			margin-right: 10px;
-		}
 		.post-menu {
 			.more-wrapper {
 				position: relative;
@@ -60,13 +52,14 @@
 				background: #c243a0;
 				position: relative;
 				padding: 3px 7px 3px;
-				line-height: 0px;
+				line-height: 7px;
 				text-align: center;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				top: -10px;
 				font-family: 'Rubik-Light';
 				left: 10px;
+				display: inline-block;
 				
 				&::before, &::after {
 					content: '';
@@ -84,6 +77,14 @@
 					border-top: 6px solid #C243A0;
 					border-left: 6px solid #c243a0;
 					top: 0px;
+				}
+			}
+			a:hover {
+				h2 {
+					text-decoration: underline;
+				}
+				.post-label {
+					text-decoration: none;
 				}
 			}
 		}
@@ -173,12 +174,6 @@
 			.line-link {
 				> span {
 					border-color: #dedede;
-				}
-
-				&:hover {
-					> span {
-						border-color: transparent;
-					}
 				}
 			}
 

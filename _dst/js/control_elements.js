@@ -3,6 +3,12 @@
 // =================================================================================
 $(document).ready(function() {
 	// -----------------------------------------------------------------------------
+	// ---------------------- CALENDAR FOR EVENTS WIDGET ---------------------------
+	if($("#events-calendar").length > 0){
+		var dates;
+		calendar_events.init($("#events-calendar"), 'ru', dates);
+	}
+	// -----------------------------------------------------------------------------
 	// ----------------------BOOTSTRAP SELECT SETTINGS -----------------------------
 	$('.selectpicker').selectpicker({
 		iconBase: 'sceinceIcon'
@@ -189,3 +195,19 @@ var results = {
 }
 // ++++++++++++++++++++++ *PRINT RESULT AJAX FUNCTIONS END* ++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+var calendar_events = {
+	init: function(obj, lang, date){
+		obj.zabuto_calendar({
+			/* de	Deutsch (German)	 	nl	Nederlands (Dutch)
+			 en	English [default value]	 	pt	Portugues (Portuguese)
+			 es	Espanol (Spanish)	 	ru	ру́сский язы́кR (Russian)
+			 fr	Francais (French)	 	se	Svenska (Swedish)
+			 it	Italiano (Italian)	 	tr	Türkçe (Turkish) */
+			language: lang,
+			data: date,
+			nav_icon: {
+		        prev: '<i class="fa fa-chevron-circle-left"></i>',
+		        next: '<i class="fa fa-chevron-circle-right"></i>'}
+	    });
+	}
+}

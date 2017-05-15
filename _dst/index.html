@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="styles/css/_lib/bootstrap-select.min.css"/>
     <!--font-awesome css-->
     <link rel="stylesheet" href="styles/css/_lib/font-awesome.min.css"/>
+    <!--ui css-->
     <link rel="stylesheet" href="styles/css/_lib/jquery-ui.css"/>
+    <!--Zabuto calendar-->
+    <link rel="stylesheet" href="styles/css/_lib/zabuto_calendar.css"/>
     <!--default styles-->
     <link rel="stylesheet" href="styles/css/science.css"/>
     <!-- /++++++++++++++++++* STYLES END *++++++++++++++++++/-->
@@ -44,7 +47,7 @@
           <!-- EVENT RIBBON -->
           <ul class="nav navbar-nav navbar-right header-menu">
             <!-- ITEM MENU -->
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Публикации </span></a>
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Публикации</span><i class="dropdown-arrow"></i></a>
               <!-- SUB MENU -->
               <ul class="dropdown-menu">
                 <li><a href="#"> <span>Новости</span></a></li>
@@ -54,7 +57,7 @@
               </ul>
             </li>
             <!-- ITEM MENU -->
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Участники </span></a>
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Участники </span><i class="dropdown-arrow"></i></a>
               <!-- SUB MENU -->
               <ul class="dropdown-menu">
                 <li><a href="#"> <span>Институты</span></a></li>
@@ -63,7 +66,7 @@
               </ul>
             </li>
             <!-- ITEM MENU -->
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Коммерция </span></a>
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Коммерция </span><i class="dropdown-arrow"></i></a>
               <!-- SUB MENU -->
               <ul class="dropdown-menu">
                 <li><a href="#"> <span>Технологии</span></a></li>
@@ -72,7 +75,7 @@
               </ul>
             </li>
             <!-- ITEM MENU -->
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>База знаний </span></a>
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>База знаний </span><i class="dropdown-arrow"></i></a>
               <!-- SUB MENU -->
               <ul class="dropdown-menu">
                 <li><a href="#"> <span>Литература</span></a></li>
@@ -161,9 +164,8 @@
                     </ul>
                   </div>
                 </div>
-                <div class="post-title col-md-12">
-                  <h2>Окраска ящериц оказалась клеточным автоматом фон Неймана<span class="post-label">Статья</span></h2>
-                </div>
+                <div class="post-title col-md-12"><a href="#">
+                    <h2>Окраска ящериц оказалась клеточным автоматом фон Неймана<span class="post-label">Статья</span></h2></a></div>
                 <div class="post-authtor col-md-12"><span class="gray-mini-description">Опубликовал</span><span class="post-authtor-photo"><a href="#"><img src="images/test-content/profile-photo.png" alt="user-name"/></a></span><span class="post-authtor-name"><a class="line-link" href="#"><span>Малахов В.О.</span></a></span><span class="gray-mini-description">для</span><span class="post-for"><a class="line-link" href="#"><span>Институт информационніх технологий им. А. Васильковского</span></a></span></div>
               </div>
               <div class="row post-body">
@@ -189,7 +191,106 @@
       </div>
       <!-- *PUBLICATIONS WRAPPER END*-->
     </div>
-    <div class="right-column"></div>
+    <div class="right-column">
+      <div class="widgets-panel">
+        <!-- NewS Section-->
+        <section class="news-widget">
+          <h2>Свежие новости</h2>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">ВКонтакте совместно с Роскосмосом сняли сериал</a></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">Столкновение сверхсильных магнитов на скорости более 300 километров в час</a></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">Вид виниловой пластинки под электронным микроскопом</a></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">Лягушачья слизь оказалась убийственной для гриппа</a></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">NASA впервые начало трансляцию запуска ракеты в 360°</a></div>
+            </div>
+          </div>
+          <!-- MORE--><a class="news-more line-link" href="#"><span>Читать все новости</span></a>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *NewS Section END* -->
+        <!-- Events Widget-->
+        <section class="events-widget">
+          <h2>Ближайшие события</h2>
+          <!-- Item-->
+          <div class="item clearfix">
+            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
+            <div class="item-content">
+              <div class="event-date">30 апреля 2017</div>
+              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            </div>
+          </div>
+          <!-- Item-->
+          <div class="item clearfix">
+            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
+            <div class="item-content">
+              <div class="event-date">30 апреля 2017</div>
+              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            </div>
+          </div>
+          <!-- Item-->
+          <div class="item clearfix">
+            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
+            <div class="item-content">
+              <div class="event-date">30 апреля 2017</div>
+              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            </div>
+          </div>
+          <div class="events-calendar" id="events-calendar"></div>
+        </section>
+        <!-- *Events Widget END*-->
+        <!-- SINGLE NEWS (WIDGET)-->
+        <section class="news-single">
+          <div class="news-banner"><img src="images/test-content/news_1.jpg" alt=""/></div>
+          <div class="news-content">
+            <div class="news-title">НОВАЯ ТЕХНОЛОГИЯ </div><a class="news-description" href="#">Международная группа ученых обнаружила в океане вблизи Филиппин гигантского двустворчатого моллюска</a>
+          </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *SINGLE NEWS (WIDGET) END*-->
+        <!-- SINGLE NEWS (WIDGET)-->
+        <section class="news-single">
+          <div class="news-banner"><img src="images/test-content/news_1.jpg" alt=""/></div>
+          <div class="news-content">
+            <div class="news-title">НОВАЯ ТЕХНОЛОГИЯ </div><a class="news-description" href="#">Международная группа ученых обнаружила в океане вблизи Филиппин гигантского двустворчатого моллюска</a>
+          </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *SINGLE NEWS (WIDGET) END*-->
+      </div>
+    </div>
   </div>
   <footer>
     <div class="container">
@@ -360,6 +461,8 @@
   <script src="js/_lib/jquery.mousewheel.min.js"></script>
   <!--Scroll pane js-->
   <script src="js/_lib/jquery.jscrollpane.min.js"></script>
+  <!--Calendar js for events date-->
+  <script src="js/_lib/zabuto_calendar.min.js"></script>
   <!--Control ELEMENTS js-->
   <script src="js/control_elements.js"></script>
   <!-- /++++++++++++++++++* SCRIPTS END *++++++++++++++++++++/-->
