@@ -6220,21 +6220,17 @@ button.close {
  */
 #myCarousel {
   height: 100%;
-  height: 805px;
+  height: 400px;
   /* Background images are set within the HTML using inline CSS, not here */ }
-  @media (max-width: 1480px) {
-    #myCarousel {
-      height: 500px; } }
   #myCarousel .carousel,
   #myCarousel .carousel-inner .item,
   #myCarousel .carousel-inner .active {
-    height: 100%;
-    height: 805px; }
-    @media (max-width: 1480px) {
-      #myCarousel .carousel,
-      #myCarousel .carousel-inner .item,
-      #myCarousel .carousel-inner .active {
-        height: 500px; } }
+    height: 100%; }
+    #myCarousel .carousel .fill,
+    #myCarousel .carousel-inner .item .fill,
+    #myCarousel .carousel-inner .active .fill {
+      background-repeat: no-repeat;
+      background-position: center; }
   #myCarousel .carousel-inner {
     height: 100%; }
   #myCarousel .fill {
@@ -6284,6 +6280,44 @@ button.close {
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); } }
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity; }
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1; }
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1; }
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+
+.carousel-fade .carousel-control {
+  z-index: 2; }
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 
 /* ------------------------------------ */
 /* -------- *Bootstrap END* ----------- */
@@ -6474,7 +6508,6 @@ button.clear {
   color: #bababa;
   font-size: 13px;
   font-family: 'Rubik-Light';
-  letter-spacing: -0.3px;
   margin-right: 10px; }
 
 .container {
@@ -6749,39 +6782,77 @@ header {
           header .navbar-nav.navbar-right.user-block .profile .user-wrapp .user-nick-name a:hover > span {
             border-color: #bde9f1; }
       header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons {
-        margin-top: 4px;
-        float: right; }
+        float: right;
+        height: 50px;
+        margin-top: -11px; }
         header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons a {
           display: inline-block;
           float: left;
-          background: url(../../images/icons/profile-header-sprite.png) no-repeat;
-          margin: 0px 3px; }
+          position: relative; }
+          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons a::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            bottom: -50%;
+            left: -50%;
+            right: -50%;
+            margin: auto;
+            background: url(../../images/icons/profile-header-sprite.png) no-repeat; }
+        header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .relative {
+          height: 100%; }
         header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events {
-          width: 13px;
-          height: 13px;
-          background-position: 0px -4px;
-          margin-top: 4px; }
+          width: 30px;
+          height: 100%;
+          margin-right: 0px;
+          border: 1px solid #fff;
+          border-top: 0px;
+          border-bottom: 0px; }
+          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events::before {
+            width: 20px;
+            height: 20px;
+            background-position: -30px -30px; }
           header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events:hover {
-            background-position: 0px -21px; }
-        header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events.new {
-          width: 15px;
-          height: 18px;
-          margin-top: 0px;
-          background-position: -14px 0px; }
-          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events.new:hover {
-            background-position: -13px -17px; }
+            border-color: #efefef; }
+            header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events:hover::before {
+              background-position: -30px -3px; }
+        header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events.new::before {
+          width: 20px;
+          height: 23px;
+          background-position: -60px -27px;
+          bottom: -49%; }
+        header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .events.new:hover::before {
+          background-position: -60px 0px; }
         header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .settings {
-          width: 21px;
-          height: 22px;
-          background-position: -27px 3px;
+          width: 30px;
+          height: 100%;
           padding: 3px;
-          border: 1px solid white;
-          margin-top: -1px;
+          border: 1px solid #fff;
+          border-top: 0px;
+          border-bottom: 0px;
           margin-right: 0px; }
+          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .settings::before {
+            width: 20px;
+            height: 20px;
+            background-position: 0 -30px; }
           header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .settings:hover {
-            background-position: -27px -16px; }
+            border-color: #efefef; }
+            header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .settings:hover::before {
+              background-position: 0 0; }
         header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .open .settings {
-          border: 1px solid #efefef; }
+          border-color: #efefef;
+          background: #ffffff; }
+          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .open .settings::before {
+            background-position: 0 0px; }
+        header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .open .events {
+          border-color: #efefef;
+          background: #ffffff; }
+          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .open .events::before {
+            background-position: -30px -3px; }
+        header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .open .events.new {
+          border-color: #efefef;
+          background: #ffffff; }
+          header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .open .events.new::before {
+            background-position: -60px 0px; }
         header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .dropdown-menu {
           padding: 0px;
           margin-top: -1px;
@@ -6802,6 +6873,10 @@ header {
                 font-size: 13px;
                 font-family: 'Rubik-Light';
                 padding: 10px 0px; }
+                header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .dropdown-menu li > span a::before {
+                  content: '';
+                  background: transparent;
+                  display: none; }
                 header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .dropdown-menu li > span a:hover {
                   color: #25b6d2; }
               header .navbar-nav.navbar-right.user-block .profile .profile-action-buttons .dropdown-menu li > span .plus {
@@ -6817,10 +6892,10 @@ header {
     header .search-section.nav.navbar-nav.navbar-right.header-section-search .header-button-search {
       border: none;
       outline: none;
-      width: 13px;
-      height: 13px;
+      width: 20px;
+      height: 20px;
       background: url(../../images/icons/search-icon.png) no-repeat center top;
-      margin-top: 17px; }
+      margin-top: 14px; }
       header .search-section.nav.navbar-nav.navbar-right.header-section-search .header-button-search:hover {
         background-position: center bottom; }
     header .search-section.nav.navbar-nav.navbar-right.header-section-search .searsh-wrapper {
@@ -7116,9 +7191,8 @@ footer {
     .post .post-header .post-title h2 {
       font-family: 'Rubik-Medium';
       color: #4e4e4e;
-      letter-spacing: -0.6px;
       line-height: 29px;
-      font-size: 24px;
+      font-size: 23px;
       margin: 0px;
       max-width: 80%; }
     .post .post-header .post-title .post-label {
@@ -7165,11 +7239,9 @@ footer {
       margin-right: 7px;
       border-radius: 50%; }
     .post .post-header .post-authtor .post-authtor-name {
-      letter-spacing: -1.1px;
       margin-right: 10px;
       font-family: 'Rubik-Light'; }
     .post .post-header .post-authtor .post-for {
-      letter-spacing: -1.2px;
       font-family: 'Rubik-Light'; }
   .post .post-body {
     margin-top: 20px; }
@@ -7205,8 +7277,7 @@ footer {
     margin-top: 15px; }
     .post .post-footer .hubs a {
       color: #939393;
-      font-family: 'Rubik-Light';
-      letter-spacing: -0.3px; }
+      font-family: 'Rubik-Light'; }
     .post .post-footer .hubs .line-link > span {
       border-color: #dedede; }
     .post .post-footer .hubs > span {
@@ -7268,7 +7339,7 @@ footer {
   margin-top: 30px;
   margin-bottom: -5px;
   display: block;
-  font-size: 12px; }
+  font-size: 14px; }
 
 section.news-single {
   margin-top: 15px;
@@ -7344,10 +7415,81 @@ section .item-content {
       text-decoration: underline; }
 
 section .events-calendar {
-  margin-top: -30px;
+  margin-top: 30px;
   margin-left: -30px;
-  margin-right: -30px; }
+  margin-right: -20px;
+  margin-bottom: -35px; }
+
+section .events-more {
+  margin-top: 30px;
+  display: block; }
 
 /* ------------------------------------ */
 /* ---- *events-widget styles end* ---- */
+/* ------------------------------------ */
+/* ------- calendar-widget styles ----- */
+/* ------------------------------------ */
+div.zabuto_calendar {
+  margin: 0;
+  padding: 0; }
+  div.zabuto_calendar .table {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    div.zabuto_calendar .table tr th, div.zabuto_calendar .table tr td {
+      background-color: #ffffff; }
+    div.zabuto_calendar .table tr td.dow-clickable,
+    div.zabuto_calendar .table tr td.event-clickable {
+      cursor: pointer; }
+    div.zabuto_calendar .table tr.calendar-dow-header th {
+      background: #2eb69f;
+      color: #bcfef3;
+      font-family: 'Rubik-Regular';
+      font-size: 10px;
+      font-weight: normal; }
+    div.zabuto_calendar .table tr.calendar-month-header th {
+      color: #ffffff;
+      background: #32bea6;
+      font-family: 'Rubik-Medium';
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 12px;
+      border-bottom: 1px solid #2aae98;
+      height: 32px;
+      vertical-align: middle; }
+    div.zabuto_calendar .table th {
+      padding: 4px 2px;
+      text-align: center; }
+    div.zabuto_calendar .table td {
+      text-align: center;
+      padding: 1px; }
+      div.zabuto_calendar .table td div.day {
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #efefef;
+        color: #939393;
+        font-size: 12px; }
+  div.zabuto_calendar tr.calendar-dow-header th, div.zabuto_calendar tr.calendar-dow-header td,
+  div.zabuto_calendar tr.calendar-dow th,
+  div.zabuto_calendar tr.calendar-dow td {
+    width: 14%; }
+  div.zabuto_calendar .badge-event {
+    font-size: 0.95em;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px; }
+  div.zabuto_calendar .badge-event, div.zabuto_calendar div.legend span.badge-event {
+    background: #32bea6;
+    margin-top: -12px;
+    margin-bottom: -12px;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    border-radius: 0; }
+  div.zabuto_calendar .calendar-month-navigation {
+    cursor: pointer; }
+
+/* ------------------------------------ */
+/* ---- *calendar-widget styles end* -- */
 /* ------------------------------------ */
