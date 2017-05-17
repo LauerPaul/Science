@@ -17,7 +17,6 @@
 // --------------------------------------------------
 
 // Common styles
-.btn-primary,
 .btn-success,
 .btn-info,
 .btn-warning,
@@ -87,7 +86,6 @@
 }
 
 // Apply the mixin to the buttons
-.btn-primary { @include btn-styles($btn-primary-bg); }
 .btn-success { @include btn-styles($btn-success-bg); }
 .btn-info    { @include btn-styles($btn-info-bg); }
 .btn-warning { @include btn-styles($btn-warning-bg); }

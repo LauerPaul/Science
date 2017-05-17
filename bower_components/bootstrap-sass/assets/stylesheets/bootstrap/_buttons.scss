@@ -73,7 +73,15 @@ a.btn {
   box-shadow: none;
 }
 .btn-primary {
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  color: $btn-primary-color;
+  border-color: $btn-primary-border;
+  background: $btn-primary-bg;
+  height: 39px;
+  
+  &:hover {
+    background: $btn-primary-color;
+    border-color: $btn-primary-color;
+  }
 }
 // Success appears as green
 .btn-success {

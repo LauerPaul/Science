@@ -1,5 +1,8 @@
 // PUBLICATIONS WRAPPER
 .publications-wrapper
 	.result-wrapper.row
-		include ../post
+		- var x = 5; //- Post length
+		- for (var i=1; i<=x; i++) {
+			include ../posts/post-mini
+		-}
 // *PUBLICATIONS WRAPPER END*

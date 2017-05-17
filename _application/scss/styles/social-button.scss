@@ -1,0 +1,67 @@
+.social-button {
+	display: inline-block;
+	height: 40px;
+	background: #45668e;
+	cursor: pointer;
+	margin-right: 20px;
+	transition: all 0.3s;
+
+	.icon-button {
+		display: inline-block;
+		float: left;
+		width: 40px;
+		height: 100%;
+		text-align: center;
+		font-size: 16px;
+		color: #fff;
+		position: relative;
+		
+		i.fa {
+			position: absolute;
+			top: -50%;
+			bottom: -50%;
+			margin: auto;
+			height: 19px;
+			width: 18px;
+			left: -50%;
+			right: -50%;
+		}
+	}
+	.counter {
+		display: inline-block;
+		float: left;
+		text-align: center;
+		padding: 15px;
+		line-height: 10px;
+		font-size: 13px;
+		color: rgba(254, 254, 254, 0.7);
+	}
+	
+	&.vkontakte {
+		.icon-button {
+			background: #405f85;
+		}
+	}
+	
+	&.facebook {
+		background: #3b5998;
+		
+		.icon-button {
+			background: #34508b;
+		}
+	}
+
+	&.odnoklassniki {
+		background: #ed812b;
+
+		.icon-button {
+			background: #e17927;
+		}
+	}
+
+	&:hover {
+		.icon-button {
+			font-size: 18px;
+		}
+	}
+}

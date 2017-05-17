@@ -155,9 +155,9 @@ $btn-default-color:              #fff;
 $btn-default-bg:                 #25b6d2;
 $btn-default-border:             transparent;
 
-$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-color:              $brand-success;
+$btn-primary-bg:                 transparent;
+$btn-primary-border:             #8ee8d9;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
@@ -801,7 +801,7 @@ $breadcrumb-bg:                 #f5f5f5 !default;
 //** Breadcrumb text color
 $breadcrumb-color:              #ccc !default;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-active-color:       $gray-dark;
 //** Textual separator for between breadcrumb elements
 $breadcrumb-separator:          "/" !default;
 

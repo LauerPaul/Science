@@ -1,0 +1,14 @@
+mixin breadcrumbs(links)
+	// breadcrumbs
+	nav.breadcrumb
+		- var i_length = links.length;
+		- var i = 0;
+		each link in links
+			- i++;
+			- if (i == i_length){
+				span.breadcrumb-item.active= link
+			- }else{
+				a.breadcrumb-item(href="#")
+					span= link
+			-}
+	// *breadcrumbs end*

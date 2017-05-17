@@ -1,0 +1,24 @@
+html(lang='ru')
+	include include/common/head
+	include include/common/header-logged
+
+	.container
+		//- Хлебные крошки
+		include include/common/breadcrumbs
+		-var links = ['Главная', 'Участники', 'Институты', 'ИИПТ (Институт Импульсных Процессов и Технологий)'];
+		+breadcrumbs(links)
+		//- Хлебные крошки (конец)
+		
+		.left-column
+			include include/posts/post_auth_author
+		.right-column
+			.post-action-button.pull-right
+				button.btn.btn-primary Написать автору
+				button.btn.btn-default(type="button", onclick="") Подписаться
+			.clearfix
+			.widgets-panel
+				include include/home/events-widget
+
+	include include/common/footer
+
+	include include/common/buttom-scripts

@@ -22,6 +22,18 @@
 	}
 
 }
+.margin-group-select {
+	.bootstrap-select {
+		.dropdown-menu {
+			li a span.text {
+				width: calc(100% - 23px);
+				text-overflow: ellipsis;
+				overflow: hidden;
+				float: right;
+			}
+		}
+	}
+}
 .bootstrap-select {
 	div.dropdown-menu {
 		max-height: 150px !important;
