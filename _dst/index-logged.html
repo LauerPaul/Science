@@ -134,44 +134,44 @@
     </div>
     <div class="wrapper-controls-slider container"><a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a><a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a></div>
   </div>
-  <div class="container">
-    <div class="left-column">
-      <!-- FILTERS -->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="filters-group">
-            <div class="filter-section select-parent" id="science">
-              <select class="selectpicker" title="Выберите науку" data-url="flows/">
-                <option value="physics">Физика</option>
-                <option value="mathematics"> Математика</option>
-                <option value="chemistry"> Химия</option>
-                <option value="biology"> Биология</option>
-                <option value="history"> История</option>
-                <option value="astronomy"> Астрономия</option>
-                <option value="geography"> География</option>
-                <option value="geology"> Геология</option>
-                <option value="botany"> Ботаника</option>
-              </select>
-            </div><span class="link-group"><i class="fa fa-link"></i></span>
-            <div class="filter-section select-parent" id="science-themes">
-              <select class="selectpicker" data-live-search="true" title="Напишите либо выберите тему" data-width="284px" disabled="disabled" data-url="hub/"></select>
-            </div>
-            <div class="filter-section select-parent margin-group-select" id="types">
-              <select class="selectpicker" title="Все типы публикаций" multiple="multiple" data-url="types/" data-single-url="top/">
-                <option data-tokens="" value="all" data-icon="glyphicon-ok" selected="selected">Все типы публикаций</option>
-                <option data-tokens="Физика" value="news">Новости</option>
-                <option data-tokens="Математика" value="article">Статьи</option>
-                <option data-tokens="Астрономия" value="doing">События</option>
-                <option data-tokens="География" value="ready-made_technologies">Готовые технологии</option>
-                <option data-tokens="География" value="tenders">Тендеры</option>
-                <option data-tokens="География" value="services">Услуги</option>
-              </select>
-            </div>
-            <div class="clearfix"></div>
+  <div class="container main">
+    <!-- FILTERS -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="filters-group">
+          <div class="filter-section select-parent" id="science">
+            <select class="selectpicker" title="Выберите науку" data-url="flows/">
+              <option value="physics">Физика</option>
+              <option value="mathematics"> Математика</option>
+              <option value="chemistry"> Химия</option>
+              <option value="biology"> Биология</option>
+              <option value="history"> История</option>
+              <option value="astronomy"> Астрономия</option>
+              <option value="geography"> География</option>
+              <option value="geology"> Геология</option>
+              <option value="botany"> Ботаника</option>
+            </select>
+          </div><span class="link-group"><i class="fa fa-link"></i></span>
+          <div class="filter-section select-parent" id="science-themes">
+            <select class="selectpicker" data-live-search="true" title="Напишите либо выберите тему" data-width="284px" disabled="disabled" data-url="hub/"></select>
           </div>
+          <div class="filter-section select-parent margin-group-select" id="types">
+            <select class="selectpicker" title="Все типы публикаций" multiple="multiple" data-url="types/" data-single-url="top/">
+              <option data-tokens="" value="all" data-icon="glyphicon-ok" selected="selected">Все типы публикаций</option>
+              <option data-tokens="Физика" value="news">Новости</option>
+              <option data-tokens="Математика" value="article">Статьи</option>
+              <option data-tokens="Астрономия" value="doing">События</option>
+              <option data-tokens="География" value="ready-made_technologies">Готовые технологии</option>
+              <option data-tokens="География" value="tenders">Тендеры</option>
+              <option data-tokens="География" value="services">Услуги</option>
+            </select>
+          </div>
+          <div class="clearfix"></div>
         </div>
       </div>
-      <!-- * FILTERS END * -->
+    </div>
+    <!-- * FILTERS END * -->
+    <div class="left-column">
       <!-- PUBLICATIONS WRAPPER-->
       <div class="publications-wrapper">
         <div class="result-wrapper row">
@@ -544,6 +544,10 @@
     </div>
   </footer>
   <!-- /+++++++++++++++++++++ SCRIPTS +++++++++++++++++++++/-->
+  <!-- SCRIPT validate -->
+  <script src="js/_lib/validate/jquery.validate.min.js"></script>
+  <script src="js/_lib/validate/additional-methods.min.js"></script>
+  <script src="js/validate.js"></script>
   <!-- SCRIPT ICHECK -->
   <script src="js/_lib/icheck.min.js"></script>
   <!--Bootstrap js include-->
@@ -558,8 +562,6 @@
   <script src="js/_lib/zabuto_calendar.min.js"></script>
   <!-- Social share-->
   <script src="js/social-share.js"></script>
-  <!--Control FILTERS js-->
-  <script src="js/filters.js"></script>
   <!--Control ELEMENTS js-->
   <script src="js/control_elements.js"></script>
   <!-- /++++++++++++++++++* SCRIPTS END *++++++++++++++++++++/-->

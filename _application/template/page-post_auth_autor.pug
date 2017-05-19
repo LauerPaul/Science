@@ -8,16 +8,36 @@ html(lang='ru')
 		-var links = ['Главная', 'Участники', 'Институты', 'ИИПТ (Институт Импульсных Процессов и Технологий)'];
 		+breadcrumbs(links)
 		//- Хлебные крошки (конец)
+
+				// PUBLICATIONS WRAPPER
+		.publications-wrapper.clearfix
+			.post-full-wrapper
+				// Section About author
+				.post-information.clearfix
+					.post-authtor-photo
+						a(href="#")
+							img(src="images/test-content/profile-photo.png", alt="user-name")
+					// Class .only-name for .column-information-post if only the name is known
+					.column-information-post
+						.post-authtor-name
+							a.line-link(href="#") Малахов Владимир Олегович
+						span.gray-mini-description Работает в
+						span.post-for
+							a.line-link(href="#")
+								span Институт информационніх технологий им. А. Васильковского
+				.post-action-button.pull-right
+					button.btn.btn-primary Написать автору
+					button.btn.btn-default(type="button", onclick="") Подписаться
+				.clearfix
 		
-		.left-column
-			include include/posts/post_auth_author
-		.right-column
-			.post-action-button.pull-right
-				button.btn.btn-primary Написать автору
-				button.btn.btn-default(type="button", onclick="") Подписаться
-			.clearfix
-			.widgets-panel
-				include include/home/events-widget
+				.left-column
+					include include/posts/post_auth_author
+				.right-column
+					.widgets-panel
+						include include/widget/banner-widget
+						include include/widget/events-widget
+						include include/widget/photoReport-widget
+						include include/widget/new-book-widget
 
 	include include/common/footer
 

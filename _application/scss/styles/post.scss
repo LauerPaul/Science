@@ -100,7 +100,8 @@
 				margin-right: 7px;
 				border-radius: 50%;
 			}
-			.post-authtor-name {
+			.post-authtor-name,
+			.post-institote-name {
 				margin-right: 10px;
 				font-family: 'Rubik-Light';
 			}
@@ -184,9 +185,11 @@
     margin-top: 30px;
     
     .post-information {
-    	margin-bottom: 30px;
+		max-width: 70%;
+		float: left;
    	
-		.post-authtor-photo {
+		.post-authtor-photo,
+		.post-institute-photo {
 			width: 42px;
 			height: 42px;
 			overflow: hidden;
@@ -201,13 +204,17 @@
 				width: 100%;
 			}
 		}
+		.post-institute-photo {
+			border-radius: 0px;
+		}
     }
     .column-information-post {
     	min-height: 42px;
     	float: left;
 	    width: calc(100% - 57px);
     	
-    	.post-authtor-name {
+    	.post-authtor-name,
+    	.post-institute-name {
     		color: $gray-dark;
     		font-size: 16px;
     		font-family: 'Rubik-Medium';
@@ -231,7 +238,8 @@
     	}
 
     	&.only-name {
-    		.post-authtor-name {
+    		.post-authtor-name,
+    		.post-institute-name {
     			margin-top: 8px;
     		}
     	}
@@ -358,8 +366,47 @@
     }
 }
 .post-action-button.pull-right {
-	margin-top: 35px;
 	.btn {
 		margin-left: 20px;
+	}
+}
+.contacts-widget {
+	.contacts-tel,
+	.contacts-mail,
+	.contacts-time,
+	a {
+		color: #bababa;
+		display: block;
+	}
+	.contacts-tel,
+	.contacts-mail,
+	.contacts-time {
+		padding-left: 30px;
+		margin-top: 30px;
+		position: relative;
+		
+		i {
+			margin-left: -30px;
+			position: absolute;
+		}
+	}
+	.contacts-tel,
+	.contacts-time {
+		i{
+			font-size: 16px;
+			margin-top: 3px;
+		}
+		a {
+			margin-bottom: 1px;
+		}
+		p {
+			margin: 0px;
+		}
+	}
+	.contacts-mail {
+		i{
+			font-size: 12px;
+			margin-top: 2px;
+		}
 	}
 }

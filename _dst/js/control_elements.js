@@ -7,7 +7,7 @@ $(document).ready(function() {
 	if(log_status){
 		console.log('Инициализация документа - application.init');
 	}
-	if($('.filter-section').length > 0){filters.init();}
+	// if($('.filter-section').length > 0){filters.init();}
 });
 // =================================================================================
 // ========================== *DOCUMENT READY END* =================================

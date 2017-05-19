@@ -1,3 +1,8 @@
 .publications-wrapper {
 	padding-bottom: 30px;
 }
+.container.main {
+	.publications-wrapper {
+		margin-top: -30px;
+	}
+}

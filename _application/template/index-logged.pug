@@ -3,16 +3,16 @@ html(lang='ru')
 	include include/common/header-logged
 	include include/home/full-slider
 	
-	.container
+	.container.main
+		include include/home/filters
 		.left-column
-			include include/home/filters
 			include include/home/publications-wrapper
 		.right-column
 			.widgets-panel
-				include include/home/news-single-widget
-				include include/home/news-single-widget
-				include include/home/events-widget
-				include include/home/news-section
+				include include/widget/news-single-widget
+				include include/widget/news-single-widget
+				include include/widget/events-widget
+				include include/widget/news-widget
 
 	include include/common/footer
 

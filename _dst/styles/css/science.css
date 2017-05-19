@@ -3996,7 +3996,7 @@ tbody.collapse.in {
       color: #444; }
 
 .breadcrumb {
-  margin-top: 30px; }
+  margin: 30px 0; }
   .breadcrumb a {
     color: #939393;
     margin-right: 5px; }
@@ -6554,6 +6554,13 @@ i.dropdown-arrow {
   display: inline-block;
   background: url(../../images/icons/dropdown_arrow.png) no-repeat; }
 
+i.clock {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  display: inline-block;
+  background: url(../../images/icons/clock.png) no-repeat; }
+
 .social-button {
   display: inline-block;
   height: 40px;
@@ -7096,7 +7103,8 @@ footer {
 /* --------- filters styles ----------- */
 /* ------------------------------------ */
 .filters-group {
-  padding-top: 15px; }
+  padding-top: 45px;
+  padding-bottom: 30px; }
   .filters-group .filter-section {
     padding-top: 15px;
     display: inline-block;
@@ -7144,6 +7152,9 @@ footer {
 /* ------------------------------------ */
 .publications-wrapper {
   padding-bottom: 30px; }
+
+.container.main .publications-wrapper {
+  margin-top: -30px; }
 
 /* ------------------------------------ */
 /* - *publications-wrapper styles end*  */
@@ -7225,7 +7236,8 @@ footer {
       margin-bottom: -11px;
       margin-right: 7px;
       border-radius: 50%; }
-    .post .post-header .post-authtor .post-authtor-name {
+    .post .post-header .post-authtor .post-authtor-name,
+    .post .post-header .post-authtor .post-institote-name {
       margin-right: 10px;
       font-family: 'Rubik-Light'; }
     .post .post-header .post-authtor .post-for {
@@ -7273,8 +7285,10 @@ footer {
 .post-full-wrapper {
   margin-top: 30px; }
   .post-full-wrapper .post-information {
-    margin-bottom: 30px; }
-    .post-full-wrapper .post-information .post-authtor-photo {
+    max-width: 70%;
+    float: left; }
+    .post-full-wrapper .post-information .post-authtor-photo,
+    .post-full-wrapper .post-information .post-institute-photo {
       width: 42px;
       height: 42px;
       overflow: hidden;
@@ -7284,27 +7298,34 @@ footer {
       float: left;
       margin-right: 15px;
       text-align: center; }
-      .post-full-wrapper .post-information .post-authtor-photo img {
+      .post-full-wrapper .post-information .post-authtor-photo img,
+      .post-full-wrapper .post-information .post-institute-photo img {
         width: 100%; }
+    .post-full-wrapper .post-information .post-institute-photo {
+      border-radius: 0px; }
   .post-full-wrapper .column-information-post {
     min-height: 42px;
     float: left;
     width: calc(100% - 57px); }
-    .post-full-wrapper .column-information-post .post-authtor-name {
+    .post-full-wrapper .column-information-post .post-authtor-name,
+    .post-full-wrapper .column-information-post .post-institute-name {
       color: #4e4e4e;
       font-size: 16px;
       font-family: 'Rubik-Medium';
       margin-bottom: 10px;
       margin-top: -5px; }
-      .post-full-wrapper .column-information-post .post-authtor-name a {
+      .post-full-wrapper .column-information-post .post-authtor-name a,
+      .post-full-wrapper .column-information-post .post-institute-name a {
         color: #4e4e4e; }
-      .post-full-wrapper .column-information-post .post-authtor-name:hover a {
+      .post-full-wrapper .column-information-post .post-authtor-name:hover a,
+      .post-full-wrapper .column-information-post .post-institute-name:hover a {
         text-decoration: underline; }
     .post-full-wrapper .column-information-post .post-for {
       font-size: 13px;
       position: relative;
       top: -1px; }
-    .post-full-wrapper .column-information-post.only-name .post-authtor-name {
+    .post-full-wrapper .column-information-post.only-name .post-authtor-name,
+    .post-full-wrapper .column-information-post.only-name .post-institute-name {
       margin-top: 8px; }
   .post-full-wrapper .post-wrapper {
     margin-top: 0px; }
@@ -7376,10 +7397,44 @@ footer {
           .post-full-wrapper .post-wrapper .post .post-footer .tags a:hover {
             color: #25b6d2; }
 
-.post-action-button.pull-right {
-  margin-top: 35px; }
-  .post-action-button.pull-right .btn {
-    margin-left: 20px; }
+.post-action-button.pull-right .btn {
+  margin-left: 20px; }
+
+.contacts-widget .contacts-tel,
+.contacts-widget .contacts-mail,
+.contacts-widget .contacts-time,
+.contacts-widget a {
+  color: #bababa;
+  display: block; }
+
+.contacts-widget .contacts-tel,
+.contacts-widget .contacts-mail,
+.contacts-widget .contacts-time {
+  padding-left: 30px;
+  margin-top: 30px;
+  position: relative; }
+  .contacts-widget .contacts-tel i,
+  .contacts-widget .contacts-mail i,
+  .contacts-widget .contacts-time i {
+    margin-left: -30px;
+    position: absolute; }
+
+.contacts-widget .contacts-tel i,
+.contacts-widget .contacts-time i {
+  font-size: 16px;
+  margin-top: 3px; }
+
+.contacts-widget .contacts-tel a,
+.contacts-widget .contacts-time a {
+  margin-bottom: 1px; }
+
+.contacts-widget .contacts-tel p,
+.contacts-widget .contacts-time p {
+  margin: 0px; }
+
+.contacts-widget .contacts-mail i {
+  font-size: 12px;
+  margin-top: 2px; }
 
 /* ------------------------------------ */
 /* -------- *post styles end* --------- */
@@ -7388,20 +7443,30 @@ footer {
 /* ------------------------------------ */
 .widgets-panel {
   padding-bottom: 15px;
-  padding-top: 15px; }
+  margin-top: -15px; }
   .widgets-panel section {
     background: #ffffff;
     padding: 30px;
     margin-top: 15px;
-    margin-bottom: 15px;
-    padding-right: 20px; }
-    .widgets-panel section > h2, .widgets-panel section > h3, .widgets-panel section > h4, .widgets-panel section > h1, .widgets-panel section > .title {
+    margin-bottom: 15px; }
+    .widgets-panel section > h2, .widgets-panel section > h3, .widgets-panel section > h4, .widgets-panel section > h1, .widgets-panel section .widget-title {
       margin-top: 0px;
       margin-bottom: 0px;
       font-size: 16px;
       font-family: 'Rubik-Medium'; }
-    .widgets-panel section .item {
+    .widgets-panel section .item, .widgets-panel section .widget-content, .widgets-panel section .widget-more {
       margin-top: 30px; }
+    .widgets-panel section .widget-image {
+      margin-bottom: 15px;
+      display: block; }
+    .widgets-panel section .widget-description {
+      font-family: 'Rubik-Medium';
+      color: #4e4e4e; }
+      .widgets-panel section .widget-description:hover {
+        text-decoration: underline; }
+    .widgets-panel section .widget-more {
+      margin-bottom: -5px;
+      display: block; }
 
 .news-widget .news-item {
   margin-top: 30px; }
@@ -7418,7 +7483,7 @@ footer {
 
 .news-widget .news-content {
   float: left;
-  width: 185px; }
+  width: 175px; }
   .news-widget .news-content .news-date {
     margin-top: -5px; }
   .news-widget .news-content .news-title {
@@ -7471,11 +7536,6 @@ section.news-single {
     section.news-single .news-description:hover {
       text-decoration: underline; }
 
-/* ------------------------------------ */
-/* ------ *news-widget styles end* ---- */
-/* ------------------------------------ */
-/* ------- events-widget styles ------- */
-/* ------------------------------------ */
 section .item-wrapp {
   float: left;
   width: 51px;
@@ -7488,7 +7548,7 @@ section .item-wrapp {
 
 section .item-content {
   float: left;
-  width: 185px; }
+  width: 175px; }
   section .item-content .item-title {
     font-family: 'Rubik-Medium';
     font-size: 15px;
@@ -7514,18 +7574,13 @@ section .item-content {
 section .events-calendar {
   margin-top: 30px;
   margin-left: -30px;
-  margin-right: -20px;
+  margin-right: -30px;
   margin-bottom: -35px; }
 
 section .events-more {
   margin-top: 30px;
   display: block; }
 
-/* ------------------------------------ */
-/* ---- *events-widget styles end* ---- */
-/* ------------------------------------ */
-/* ------- calendar-widget styles ----- */
-/* ------------------------------------ */
 div.zabuto_calendar {
   margin: 0;
   padding: 0; }
@@ -7587,6 +7642,19 @@ div.zabuto_calendar {
   div.zabuto_calendar .calendar-month-navigation {
     cursor: pointer; }
 
+section.banner-widget {
+  padding: 0px; }
+  section.banner-widget img {
+    max-width: 100%; }
+
 /* ------------------------------------ */
-/* ---- *calendar-widget styles end* -- */
+/* ------ *news-widget styles end* ---- */
+/* ------------------------------------ */
+/* -------- institute styles ---------- */
+/* ------------------------------------ */
+.institute-banner {
+  margin-top: 30px; }
+
+/* ------------------------------------ */
+/* ------- *institute styles end* ----- */
 /* ------------------------------------ */
