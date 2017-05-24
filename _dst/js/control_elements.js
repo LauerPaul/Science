@@ -178,3 +178,15 @@ calendar_events = {
 }
 // ++++++++++++++++++++ *CALENDAR EVENTS WIDGET FUNCTIONS END* +++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+tinymce.init({
+  selector: '.text-reader',
+  height: 325,
+  menubar: false,
+  /*plugins: [
+    'advlist /*autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table contextmenu paste code'
+  ],*/
+  toolbar: 'bold italic underline | undo redo ',
+  // content_css: '//www.tinymce.com/css/codepen.min.css'
+});

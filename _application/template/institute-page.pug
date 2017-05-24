@@ -1,0 +1,45 @@
+html(lang='ru')
+	include include/common/head
+	include include/common/header-logged
+
+	.container
+		//- Хлебные крошки
+		include include/common/breadcrumbs
+		-var links = ['Главная', 'Участники', 'Институты', 'ИИПТ (Институт Импульсных Процессов и Технологий)'];
+		+breadcrumbs(links)
+		//- Хлебные крошки (конец)
+		.clearfix
+
+		// PUBLICATIONS WRAPPER
+		.publications-wrapper.clearfix
+			.post-full-wrapper
+				// Section About institute
+				.post-information.clearfix
+					.page-institute-photo
+						a(href="#")
+							img(src="images/test-content/institute_logo.png", alt="")
+					.column-information-institute
+						.information-institute-name
+							a.line-link(href="#") Центральный аэрогидродинамический институт имени профессора Н.Е.Жуковского
+						span.adress
+							a.line-link(href="#")
+								span Россия, Московская обл., г. Жуковский, ул. Жуковского, дом 1
+
+				// ACTION BUTTONS
+				.post-action-button.pull-right
+					button.btn.btn-default(type="button", onclick="") Получать обновления
+				.clearfix
+
+				.left-column
+					include include/institute/contacts-section
+					include include/institute/menu-tabs
+					include include/home/publications-wrapper
+				.right-column
+					.widgets-panel
+						include include/widget/banner-widget
+						include include/widget/events-widget
+						include include/widget/photoReport-widget
+						include include/widget/new-book-widget
+
+	include include/common/footer
+	include include/common/buttom-scripts

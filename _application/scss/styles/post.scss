@@ -101,7 +101,7 @@
 				border-radius: 50%;
 			}
 			.post-authtor-name,
-			.post-institote-name {
+			.post-institute-name {
 				margin-right: 10px;
 				font-family: 'Rubik-Light';
 			}
@@ -408,5 +408,33 @@
 			font-size: 12px;
 			margin-top: 2px;
 		}
+	}
+}
+.new-post-top-section {
+	.input-group {
+		width: 100%;
+		
+		input, textarea{
+			width: 100%;
+		}
+
+		input.title-input { 
+			font-family: 'Rubik-Medium';
+		}
+	}
+
+	.title {
+		font-family: 'Rubik-Medium';
+		margin: 0px;
+		padding: 0px;
+		font-size: 23px;
+		margin-bottom: 30px;
+	}
+	.inputs-title {
+		font-family: 'Rubik-Medium';
+		margin: 0px;
+		padding: 0px;
+		font-size: 16px;
+		margin-bottom: 15px;
 	}
 }

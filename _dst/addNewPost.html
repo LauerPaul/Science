@@ -1,0 +1,391 @@
+
+<html lang="ru">
+  <head>
+    <!-- /+++++++++++++++++++++ META +++++++++++++++++++++/-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="language" content="RU"/>
+    <!-- For Social Share-->
+    <!-- post link-->
+    <meta property="og:url" content="http://science.mysweetheart.link/post"/>
+    <!-- post title-->
+    <meta property="og:title" content="Институт информационніх технологий им. А. Васильковского"/>
+    <!-- post image-->
+    <meta property="og:image" content="http://science.mysweetheart.link/themes/default/images/test-content/news_1.jpg"/>
+    <!-- post description-->
+    <meta property="og:description" content="Test description"/>
+    <title>Science</title>
+    <!-- /+++++++++++++++++++++ STYLES +++++++++++++++++++++/-->
+    <!--bootstrap-select.min.css-->
+    <link rel="stylesheet" href="styles/css/_lib/bootstrap-select.min.css"/>
+    <!--font-awesome css-->
+    <link rel="stylesheet" href="styles/css/_lib/font-awesome.min.css"/>
+    <!--ui css-->
+    <link rel="stylesheet" href="styles/css/_lib/jquery-ui.css"/>
+    <!--bootstrap-tagsinput.css-->
+    <link rel="stylesheet" href="styles/css/_lib/bootstrap-tagsinput.css"/>
+    <!--default styles-->
+    <link rel="stylesheet" href="styles/css/science.css"/>
+    <!-- /++++++++++++++++++* STYLES END *++++++++++++++++++/-->
+    <!-- /+++++++++++++++++++++ SCRIPT Jquery +++++++++++++++++++++/-->
+    <script src="js/_lib/jquery-3.1.1.min.js"></script>
+    <script src="js/_lib/jquery-ui.min.js"></script>
+    <!-- /++++++++++++++++++* SCRIPT Jquery END *++++++++++++++++++/-->
+  </head>
+  <!-- ************** HEADER ************** -->
+  <header>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#"><img src="images/logo/logo_science.png"/></a></div>
+        <div id="navbar">
+          <div class="nav navbar-nav navbar-right user-block">
+            <!-- PROFILE -->
+            <div class="profile">
+              <div class="user-wrapp">
+                <div class="user-icon"><img src="images/test-content/profile-photo.png" alt="user-name"/></div>
+                <div class="user-nick-name"><a href="#"> <span>alexander999</span></a></div>
+              </div>
+              <div class="profile-action-buttons"><a class="events" href="#"></a><span class="relative"><a class="dropdown-toggle settings" href="#" data-toggle="dropdown"></a>
+                  <ul class="dropdown-menu">
+                    <li><span><a href="#"> <span>Настройки профиля</span></a></span></li>
+                    <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Создать запись">+</a><a href="#"> <span>Мой блог</span></a></span></li>
+                    <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">+</a><a href="#"> <span>Институт ИИПТ</span></a></span></li>
+                    <li><span><a href="#"> <span>Личные сообщения</span></a></span></li>
+                    <li><span><a href="#"> <span>Мое избранное</span></a></span></li>
+                    <li><span><a href="#"> <span>Подписка ленты</span></a></span></li>
+                  </ul></span></div>
+            </div>
+          </div>
+          <div class="search-section nav navbar-nav navbar-right header-section-search">
+            <!-- SEARCH -->
+            <button class="header-button-search" type="button"></button>
+            <div class="searsh-wrapper">
+              <div class="input-group">
+                <input class="form-control" id="search" type="text" placeholder="Поиск..."/>
+                <div class="input-group-btn">
+                  <button class="btn close-serch" type="button">x</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- EVENT RIBBON -->
+          <ul class="nav navbar-nav navbar-right header-menu">
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Публикации</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Новости</span></a></li>
+                <li><a href="#"> <span>События</span></a></li>
+                <li><a href="#"> <span>Статьи</span></a></li>
+                <li class="all-records"><a href="#"> <span>Все записи</span></a></li>
+              </ul>
+            </li>
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Участники</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Институты</span></a></li>
+                <li><a href="#"> <span>Компании</span></a></li>
+                <li><a href="#"> <span>Ученые</span></a></li>
+              </ul>
+            </li>
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Коммерция</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Технологии</span></a></li>
+                <li><a href="#"> <span>Услуги</span></a></li>
+                <li><a href="#"> <span>Тендеры</span></a></li>
+              </ul>
+            </li>
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>База знаний</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Литература</span></a></li>
+                <li><a href="#"> <span>Словарь</span></a></li>
+                <li><a href="#"> <span>Исследования</span></a></li>
+                <li class="all-records"><a href="#"> <span>Все записи</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right event-ribbon">
+            <li><a href="#"> <span>Лента записей
+                  <div class="count">22</div></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container add-new-post">
+    <div class="left-column">
+      <!-- TOP_section -->
+      <section>
+        <div class="new-post-top-section wrap">
+          <h2 class="title">Новая публикация</h2>
+          <div class="input-group">
+            <input class="title-input form-control" type="text" name="title" placeholder="Название публикации"/>
+          </div>
+          <div class="input-group">
+            <textarea class="form-control text-reader" name="text" cols="30" rows="10" placeholder="Текст"></textarea>
+          </div>
+          <div class="input-group tags-input">
+            <input class="form-control" type="text" name="tags" placeholder="Теги" data-role="tagsinput"/>
+          </div>
+        </div>
+      </section>
+      <!-- *TOP_section end* -->
+      <!-- TOP_section -->
+      <section>
+        <div class="new-post-top-section wrap">
+          <h2 class="title" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapseExample">Настройки публикации
+            <div class="slide-top pull-right"><a class="toggle-slide"><i class="fa fa-angle-up"></i></a></div>
+          </h2>
+          <div class="slide-hide-wrapper collapse in" id="collapse_1">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="inputs-title">Научные параметры</h4>
+                <div class="input-group">
+                  <select class="selectpicker form-control" title="Выберите науку" name="science">
+                    <option value="physics">Физика</option>
+                    <option value="mathematics"> Математика</option>
+                    <option value="chemistry"> Химия</option>
+                    <option value="biology"> Биология</option>
+                    <option value="history"> История</option>
+                    <option value="astronomy"> Астрономия</option>
+                    <option value="geography"> География</option>
+                    <option value="geology"> Геология</option>
+                    <option value="botany"> Ботаника</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <input class="form-control" type="text" name="title" placeholder="Направление"/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4 class="inputs-title">Параметры публикации</h4>
+                <div class="input-group">
+                  <select class="selectpicker form-control" title="Тип публикации" name="type">
+                    <option value="tender">Тендер</option>
+                    <option value="conference"> Конференция</option>
+                    <option value="tecnology"> Технологии</option>
+                    <option value="post"> Статья</option>
+                    <div class="input-group"></div>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <select class="selectpicker form-control" title="От чьего имени публиковать?" name="author">
+                    <option value="1">Вариант 1</option>
+                    <option value="2"> Вариант 2</option>
+                    <option value="3"> Вариант 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *TOP_section end* -->
+    </div>
+    <div class="right-column">
+      <div class="widgets-panel">
+        <!-- SINGLE NEWS (WIDGET)-->
+        <section class="news-single">
+          <div class="news-banner"><img src="images/test-content/news_1.jpg" alt=""/></div>
+          <div class="news-content">
+            <div class="news-title">НОВАЯ ТЕХНОЛОГИЯ </div><a class="news-description" href="#">Международная группа ученых обнаружила в океане вблизи Филиппин гигантского двустворчатого моллюска</a>
+          </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *SINGLE NEWS (WIDGET) END*-->
+        <!-- SINGLE NEWS (WIDGET)-->
+        <section class="news-single">
+          <div class="news-banner"><img src="images/test-content/news_1.jpg" alt=""/></div>
+          <div class="news-content">
+            <div class="news-title">НОВАЯ ТЕХНОЛОГИЯ </div><a class="news-description" href="#">Международная группа ученых обнаружила в океане вблизи Филиппин гигантского двустворчатого моллюска</a>
+          </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *SINGLE NEWS (WIDGET) END*-->
+        <!-- Events Widget-->
+        <section class="events-widget">
+          <h2>Ближайшие события</h2>
+          <!-- Item-->
+          <div class="item clearfix">
+            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
+            <div class="item-content">
+              <div class="event-date">30 апреля 2017</div>
+              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            </div>
+          </div>
+          <!-- Item-->
+          <div class="item clearfix">
+            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
+            <div class="item-content">
+              <div class="event-date">30 апреля 2017</div>
+              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            </div>
+          </div>
+          <!-- Item-->
+          <div class="item clearfix">
+            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
+            <div class="item-content">
+              <div class="event-date">30 апреля 2017</div>
+              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            </div>
+          </div>
+          <!-- MORE--><a class="events-more line-link" href="#"><span>Все события</span></a>
+          <div class="events-calendar" id="events-calendar"></div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *Events Widget END*-->
+        <!-- NewS Section-->
+        <section class="news-widget">
+          <h2>Свежие новости</h2>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">ВКонтакте совместно с Роскосмосом сняли сериал</a></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">Столкновение сверхсильных магнитов на скорости более 300 километров в час</a></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">Вид виниловой пластинки под электронным микроскопом</a></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">Лягушачья слизь оказалась убийственной для гриппа</a></div>
+            </div>
+          </div>
+          <!-- NEWS ITEM-->
+          <div class="news-item clearfix">
+            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
+            <div class="news-content">
+              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
+              <div class="news-title"><a href="#">NASA впервые начало трансляцию запуска ракеты в 360°</a></div>
+            </div>
+          </div>
+          <!-- MORE--><a class="news-more line-link" href="#"><span>Читать все новости</span></a>
+        </section>
+        <div class="clearfix"></div>
+        <!-- *NewS Section END* -->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row line-menu">
+            <div class="col-md-12">
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Публикации</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Новости</span></a></li>
+                <li><a class="line-link" href="#"> <span>События</span></a></li>
+                <li><a class="line-link" href="#"> <span>Статьи</span></a></li>
+                <li><a class="line-link" href="#"> <span>Записи</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Участники</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Институты</span></a></li>
+                <li><a class="line-link" href="#"> <span>Компании</span></a></li>
+                <li><a class="line-link" href="#"> <span>Ученые</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Коммерция</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Технологии</span></a></li>
+                <li><a class="line-link" href="#"> <span>Услуги</span></a></li>
+                <li><a class="line-link" href="#"> <span>Тендеры</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">База знаний</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>Литература</span></a></li>
+                <li><a class="line-link" href="#"> <span>Словарь</span></a></li>
+                <li><a class="line-link" href="#"> <span>Исследования</span></a></li>
+              </ul>
+              <ul class="list-menu list-unstyled">
+                <li>
+                  <p class="title-section">Портал</p>
+                </li>
+                <li><a class="line-link" href="#"> <span>О нас</span></a></li>
+                <li><a class="line-link" href="#"> <span>Контакты</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col-md-12 copyright">© 2012 -2017   Институт  импульсных  процессов  и  технологий  НАН  Украины. Все права защищены.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="green-bg pull-right">
+            <ul class="list-unstyled list-inline language-buttons">
+              <li class="active"><a>Ru</a></li>
+              <li><a href="#">Eng</a></li>
+              <li><a href="#">Deu</a></li>
+              <li><a class="dot">...</a></li>
+            </ul>
+            <p class="description">По возникшим вопросам<br/>в работе портала обращайтесь<br/>в службу поддержки</p>
+            <ul class="list-unstyled contacts">
+              <li><a class="active" href="tel:0446788078" target="_blank">(044) 678-80-78</a></li>
+              <li><a href="tel:0961205645" target="_blank">(096) 120-56-45</a></li>
+              <li><a href="mailto:info@gmail.com" target="_blank">info@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /+++++++++++++++++++++ SCRIPTS +++++++++++++++++++++/-->
+  <!-- SCRIPT validate -->
+  <script src="js/_lib/validate/jquery.validate.min.js"></script>
+  <script src="js/_lib/validate/additional-methods.min.js"></script>
+  <script src="js/validate.js"></script>
+  <!-- SCRIPT ICHECK -->
+  <script src="js/_lib/icheck.min.js"></script>
+  <!--Bootstrap js include-->
+  <script src="js/_lib/bootstrap.min.js"></script>
+  <!--Bootstrap select js-->
+  <script src="js/_lib/bootstrap-select.js"></script>
+  <!--MouseWheel js-->
+  <script src="js/_lib/jquery.mousewheel.min.js"></script>
+  <!--Scroll pane js-->
+  <script src="js/_lib/jquery.jscrollpane.min.js"></script>
+  <!--Calendar js for events date-->
+  <script src="js/_lib/zabuto_calendar.min.js"></script>
+  <!--tinymce.min.js-->
+  <script src="js/_lib/tinymce/tinymce.min.js"></script>
+  <!--bootstrap-tagsinput.min.js-->
+  <script src="js/_lib/bootstrap-tagsinput.min.js"></script>
+  <!-- Social share-->
+  <script src="js/social-share.js"></script>
+  <!--Control ELEMENTS js-->
+  <script src="js/control_elements.js"></script>
+  <!-- /++++++++++++++++++* SCRIPTS END *++++++++++++++++++++/-->
+</html>

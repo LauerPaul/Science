@@ -1,0 +1,40 @@
+// TOP_section 
+section
+	.new-post-top-section.wrap
+		h2.title(data-toggle="collapse", data-target="#collapse_1", aria-expanded="true", aria-controls="collapseExample") Настройки публикации
+			.slide-top.pull-right
+				a.toggle-slide
+					i.fa.fa-angle-up
+		.slide-hide-wrapper#collapse_1.collapse.in
+			.row
+				.col-md-6
+					h4.inputs-title Научные параметры
+					.input-group
+						select.selectpicker.form-control(title="Выберите науку", name="science")
+							option(value="physics") Физика
+							option(value="mathematics")  Математика
+							option(value="chemistry")  Химия
+							option(value="biology")  Биология
+							option(value="history")  История
+							option(value="astronomy")  Астрономия
+							option(value="geography")  География
+							option(value="geology")  Геология
+							option(value="botany")  Ботаника
+					.input-group
+						input.form-control(type="text", name="title" placeholder="Направление")
+				.col-md-6
+					h4.inputs-title Параметры публикации
+					.input-group
+						select.selectpicker.form-control(title="Тип публикации", name="type")
+							option(value="tender") Тендер
+							option(value="conference")  Конференция
+							option(value="tecnology")  Технологии
+							option(value="post")  Статья
+							.input-group
+					.input-group
+						select.selectpicker.form-control(title="От чьего имени публиковать?", name="author")
+							option(value="1") Вариант 1
+							option(value="2")  Вариант 2
+							option(value="3")  Вариант 3
+				.clearfix
+// *TOP_section end* 

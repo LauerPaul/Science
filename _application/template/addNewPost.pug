@@ -1,0 +1,18 @@
+html(lang='ru')
+	include include/common/head
+	include include/common/header-logged
+	
+	.container.add-new-post
+		.left-column
+			include include/posts/new_post_top_section
+			include include/posts/add_new_post_settings
+		.right-column
+			.widgets-panel
+				include include/widget/news-single-widget
+				include include/widget/news-single-widget
+				include include/widget/events-widget
+				include include/widget/news-widget
+
+	include include/common/footer
+
+	include include/common/buttom-scripts

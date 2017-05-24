@@ -1,3 +1,158 @@
 .institute-banner {
 	margin-top: 30px;
 }
+/* INSTITUTE PAGE */
+.page-institute-photo {
+	width: 100px;
+	float: left;
+	margin-right: 15px;
+
+	img {
+		max-width: 100%;
+	}
+}
+.column-information-institute {
+	min-height: 42px;
+	float: left;
+	width: calc(100% - 115px);
+	
+	.information-institute-name {
+		color: $gray-dark;
+		font-size: 23px;
+		font-family: 'Rubik-Medium';
+		margin-bottom: 10px;
+		    margin-top: -5px;
+		
+		a {
+    		color: $gray-dark;
+		}
+
+		&:hover {
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.institute-contacts-section {
+	background: #ffffff;
+	margin-bottom: 30px;
+    max-height: 288px;
+    position: relative;
+    overflow: hidden;
+	
+	.title {
+		color: #4e4e4e;
+		font-size: 16px;
+		font-family: 'Rubik-Medium';
+	    margin-bottom: 10px !important;
+	}
+
+	.banner-institute {
+		float: right;
+		max-width: 540px;
+		height: 288px;
+		
+		img {
+			height: 100%;
+		}
+	}
+	.contacts-all {
+		max-width: 300px;
+		display: inline-block;
+		padding: 30px;
+		padding-right: 0px;
+		padding-top: 10px;
+		
+		.contacts-tel,
+		.contacts-mail,
+		.contacts-time,
+		a {
+			color: #bababa;
+			display: block;
+			font-family: 'Rubik-Light';
+		}
+		.contacts-tel,
+		.contacts-mail,
+		.contacts-time {
+			margin-top: 20px;
+			position: relative;
+			
+			i {
+				margin-left: -30px;
+				position: absolute;
+			}
+		}
+		.contacts-tel,
+		.contacts-time {
+			i{
+				font-size: 16px;
+				margin-top: 3px;
+			}
+			a {
+				margin-bottom: 1px;
+			    line-height: 18px;
+			}
+			p {
+				margin: 0px;
+			    line-height: 18px;
+			}
+		}
+		.contacts-mail {
+			i{
+				font-size: 12px;
+				margin-top: 2px;
+			}
+		}
+
+	}
+}
+.institute-menu-tabs {
+	margin-top: 30px;
+	
+	ul {
+		margin-bottom: 0px;
+		margin-left: 0px;
+		height: 39px;
+		overflow: hidden;
+		
+		li {
+			padding-left: 0px;
+			position: relative;
+			
+			 a {
+				padding: 10px 20px;
+				height: 39px;
+				background: #e8e8e8;
+			    display: block;
+			    font-size: 13px;
+			    color: #939393;
+			    cursor: pointer;
+			}
+			&.active {
+				span {
+					color: $brand-success;
+					background: #fff;
+					display: block;
+					padding: 10px 20px;
+					height: 39px;
+				}
+			}
+
+			.count {
+				position: absolute;
+				width: 19px;
+				height: 18px;
+				border-radius: 50%;
+				background: #e04f5f;
+				color: #ffffff;
+				font-size: 9px;
+				text-align: center;
+				top: 3px;
+				right: 10px;
+				line-height: 18px;
+				z-index: 2;
+			}
+		}
+	}
+}
