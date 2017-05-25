@@ -102,6 +102,30 @@ var application = {
 				}
 			});
 		}
+		// DATA INIT JS init()
+		if($(document).find('[data-js-init]').length > 0){
+			if(log_status){
+				console.log('$([DATA-JS-INIT]).init()');
+			}
+			for (var i = 0; i < $(document).find('[data-js-init]').length; i++) {
+				eval($($('[data-js-init]')[i]).attr('data-js-init')).init();
+			}
+		}
+		// DATA JS ACTION init()
+		if($(document).find('[data-action-click]').length > 0){
+			if(log_status){
+				console.log('$([data-action-click]).init()');
+			}
+			$(document).on('click', '[data-action-click]', function() {
+				eval($(this).attr('data-action-click'));
+				if(log_status){
+					console.log('$([data-action-click]).click()');
+				}
+			});
+		}
+
+		//ICHECK
+		$('input[type="checkbox"]').iCheck();
 		// -----------------------------------------------------------------------------
 		// ----------------------BOOTSTRAP SELECT SETTINGS -----------------------------
 		$('.selectpicker').selectpicker({
@@ -131,6 +155,8 @@ var application = {
 			$(wrapper).html(text);
 		}else if(method == 'text_'){
 			$(wrapper).text(text);
+		}else if(method == 'append'){
+			$(wrapper).append(text);
 		}
 		if(log_status){
 			console.log('Вывод результата Ajax в объект '+wrapper+' - application.print_result('+method+')');
@@ -175,18 +201,223 @@ calendar_events = {
 	  var nav = $("#" + id).data("navigation");
 	  var to = $("#" + id).data("to");
 	}
-}
+},
 // ++++++++++++++++++++ *CALENDAR EVENTS WIDGET FUNCTIONS END* +++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-tinymce.init({
-  selector: '.text-reader',
-  height: 325,
-  menubar: false,
-  /*plugins: [
-    'advlist /*autolink lists link image charmap print preview anchor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table contextmenu paste code'
-  ],*/
-  toolbar: 'bold italic underline | undo redo ',
-  // content_css: '//www.tinymce.com/css/codepen.min.css'
-});
+// +++++++++++++++++++++++ TINYMCE EDITOR FUNCTION INIT ++++++++++++++++++++++++++++
+editor = { 
+	init: function(
+				selector, 
+				height = 325, 
+				toolbar = 'bold italic underline | undo redo',
+				css,
+				menubar = false,
+				plugins = ''
+			){
+		tinymce.init({
+			selector: selector,
+			height: height,
+			menubar: menubar,
+			plugins: [plugins],
+			toolbar: toolbar,
+			content_css: css
+		});
+		if(log_status){
+			console.log('Инициализация TINYMCE EDITOR - editor.init("'+selector+'")');
+		}
+	}
+},
+// ++++++++++++++++++++ *TINYMCE EDITOR FUNCTION INIT END* +++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++ jQuery UI AUTOCOMPLETE FUNCTIONS +++++++++++++++++++++++++
+autocomplete = {
+	init: function(selector, data, minLength = 2, appendTo){
+		if(log_status){
+			console.log('Инициализация autocomplete.init("'+selector+'")');
+		}
+
+		$(selector).autocomplete({
+	      source: data,
+	      minLength: minLength,
+	      appendTo: appendTo,
+	    });
+	},
+	destroy: function(selector){
+		if(log_status){
+			console.log('Инициализация autocomplete.destroy("'+selector+'")');
+		}
+		$(selector).autocomplete( "destroy" );
+	},
+	change: function(selector, function_){
+		if(log_status){
+			console.log('Bind autocomplete.change("'+selector+'")');
+		}
+		$(selector).on( "autocompletechange", function( event, ui ) {function_;});
+	}
+},
+// +++++++++++++++++++ *jQuery UI AUTOCOMPLETE FUNCTIONS END* ++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++ TAG INPUTS FUNCTIONS +++++++++++++++++++++++++++++++
+taginputs = {
+	init: function(selector, maxTags, source){
+		$(selector).tagsinput({
+			maxTags: maxTags,
+			typeahead: {
+				source: source
+			},
+		});
+	},
+	focus: function(selector){
+		$(selector).tagsinput('focus');
+	},
+	refresh: function(selector){
+		$(selector).tagsinput('refresh');
+	},
+	destroy: function(selector){
+		$(selector).tagsinput('destroy');
+	},
+	removeAll: function(selector){
+		$(selector).tagsinput('removeAll');
+	},
+	value: function(selector){
+		$(selector).tagsinput('items')
+	}
+},
+// +++++++++++++++++++++++++ *TAG INPUTS FUNCTIONS END* ++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++ ADD POST PAGE FUNCTIONS +++++++++++++++++++++++++++++++
+addPostPage = {
+	init: function(){
+		
+		if(log_status){
+			console.log('Инициализация addPostPage.init()');
+		}
+
+		var data = ['Статья', 'Научная статья', 'ученые', 'наука', 'тест'];
+
+		editor.init('.text-reader');
+		autocomplete.init('#tags-input input[type="text"]', data, 2, '#tags-input');
+
+		$(document).on('focus', '#tags-input input[type="text"]', function(event) {
+			if(log_status){
+				console.log('focus #tags-input input[type="text"]');
+			}
+			$(this).parents('.bootstrap-tagsinput').addClass('focus');
+			$(this).focusout(function(){
+				$(this).parents('.bootstrap-tagsinput').removeClass('focus');
+			});
+		});
+		addPostPage.selected(
+			['#science-1'], 
+			['#science-theme-1']
+		);
+	},
+	selected: function(selectors = [], selector_themes = []){
+		if(log_status){ console.log('Инициализация addPostPage.selected("'+selectors+'")'); }
+
+		if(selectors.length > 0){
+			if(selectors.length == selector_themes.length){
+				selectors.forEach( function(element, index) {
+					$(document).on('changed.bs.select', element+' .bootstrap-select', function(e){
+						if(log_status){ console.log('on change ("'+element+'")'); }
+						select_science.init(element, selector_themes[index]);
+					});
+				});
+			}else{
+				console.log('Ошибка! addPostPage.selected() - Массивы объектов должны быть равны');
+			}
+		}else{
+			console.log('Ошибка! addPostPage.selected() - Пустой массив');
+		}
+	}
+},
+// ++++++++++++++++++++++++ *ADD POST PAGE FUNCTIONS END* ++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++ SELECT SCIENCE > THEME FUNCTIONS +++++++++++++++++++++++++
+select_science = {
+	init: function(scince_parent, themes_parent) {
+		if(log_status){ console.log('Инициализация select_science.init()'); }
+		var ss_parent_scince = $(scince_parent), // parent scince block
+			ss_parent_themes = $(themes_parent), // parent scince block
+				ss_select_scince = $('select.selectpicker', ss_parent_scince), // Select
+				ss_select_themes = $('select.selectpicker', ss_parent_themes), // Select	
+			ss_val_scince = ss_select_scince.val(), // Selected result
+			ss_val_themes = ss_select_themes.val(); // Selected result
+
+		// jAjax.set("URL", ajax_url).set("dataType", "json").set("type", "GET").load(function(success){
+		// 	if(log_status){
+		// 		console.log('Успешный запрос ajax (filter science)');
+		// 		console.log(success);
+		// 	}
+
+		// 	// ------------ *success* ----------------
+		// 	if($.trim(success.response_html) == 'Collection is empty' || success.response_html == ''){
+		// 		if(log_status){ console.log(success.response_html);}
+		// 		ss_select_themes.html('').attr('disabled', 'disabled').selectpicker('refresh');
+		// 	}else{
+		
+		var success = ["first", "test", "aaa", "tsdst"];
+
+				ss_select_themes.html('');
+				$.each(success, function(key, value) {
+					ss_select_themes.append('<option value="'+key+'" data-tokens="'+value+'">'+value+'</option>');
+				});
+				ss_select_themes.removeAttr('disabled').selectpicker('refresh');
+		// }
+			// }
+			// ---------------------------------------
+		// });
+	},
+	addNew: function(wrapper = false, htm = false){
+		if(htm && wrapper){
+			if(log_status){ console.log('Инициализация select_science.addNew()'); }
+			if(htm = 'Add Post Page'){
+				htm = '<div class="input-group select-parent new-select-science"><select class="selectpicker form-control" title="Выберите науку" name="science-1"><option value="physics">Физика</option><option value="mathematics"> Математика</option><option value="chemistry"> Химия</option><option value="biology"> Биология</option><option value="history"> История</option><option value="astronomy"> Астрономия</option><option value="geography"> География</option><option value="geology"> Геология</option><option value="botany"> Ботаника</option></select></div><div class="input-group select-parent new-select-science-theme"><select class="selectpicker form-control" data-live-search="true" title="Направление" name="science-theme-1" multiple="multiple" data-max-options="2" disabled="disabled"></select></div>';
+			}
+
+			application.print_result(wrapper, htm, 'append');
+
+			// For add Post Page
+			if(htm = 'Add Post Page'){
+				var index_select_addNew = 'science-',
+					index_theme_select_addNew = 'science-theme-';
+				
+				for (var i_ = 1; i_ < 6 ; i_++) {
+					if($(document).find('#science-'+i_).length == 0){
+							console.log('#science-'+i_);
+
+							$('.new-select-science').attr('id', index_select_addNew+i_)
+							.removeClass('.new-select-science')
+							.find('select.selectpicker').attr('name', index_select_addNew+i_);
+
+							$('.new-select-science-theme').attr('id', index_theme_select_addNew+i_)
+							.removeClass('.new-select-science-theme')
+							.find('select.selectpicker').attr('name', index_theme_select_addNew+i_);
+
+							addPostPage.selected(
+								['#'+index_select_addNew+i_], 
+								['#'+index_theme_select_addNew+i_]
+							);
+
+							console.log(addPostPage.selected(
+								['#'+index_select_addNew+i_], 
+								['#'+index_theme_select_addNew+i_]
+							));
+
+						$('select.selectpicker').selectpicker();
+						break
+					}
+				}
+
+			}
+		}else{
+			if(!htm){
+				console.log('!ERROR select_science.addNew() - переменная htm пустая');
+			}else{
+				console.log('!ERROR select_science.addNew() - переменная wrapper пустая');
+			}
+		}
+	}
+}
+// +++++++++++++++++++ *SELECT SCIENCE > THEME FUNCTIONS END* ++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -9,19 +9,25 @@ section
 			.row
 				.col-md-6
 					h4.inputs-title Научные параметры
-					.input-group
-						select.selectpicker.form-control(title="Выберите науку", name="science")
-							option(value="physics") Физика
-							option(value="mathematics")  Математика
-							option(value="chemistry")  Химия
-							option(value="biology")  Биология
-							option(value="history")  История
-							option(value="astronomy")  Астрономия
-							option(value="geography")  География
-							option(value="geology")  Геология
-							option(value="botany")  Ботаника
-					.input-group
-						input.form-control(type="text", name="title" placeholder="Направление")
+					.science-select-wrapper
+						.input-group.select-parent#science-1
+							select.selectpicker.form-control(title="Выберите науку", name="science-1")
+								option(value="physics") Физика
+								option(value="mathematics")  Математика
+								option(value="chemistry")  Химия
+								option(value="biology")  Биология
+								option(value="history")  История
+								option(value="astronomy")  Астрономия
+								option(value="geography")  География
+								option(value="geology")  Геология
+								option(value="botany")  Ботаника
+						.input-group.select-parent#science-theme-1
+							select.selectpicker.form-control(data-live-search="true", title="Направление", name="science-theme-1", multiple, data-max-options="2", disabled )
+
+					.new-select-btn
+						a.add-block.link-gray(data-action-click="select_science.addNew('.science-select-wrapper', 'Add Post Page')")
+							span.icon-add-block
+							|Добавить новое направление
 				.col-md-6
 					h4.inputs-title Параметры публикации
 					.input-group
@@ -36,5 +42,13 @@ section
 							option(value="1") Вариант 1
 							option(value="2")  Вариант 2
 							option(value="3")  Вариант 3
+					.input-group
+						label
+							input(type="checkbox", name="comments", value="1")
+							|Разрешить комментарии
+					.input-group
+						label
+							input(type="checkbox", name="view", value="1")
+							|Показать эту запись всем
 				.clearfix
 // *TOP_section end* 

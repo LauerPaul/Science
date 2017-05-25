@@ -120,3 +120,14 @@ i.clock {
 	display: inline-block;
 	background: url(../../images/icons/clock.png) no-repeat;
 }
+.icon-add-block {
+	width: 39px;
+	height: 39px;
+	background: url(../../images/icons/add_block.png) no-repeat left top;
+	display: inline-block;
+	cursor: pointer;
+	
+	&:hover {
+		background: url(../../images/icons/add_block.png) no-repeat right top;
+	}
+}

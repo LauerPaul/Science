@@ -197,12 +197,15 @@ button.clear {
 	width: 100%;
 	border-radius: 0;
 	box-shadow: none;
-		@extend .form-control;
+	
+	&.focus {
+		border-color: $gray-dark;
+	}
 		
 	input {
-	    height: 100%;
 	    width: auto !important;
 	    padding: 0px;
+        margin-left: 10px;
 	}
 	.tag {
 	    margin-right: 2px;
@@ -211,17 +214,46 @@ button.clear {
 	    padding: 5px 7px;
 	    border-radius: 0px;
 	    font-size: 13px;
-	    background: #25b6d2;
+        margin-bottom: 2px;
+        margin-top: 2px;
+	    background: $default-color;
+	    display: inline-block;
 	    
-	    &:first-child {
-    	    margin-left: -10px;
-	    }
-
 	    [data-role="remove"] {
 	    	color: #bee9f2;
 	    }
 	}
 }
+.tags-input {
+	.ui-widget.ui-widget-content {
+		width: 100% !important;
+		left: 0 !important;
+		right: 0 !important;
+		margin-top: 5px;
+	}
+}
+// Autocomplete
+.ui-widget.ui-widget-content {
+	background: $body-bg;
+	border: none;
+	
+}
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+    border: none;
+    background: #eaeaea;
+    font-weight: normal;
+    color: #4e4e4e;
+    margin: 0px;
+}
+.ui-menu .ui-menu-item {
+	padding-left: 10px;
+}
+
 // BOOTSTRAP SELECT
 .bootstrap-select.form-control {
 	button.btn {
@@ -243,17 +275,72 @@ button.clear {
 	    color: #4e4e4e;
     }
     .dropdown-menu {
-    	background: #f5f5f5;
+    	background: #ffffff;
         margin-left: -1px !important;
     	margin-top: 2px !important;
+    	border: 1px solid $input-border;
+    	border-top: none;
     
     	> li > a {
-    		color: #4e4e4e;
+    		color: $gray-dark;
+    		
+    		&:hover, &:focus {
+    			background: $default-color;
+    			color: #ffffff;
+    		}
+    	}
+    }
+    .bs-searchbox .form-control {
+    	border-bottom: 1px solid $input-border;
+    	color: $gray-dark;
+    }
+    .no-results {
+    	color: #939393;
+    }
+}
+
+// ICheck
+.icheckbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $input-border;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+    display: inline-block;
+    margin-right: 15px;
+    float: left;
+    
+    ins {
+    	background: url(../../images/icons/check_black.png) no-repeat center !important;
+    	transition: all 0.1s;
+    }
+
+    &.hover {
+    	border-color: $gray-dark;
+    	
+    	ins {
+			opacity: 0.4 !important;
+    	}
+    }
+    &.checked {
+    	ins {
+    		opacity: 1 !important;
     	}
     }
 }
 
-
+label {
+	font-weight: normal;
+	cursor: pointer;
+	color: #939393;
+	margin: 0px;
+	transition: all 0.2s;
+	
+	&:hover {
+		color: $gray-dark;
+	}
+}
 
 
 

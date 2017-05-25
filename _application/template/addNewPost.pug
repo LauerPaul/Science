@@ -2,7 +2,7 @@ html(lang='ru')
 	include include/common/head
 	include include/common/header-logged
 	
-	.container.add-new-post
+	.container.add-new-post(data-js-init="addPostPage")
 		.left-column
 			include include/posts/new_post_top_section
 			include include/posts/add_new_post_settings
@@ -12,6 +12,10 @@ html(lang='ru')
 				include include/widget/news-single-widget
 				include include/widget/events-widget
 				include include/widget/news-widget
+
+	// INIT SCRIPTS
+	script.
+		console.log('Foo bar');
 
 	include include/common/footer
 

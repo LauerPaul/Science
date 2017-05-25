@@ -437,4 +437,29 @@
 		font-size: 16px;
 		margin-bottom: 15px;
 	}
+
+	.add-block {
+		cursor: pointer;
+		position: relative;
+		padding-left: 54px;
+		margin-top: 10px;
+		display: inline-block;
+		
+			.icon-add-block {
+				position: absolute;
+				top: -50%;
+				bottom: -50%;
+				margin: auto;
+				left: 0;	
+			}
+
+		&:hover{
+			color: $gray-dark;
+
+			.icon-add-block {
+				@extend .icon-add-block:hover;
+			}
+		}
+
+	}
 }
