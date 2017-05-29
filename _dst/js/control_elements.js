@@ -108,7 +108,8 @@ var application = {
 				console.log('$([DATA-JS-INIT]).init()');
 			}
 			for (var i = 0; i < $(document).find('[data-js-init]').length; i++) {
-				eval($($('[data-js-init]')[i]).attr('data-js-init')).init();
+				var _val_js = $($('[data-js-init]')[i]).attr('data-js-value') !== undefined ? $($('[data-js-init]')[i]).attr('data-js-value') : '';
+				eval($($('[data-js-init]')[i]).attr('data-js-init')).init(_val_js);
 			}
 		}
 		// DATA JS ACTION init()
@@ -307,6 +308,12 @@ addPostPage = {
 				$(this).parents('.bootstrap-tagsinput').removeClass('focus');
 			});
 		});
+		$(document).on('focus', '.input-group.gray-label .form-control', function(event) {
+			$(this).parents('.input-group.gray-label').addClass('focus');
+			$(this).focusout(function(){
+				$(this).parents('.input-group.gray-label').removeClass('focus');
+			});
+		});
 		addPostPage.selected(
 			['#science-1'], 
 			['#science-theme-1']
@@ -328,6 +335,21 @@ addPostPage = {
 			}
 		}else{
 			console.log('Ошибка! addPostPage.selected() - Пустой массив');
+		}
+	},
+	patent: function(parent){
+		var tmp = '<div class="input-group"><input class="form-control" type="text" name="paten-new"></div>';
+		application.print_result(parent, tmp, 'append');
+		var new_ = $(parent).find('input[name="paten-new"]'),
+			name_patent = 'patent-';
+		for (var i = 1; i < 10 + 1; i++) {
+			if(	$(parent).find('input[name="' + name_patent + i +'"]').length == 0 ) {
+				for (var i_ = 0; i_ < new_.length; i_++) {
+					$($(new_)[i_]).attr('name', name_patent + i);
+					i++
+				}
+				break
+			}
 		}
 	}
 },
@@ -370,45 +392,52 @@ select_science = {
 	},
 	addNew: function(wrapper = false, htm = false){
 		if(htm && wrapper){
-			if(log_status){ console.log('Инициализация select_science.addNew()'); }
+			if(log_status){ console.log('Инициализация select_science.addNew()'); }	
 			if(htm = 'Add Post Page'){
-				htm = '<div class="input-group select-parent new-select-science"><select class="selectpicker form-control" title="Выберите науку" name="science-1"><option value="physics">Физика</option><option value="mathematics"> Математика</option><option value="chemistry"> Химия</option><option value="biology"> Биология</option><option value="history"> История</option><option value="astronomy"> Астрономия</option><option value="geography"> География</option><option value="geology"> Геология</option><option value="botany"> Ботаника</option></select></div><div class="input-group select-parent new-select-science-theme"><select class="selectpicker form-control" data-live-search="true" title="Направление" name="science-theme-1" multiple="multiple" data-max-options="2" disabled="disabled"></select></div>';
-			}
+					// For add Post Page
+					var index_select_addNew = 'science-',
+						index_theme_select_addNew = 'science-theme-',
+						data_selects_addNew = 'selected=';
 
-			application.print_result(wrapper, htm, 'append');
+					for (var i_ = 1; i_ < 6 ; i_++) {
+						if($(document).find('#science-'+i_).length == 0){
+							setTimeout(function(){
+								for (var i = 1; i < i_; i++) {
+									data_selects_addNew += (i) > 1 && $('select.selectpicker[name="'+index_select_addNew+i+'"]').val() !== '' ? ',' : '';
+									data_selects_addNew += $(document).find('select.selectpicker[name="'+index_select_addNew+i+'"]').val();
+									console.log(data_selects_addNew);
+								}
+							},500);
 
-			// For add Post Page
-			if(htm = 'Add Post Page'){
-				var index_select_addNew = 'science-',
-					index_theme_select_addNew = 'science-theme-';
-				
-				for (var i_ = 1; i_ < 6 ; i_++) {
-					if($(document).find('#science-'+i_).length == 0){
-							console.log('#science-'+i_);
+							// jAjax.set("URL", ajax_url).set("dataType", "json").set("type", "POST").load({} ,function(success){
+								htm = '<div class="input-group select-parent new-select-science"><select class="selectpicker form-control" title="Выберите науку" name="science-1"><option value="physics">Физика</option><option value="mathematics"> Математика</option><option value="chemistry"> Химия</option><option value="biology"> Биология</option><option value="history"> История</option><option value="astronomy"> Астрономия</option><option value="geography"> География</option><option value="geology"> Геология</option><option value="botany"> Ботаника</option></select></div><div class="input-group select-parent new-select-science-theme"><select class="selectpicker form-control" data-live-search="true" title="Направление" name="science-theme-1" multiple="multiple" data-max-options="2" disabled="disabled"></select></div>';
+								application.print_result(wrapper, htm, 'append');
+								
+								$('.new-select-science').attr('id', index_select_addNew+i_)
+								.removeClass('new-select-science')
+								.find('select.selectpicker').attr('name', index_select_addNew+i_);
 
-							$('.new-select-science').attr('id', index_select_addNew+i_)
-							.removeClass('.new-select-science')
-							.find('select.selectpicker').attr('name', index_select_addNew+i_);
+								$('.new-select-science-theme').attr('id', index_theme_select_addNew+i_)
+								.removeClass('new-select-science-theme')
+								.find('select.selectpicker').attr('name', index_theme_select_addNew+i_);
 
-							$('.new-select-science-theme').attr('id', index_theme_select_addNew+i_)
-							.removeClass('.new-select-science-theme')
-							.find('select.selectpicker').attr('name', index_theme_select_addNew+i_);
+								addPostPage.selected(
+									['#'+index_select_addNew+i_], 
+									['#'+index_theme_select_addNew+i_]
+								);
 
-							addPostPage.selected(
-								['#'+index_select_addNew+i_], 
-								['#'+index_theme_select_addNew+i_]
-							);
-
-							console.log(addPostPage.selected(
-								['#'+index_select_addNew+i_], 
-								['#'+index_theme_select_addNew+i_]
-							));
-
-						$('select.selectpicker').selectpicker();
-						break
+								console.log(addPostPage.selected(
+									['#'+index_select_addNew+i_], 
+									['#'+index_theme_select_addNew+i_]
+								));
+							// });
+							break
+						}
 					}
-				}
+					$('select.selectpicker').selectpicker();
 
+			}else{
+				application.print_result(wrapper, htm, 'append');
 			}
 		}else{
 			if(!htm){
@@ -418,6 +447,49 @@ select_science = {
 			}
 		}
 	}
-}
+},
 // +++++++++++++++++++ *SELECT SCIENCE > THEME FUNCTIONS END* ++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+datepicker = {
+	init: function(obj){
+		var dp_local = $(obj).attr('datepicker-local') == '' || $(obj).attr('datepicker-local') == undefined ? 'en' : $(obj).attr('datepicker-local');
+		if(log_status){ console.log('Инициализация datepicker.init()'); }	
+		$(obj).datepicker({
+			regional: ['ru'],
+			dateFormat: "d MM yy",
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			minDate: "+ 1m"
+		});
+		// $.datepicker.setDefaults( $.datepicker.regional[ dp_local ] )
+	},
+	show: function(obj){
+		$(obj).datepicker( "show" );
+	},
+	hide: function(obj){
+		$(obj).datepicker('hide');
+	},
+	refresh: function(obj){
+		$(obj).datepicker('refresh');
+	},
+	destroy: function(obj){
+		$(obj).datepicker('destroy');
+	}
+},
+datetimepicker = {
+	init: function(obj){
+		var dp_local = $(obj).attr('datetimepicker-local') == '' || $(obj).attr('datetimepicker-local') == undefined ? 'en' : $(obj).attr('datetimepicker-local');
+		if(log_status){ console.log('Инициализация datetimepicker.init()'); }	
+		$(obj).datetimepicker({
+			format:'d.m.Y H:i',
+			locale: 'en',
+            disabledDates: [
+                moment("12/25/2013"),
+                "11/22/2013 00:53"
+            ]
+		});
+	},
+	show: function(obj) {
+		$(obj).datetimepicker( "show" );
+	}
+}

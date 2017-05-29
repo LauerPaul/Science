@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="styles/css/_lib/jquery-ui.css"/>
     <!--bootstrap-tagsinput.css-->
     <link rel="stylesheet" href="styles/css/_lib/bootstrap-tagsinput.css"/>
+    <!--bootstrap-datetimepicker.min.css-->
+    <link rel="stylesheet" href="styles/css/_lib/bootstrap-datetimepicker.min.css"/>
     <!--default styles-->
     <link rel="stylesheet" href="styles/css/science.css"/>
     <!-- /++++++++++++++++++* STYLES END *++++++++++++++++++/-->
@@ -193,6 +195,9 @@
                     <input type="checkbox" name="view" value="1"/>Показать эту запись всем
                   </label>
                 </div>
+                <div class="input-group gray-label left right" data-js-init="datepicker" data-js-value=".datepicker"><span class="input-group-addon left">Опубликовано</span>
+                  <input class="form-control datepicker" type="text" placeholder="1 января 2017" datepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" data-action-click="datepicker.show('.datepicker')"><span>Изменить</span></a></span>
+                </div>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -200,6 +205,53 @@
         </div>
       </section>
       <!-- *TOP_section end* -->
+      <!-- Tender_section -->
+      <section>
+        <div class="new-post-top-section wrap">
+          <h2 class="title" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" aria-controls="collapseExample">Тип публикации: <span>Тендер</span>
+            <div class="slide-top pull-right"><a class="toggle-slide"><i class="fa fa-angle-up"></i></a></div>
+          </h2>
+          <div class="slide-hide-wrapper collapse in" id="collapse_2">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="inputs-title">Основные параметры</h4>
+                <div class="input-group gray-label left right" data-js-init="datetimepicker" data-js-value=".datetimepicker"><span class="input-group-addon left">Начало</span>
+                  <input class="form-control datetimepicker" type="text" placeholder="1 января 2017" datetimepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" data-action-click="datetimepicker.show('.datetimepicker')"><span>Изменить</span></a></span>
+                </div>
+                <div class="input-group gray-label left right" data-js-init="datetimepicker" data-js-value=".datetimepicker"><span class="input-group-addon left">Окончание</span>
+                  <input class="form-control datetimepicker" type="text" placeholder="1 января 2017" datetimepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" data-action-click="datetimepicker.show('.datetimepicker')"><span>Изменить</span></a></span>
+                </div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Стоимость"/>
+                    </div>
+                  </div>
+                  <div class="col-md-4" style="padding-left: 5px;">
+                    <div class="input-group select-parent">
+                      <select class="selectpicker form-control" title="" name="">
+                        <option value="grn" selected="selected">Грн</option>
+                        <option value="dollar">$</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4 class="inputs-title">Патенты</h4>
+                <div class="patents-wrap">
+                  <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Укажите патент" name="patent-1"/>
+                  </div>
+                </div>
+                <div class="new-select-btn"><a class="add-block link-gray" data-action-click="addPostPage.patent('.patents-wrap')"><span class="icon-add-block"></span>Добавить новый патент</a></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *Tender_section end* -->
     </div>
     <div class="right-column">
       <div class="widgets-panel">
@@ -303,11 +355,6 @@
       </div>
     </div>
   </div>
-  <!-- INIT SCRIPTS-->
-  <script>
-    console.log('Foo bar');
-    
-  </script>
   <footer>
     <div class="container">
       <div class="row">
@@ -380,10 +427,8 @@
     </div>
   </footer>
   <!-- /+++++++++++++++++++++ SCRIPTS +++++++++++++++++++++/-->
-  <!-- SCRIPT validate -->
-  <script src="js/_lib/validate/jquery.validate.min.js"></script>
-  <script src="js/_lib/validate/additional-methods.min.js"></script>
-  <script src="js/validate.js"></script>
+  <script src="js/_lib/Moment.min.js"></script>
+  <script src="js/_lib/bootstrap-datetimepicker.min.js"></script>
   <!-- SCRIPT ICHECK -->
   <script src="js/_lib/icheck.min.js"></script>
   <!--Bootstrap js include-->

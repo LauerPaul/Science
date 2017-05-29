@@ -341,7 +341,39 @@ label {
 		color: $gray-dark;
 	}
 }
+.input-group.gray-label {
+	.input-group-addon {
+		@extend .link-gray;
+		border: 1px solid $input-border;
+	}
+	.form-control {
+		padding-left: 5px;
+	}
+	&.left {
+		.form-control {
+			border-left: none;
+		}
+		.input-group-addon.left {
+			border-right: none;
+			padding-right: 5px;
+		}
+	}
+	&.right {
+		.form-control {
+			border-right: none;
+		}
+		.input-group-addon.right {
+			border-left: none;
+			padding-left: 5px;
+		}
+	}
 
+	&.focus {
+		.input-group-addon {
+			border-color: $gray-dark;
+		}
+	}
+}
 
 
 .container {

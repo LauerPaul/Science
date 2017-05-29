@@ -1,0 +1,48 @@
+// Tender_section 
+section
+	.new-post-top-section.wrap
+		h2.title(data-toggle="collapse", data-target="#collapse_2", aria-expanded="true", aria-controls="collapseExample") Тип публикации: 
+			span Тендер
+			.slide-top.pull-right
+				a.toggle-slide
+					i.fa.fa-angle-up
+		.slide-hide-wrapper#collapse_2.collapse.in
+			.row
+				.col-md-6
+					h4.inputs-title Основные параметры
+
+					.input-group.gray-label.left.right(data-js-init="datetimepicker", data-js-value=".datetimepicker")
+						span.input-group-addon.left Начало
+						input.form-control.datetimepicker(type="text", placeholder="1 января 2017", datetimepicker-local="ru")
+						span.input-group-addon.right
+							a.line-link(data-action-click="datetimepicker.show('.datetimepicker')")
+								span Изменить
+					
+					.input-group.gray-label.left.right(data-js-init="datetimepicker", data-js-value=".datetimepicker")
+						span.input-group-addon.left Окончание
+						input.form-control.datetimepicker(type="text", placeholder="1 января 2017", datetimepicker-local="ru")
+						span.input-group-addon.right
+							a.line-link(data-action-click="datetimepicker.show('.datetimepicker')")
+								span Изменить
+					.row
+						.col-md-8
+							.input-group
+								input.form-control(type="text", placeholder="Стоимость")
+						.col-md-4(style="padding-left: 5px;")
+							.input-group.select-parent
+								select.selectpicker.form-control(title="", name="")
+									option(value="grn", selected) Грн
+									option(value="dollar") $
+				.col-md-6
+					h4.inputs-title Патенты
+					
+					.patents-wrap
+						.input-group
+							input.form-control(type="text", placeholder="Укажите патент", name="patent-1")
+					.new-select-btn
+						a.add-block.link-gray(data-action-click="addPostPage.patent('.patents-wrap')")
+							span.icon-add-block
+							|Добавить новый патент
+				
+				.clearfix
+// *Tender_section end* 

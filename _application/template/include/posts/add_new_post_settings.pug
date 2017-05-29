@@ -50,5 +50,11 @@ section
 						label
 							input(type="checkbox", name="view", value="1")
 							|Показать эту запись всем
+					.input-group.gray-label.left.right(data-js-init="datepicker", data-js-value=".datepicker")
+						span.input-group-addon.left Опубликовано
+						input.form-control.datepicker(type="text", placeholder="1 января 2017", datepicker-local="ru")
+						span.input-group-addon.right
+							a.line-link(data-action-click="datepicker.show('.datepicker')")
+								span Изменить
 				.clearfix
 // *TOP_section end* 
