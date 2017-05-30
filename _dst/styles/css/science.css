@@ -6474,7 +6474,8 @@ button.clear {
   .bootstrap-tagsinput input {
     width: auto !important;
     padding: 0px;
-    margin-left: 10px; }
+    margin-left: 10px;
+    padding: 4px 0; }
   .bootstrap-tagsinput .tag {
     margin-right: 2px;
     color: white;
@@ -7633,6 +7634,32 @@ footer {
   .new-post-top-section .add-block:hover {
     color: #4e4e4e; }
 
+#literature-input .bootstrap-tagsinput input[type="text"],
+#authors-mail-input .bootstrap-tagsinput input[type="text"],
+#authors-input .bootstrap-tagsinput input[type="text"],
+#organizers-input .bootstrap-tagsinput input[type="text"] {
+  width: 100% !important; }
+
+#literature-input .bootstrap-tagsinput .tag,
+#authors-mail-input .bootstrap-tagsinput .tag,
+#authors-input .bootstrap-tagsinput .tag,
+#organizers-input .bootstrap-tagsinput .tag {
+  display: block;
+  clear: both;
+  float: left; }
+
+#authors-input .bootstrap-tagsinput, #organizers-input .bootstrap-tagsinput {
+  min-height: 75px; }
+
+button.addpost {
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+  font-size: 15px; }
+
+#map {
+  height: 110px; }
+
 /* ------------------------------------ */
 /* -------- *post styles end* --------- */
 /* ------------------------------------ */
@@ -8065,6 +8092,74 @@ section.banner-widget {
   border: none;
   top: 2px;
   opacity: 1; }
+
+.datetimepicker {
+  background: #ffffff;
+  padding: 0px; }
+  .datetimepicker table {
+    max-width: 266px;
+    min-width: 266px; }
+    .datetimepicker table thead {
+      background: #32bea6; }
+      .datetimepicker table thead .switch {
+        text-align: center; }
+      .datetimepicker table thead tr:first-child th {
+        background: #32bea6;
+        color: #ffffff;
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid #2AAE98;
+        font-family: 'Rubik-Medium';
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center; }
+      .datetimepicker table thead tr:nth-child(2) {
+        background: #2eb69f;
+        color: #bcfef3;
+        font-size: 10px; }
+        .datetimepicker table thead tr:nth-child(2) th {
+          text-align: center; }
+    .datetimepicker table td {
+      border: 2px solid #efefef;
+      background: #efefef;
+      font-weight: normal;
+      color: #939393;
+      text-align: center;
+      font-size: 12px;
+      padding: 10px !important;
+      border-color: white; }
+      .datetimepicker table td:hover, .datetimepicker table td.active {
+        background: #32bea6;
+        color: white;
+        cursor: pointer; }
+      .datetimepicker table td span.minute, .datetimepicker table td span.hour {
+        display: inline-block;
+        border: 1px solid #efefef;
+        background: #efefef;
+        font-weight: normal;
+        color: #939393;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        margin: 2px;
+        width: 23.49%;
+        float: left; }
+        .datetimepicker table td span.minute:hover, .datetimepicker table td span.hour:hover {
+          background: #32bea6;
+          color: white;
+          cursor: pointer;
+          border-color: #32bea6; }
+  .datetimepicker .datetimepicker-minutes table td, .datetimepicker .datetimepicker-minutes table td:hover, .datetimepicker .datetimepicker-hours table td, .datetimepicker .datetimepicker-hours table td:hover {
+    background: white;
+    color: white;
+    cursor: pointer;
+    padding: 0px !important; }
+  .datetimepicker .day.old,
+  .datetimepicker .day.new {
+    opacity: 0.5; }
 
 /* ------------------------------------ */
 /* ------ *datepicker styles end* ----- */

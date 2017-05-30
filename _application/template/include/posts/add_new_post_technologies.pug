@@ -1,0 +1,27 @@
+// Technologies_section 
+section
+	.new-post-top-section.wrap
+		h2.title(data-toggle="collapse", data-target="#collapse_3", aria-expanded="true", aria-controls="collapseExample") Тип публикации: 
+			span Технологии
+			.slide-top.pull-right
+				a.toggle-slide
+					i.fa.fa-angle-up
+		.slide-hide-wrapper#collapse_3.collapse.in
+
+			.row
+				.col-md-6
+					h4.inputs-title Основные параметры
+		
+					.input-group#authors-input
+						input.form-control(type="text", name="authors" placeholder="Укажите авторов", data-role="tagsinput")
+				.col-md-6
+					h4.inputs-title Как связаться с авторами
+		
+					.input-group
+						label
+							input(type="checkbox", name="author_connect", value="1")
+							|Разрешить связь с авторами
+					.input-group#authors-mail-input
+						input.form-control(type="text", name="authors_mail" placeholder="Укажите электронные адреса авторов", data-role="tagsinput")
+				.clearfix
+// *Technologies_section end* 

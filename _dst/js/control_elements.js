@@ -481,13 +481,12 @@ datetimepicker = {
 		var dp_local = $(obj).attr('datetimepicker-local') == '' || $(obj).attr('datetimepicker-local') == undefined ? 'en' : $(obj).attr('datetimepicker-local');
 		if(log_status){ console.log('Инициализация datetimepicker.init()'); }	
 		$(obj).datetimepicker({
-			format:'d.m.Y H:i',
-			locale: 'en',
-            disabledDates: [
-                moment("12/25/2013"),
-                "11/22/2013 00:53"
-            ]
-		});
+			format: 'yyyy-mm-dd hh:ii',
+			autoclose: true,
+			startDate: null,
+			DaysOfWeekDisabled: [0,6],
+		}
+		);
 	},
 	show: function(obj) {
 		$(obj).datetimepicker( "show" );

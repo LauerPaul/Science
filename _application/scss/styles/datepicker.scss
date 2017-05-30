@@ -76,3 +76,96 @@
 	top: 2px;
 	opacity: 1;
 }
+.datetimepicker {
+	background: #ffffff;
+	padding: 0px;
+
+	table {
+		max-width: 266px;
+		min-width: 266px;
+		thead {
+			background: $brand-success;
+			
+			
+			.switch {
+				text-align: center;
+			}
+			tr:first-child {
+				th{
+					background: $brand-success;
+					color: #ffffff;
+					border-radius: 0px;
+					border: none;
+					border-bottom: 1px solid #2AAE98;
+				    font-family: 'Rubik-Medium';
+					text-transform: uppercase;
+					font-weight: normal;
+					font-size: 12px;
+					padding-top: 8px;
+					padding-bottom: 8px;
+					text-align: center;
+				}
+			}
+			tr:nth-child(2){
+				background: #2eb69f;
+				color: #bcfef3;
+			    font-size: 10px;
+			    th{
+					text-align: center;
+			    }
+			}
+
+		}
+		td {
+			border: 2px solid #efefef;
+		    background: #efefef;
+		    font-weight: normal;
+		    color: #939393;
+		    text-align: center;
+		    font-size: 12px;
+			padding: 10px !important;
+			border-color: white;
+		    
+		    &:hover, &.active {
+				background: $brand-success;
+				color: white;
+				cursor: pointer;
+		    }
+
+		    span.minute, span.hour {
+				display: inline-block;
+				border: 1px solid #efefef;
+			    background: #efefef;
+			    font-weight: normal;
+			    color: #939393;
+			    text-align: center;
+			    padding: 10px;
+			    font-size: 12px;
+			    margin: 2px;
+				width: 23.49%;
+				float: left;
+				
+				&:hover {
+					background: $brand-success;
+					color: white;
+					cursor: pointer;
+					border-color: $brand-success;
+				}
+			}
+		}
+	}
+	.datetimepicker-minutes, .datetimepicker-hours {
+		table {
+			td, td:hover {
+				background: white;
+				color: white;
+				cursor: pointer;
+				padding: 0px !important;
+			}
+		}
+	}
+	.day.old,
+	.day.new {
+		opacity: 0.5;
+	}
+}

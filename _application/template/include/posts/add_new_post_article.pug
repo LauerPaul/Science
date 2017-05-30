@@ -1,0 +1,16 @@
+// Article_section 
+section
+	.new-post-top-section.wrap
+		h2.title(data-toggle="collapse", data-target="#collapse_3", aria-expanded="true", aria-controls="collapseExample") Тип публикации: 
+			span Статья
+			.slide-top.pull-right
+				a.toggle-slide
+					i.fa.fa-angle-up
+		.slide-hide-wrapper#collapse_3.collapse.in
+			h4.inputs-title Основные параметры
+			.input-group#literature-input
+				input.form-control.literature(type="text", name="tags" placeholder="Укажите использованую литературу", data-role="tagsinput")
+			.input-group#authors-input
+				input.form-control.authors(type="text", name="tags" placeholder="Авторы статьи", data-role="tagsinput")
+			.clearfix
+// *Article_section end* 

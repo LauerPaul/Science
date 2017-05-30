@@ -119,7 +119,7 @@
       </div>
     </nav>
   </header>
-  <div class="container add-new-post" data-js-init="addPostPage">
+  <form class="container add-new-post" data-js-init="addPostPage" action="/ajax/post/edit/6">
     <div class="left-column">
       <!-- TOP_section -->
       <section>
@@ -195,8 +195,8 @@
                     <input type="checkbox" name="view" value="1"/>Показать эту запись всем
                   </label>
                 </div>
-                <div class="input-group gray-label left right" data-js-init="datepicker" data-js-value=".datepicker"><span class="input-group-addon left">Опубликовано</span>
-                  <input class="form-control datepicker" type="text" placeholder="1 января 2017" datepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" data-action-click="datepicker.show('.datepicker')"><span>Изменить</span></a></span>
+                <div class="input-group gray-label left right"><span class="input-group-addon left">Опубликовано</span>
+                  <input class="form-control datepicker" type="text" placeholder="1 января 2017" data-js-init="datepicker" datepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" onclick="datepicker.show('.datepicker')"><span>Изменить</span></a></span>
                 </div>
               </div>
               <div class="clearfix"></div>
@@ -215,11 +215,11 @@
             <div class="row">
               <div class="col-md-6">
                 <h4 class="inputs-title">Основные параметры</h4>
-                <div class="input-group gray-label left right" data-js-init="datetimepicker" data-js-value=".datetimepicker"><span class="input-group-addon left">Начало</span>
-                  <input class="form-control datetimepicker" type="text" placeholder="1 января 2017" datetimepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" data-action-click="datetimepicker.show('.datetimepicker')"><span>Изменить</span></a></span>
+                <div class="input-group gray-label left right"><span class="input-group-addon left">Начало</span>
+                  <input class="form-control datetimepicker-1" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-1')"><span>Изменить</span></a></span>
                 </div>
-                <div class="input-group gray-label left right" data-js-init="datetimepicker" data-js-value=".datetimepicker"><span class="input-group-addon left">Окончание</span>
-                  <input class="form-control datetimepicker" type="text" placeholder="1 января 2017" datetimepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" data-action-click="datetimepicker.show('.datetimepicker')"><span>Изменить</span></a></span>
+                <div class="input-group gray-label left right"><span class="input-group-addon left">Окончание</span>
+                  <input class="form-control datetimepicker-2" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-2')"><span>Изменить</span></a></span>
                 </div>
                 <div class="row">
                   <div class="col-md-8">
@@ -244,7 +244,7 @@
                     <input class="form-control" type="text" placeholder="Укажите патент" name="patent-1"/>
                   </div>
                 </div>
-                <div class="new-select-btn"><a class="add-block link-gray" data-action-click="addPostPage.patent('.patents-wrap')"><span class="icon-add-block"></span>Добавить новый патент</a></div>
+                <div class="new-select-btn"><a class="add-block link-gray" data-action-click="addPostPagePatent" data-placeholder="Укажите патент"><span class="icon-add-block"></span>Добавить новый патент</a></div>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -252,109 +252,127 @@
         </div>
       </section>
       <!-- *Tender_section end* -->
-    </div>
-    <div class="right-column">
-      <div class="widgets-panel">
-        <!-- SINGLE NEWS (WIDGET)-->
-        <section class="news-single">
-          <div class="news-banner"><img src="images/test-content/news_1.jpg" alt=""/></div>
-          <div class="news-content">
-            <div class="news-title">НОВАЯ ТЕХНОЛОГИЯ </div><a class="news-description" href="#">Международная группа ученых обнаружила в океане вблизи Филиппин гигантского двустворчатого моллюска</a>
-          </div>
-        </section>
-        <div class="clearfix"></div>
-        <!-- *SINGLE NEWS (WIDGET) END*-->
-        <!-- SINGLE NEWS (WIDGET)-->
-        <section class="news-single">
-          <div class="news-banner"><img src="images/test-content/news_1.jpg" alt=""/></div>
-          <div class="news-content">
-            <div class="news-title">НОВАЯ ТЕХНОЛОГИЯ </div><a class="news-description" href="#">Международная группа ученых обнаружила в океане вблизи Филиппин гигантского двустворчатого моллюска</a>
-          </div>
-        </section>
-        <div class="clearfix"></div>
-        <!-- *SINGLE NEWS (WIDGET) END*-->
-        <!-- Events Widget-->
-        <section class="events-widget">
-          <h2>Ближайшие события</h2>
-          <!-- Item-->
-          <div class="item clearfix">
-            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
-            <div class="item-content">
-              <div class="event-date">30 апреля 2017</div>
-              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+      <!-- Article_section -->
+      <section>
+        <div class="new-post-top-section wrap">
+          <h2 class="title" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" aria-controls="collapseExample">Тип публикации: <span>Статья</span>
+            <div class="slide-top pull-right"><a class="toggle-slide"><i class="fa fa-angle-up"></i></a></div>
+          </h2>
+          <div class="slide-hide-wrapper collapse in" id="collapse_3">
+            <h4 class="inputs-title">Основные параметры</h4>
+            <div class="input-group" id="literature-input">
+              <input class="form-control literature" type="text" name="tags" placeholder="Укажите использованую литературу" data-role="tagsinput"/>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="item clearfix">
-            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
-            <div class="item-content">
-              <div class="event-date">30 апреля 2017</div>
-              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
+            <div class="input-group" id="authors-input">
+              <input class="form-control authors" type="text" name="tags" placeholder="Авторы статьи" data-role="tagsinput"/>
             </div>
+            <div class="clearfix"></div>
           </div>
-          <!-- Item-->
-          <div class="item clearfix">
-            <div class="item-wrapp"><img src="images/test-content/event_1.jpg" alt=""/></div>
-            <div class="item-content">
-              <div class="event-date">30 апреля 2017</div>
-              <div class="event-title"><a href="#">Х Международная Киевская конференция</a></div>
-            </div>
-          </div>
-          <!-- MORE--><a class="events-more line-link" href="#"><span>Все события</span></a>
-          <div class="events-calendar" id="events-calendar"></div>
-        </section>
-        <!-- *Events Widget END*-->
-        <!-- NewS Section-->
-        <section class="news-widget">
-          <h2>Свежие новости</h2>
-          <!-- NEWS ITEM-->
-          <div class="news-item clearfix">
-            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
-            <div class="news-content">
-              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
-              <div class="news-title"><a href="#">ВКонтакте совместно с Роскосмосом сняли сериал</a></div>
-            </div>
-          </div>
-          <!-- NEWS ITEM-->
-          <div class="news-item clearfix">
-            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
-            <div class="news-content">
-              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
-              <div class="news-title"><a href="#">Столкновение сверхсильных магнитов на скорости более 300 километров в час</a></div>
-            </div>
-          </div>
-          <!-- NEWS ITEM-->
-          <div class="news-item clearfix">
-            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
-            <div class="news-content">
-              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
-              <div class="news-title"><a href="#">Вид виниловой пластинки под электронным микроскопом</a></div>
+        </div>
+      </section>
+      <!-- *Article_section end* -->
+      <!-- Technologies_section -->
+      <section>
+        <div class="new-post-top-section wrap">
+          <h2 class="title" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" aria-controls="collapseExample">Тип публикации: <span>Технологии</span>
+            <div class="slide-top pull-right"><a class="toggle-slide"><i class="fa fa-angle-up"></i></a></div>
+          </h2>
+          <div class="slide-hide-wrapper collapse in" id="collapse_3">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="inputs-title">Основные параметры</h4>
+                <div class="input-group" id="authors-input">
+                  <input class="form-control" type="text" name="authors" placeholder="Укажите авторов" data-role="tagsinput"/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4 class="inputs-title">Как связаться с авторами</h4>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" name="author_connect" value="1"/>Разрешить связь с авторами
+                  </label>
+                </div>
+                <div class="input-group" id="authors-mail-input">
+                  <input class="form-control" type="text" name="authors_mail" placeholder="Укажите электронные адреса авторов" data-role="tagsinput"/>
+                </div>
+              </div>
               <div class="clearfix"></div>
             </div>
           </div>
-          <!-- NEWS ITEM-->
-          <div class="news-item clearfix">
-            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
-            <div class="news-content">
-              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
-              <div class="news-title"><a href="#">Лягушачья слизь оказалась убийственной для гриппа</a></div>
+        </div>
+      </section>
+      <!-- *Technologies_section end* -->
+      <!-- Conference_section -->
+      <section>
+        <div class="new-post-top-section wrap">
+          <h2 class="title" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" aria-controls="collapseExample">Тип публикации: <span>Конференция</span>
+            <div class="slide-top pull-right"><a class="toggle-slide"><i class="fa fa-angle-up"></i></a></div>
+          </h2>
+          <div class="slide-hide-wrapper collapse in" id="collapse_4">
+            <h4 class="inputs-title">Основные параметры</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group gray-label left right"><span class="input-group-addon left">Начало</span>
+                  <input class="form-control datetimepicker-3" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-3')"><span>Изменить</span></a></span>
+                </div>
+                <div class="input-group gray-label left right"><span class="input-group-addon left">Окончание</span>
+                  <input class="form-control datetimepicker-4" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-4')"><span>Изменить</span></a></span>
+                </div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Стоимость"/>
+                    </div>
+                  </div>
+                  <div class="col-md-4" style="padding-left: 5px;">
+                    <div class="input-group select-parent">
+                      <select class="selectpicker form-control" title="" name="">
+                        <option value="grn" selected="selected">Грн</option>
+                        <option value="dollar">$</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" name="free" value="1"/>Бесплатный вход
+                  </label>
+                </div>
+                <div class="input-group" id="organizers-input">
+                  <input class="form-control organizers" type="text" name="organizers" placeholder="Организаторы" data-role="tagsinput"/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="city-select-wrapper">
+                  <div class="input-group select-parent" id="country">
+                    <select class="selectpicker form-control" title="Выберите страну" name="country">
+                      <option value="ukraine" selected="selected">Украинa</option>
+                      <option value="moldova">Молдова</option>
+                    </select>
+                  </div>
+                  <div class="input-group select-parent" id="city">
+                    <select class="selectpicker form-control" title="Выберите город" name="city">
+                      <option value="ukraine" selected="selected">Киев</option>
+                      <option value="moldova">Простоквашино</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <input class="form-control" id="address" type="text" placeholder="Укажите адрес"/>
+                  </div>
+                  <div id="map"></div>
+                </div>
+              </div>
             </div>
+            <div class="clearfix"></div>
           </div>
-          <!-- NEWS ITEM-->
-          <div class="news-item clearfix">
-            <div class="news-image-wrapper"><img src="images/test-content/news.jpg" alt=""/></div>
-            <div class="news-content">
-              <div class="news-date gray-mini-description">Сегодня, 30 апреля 2017</div>
-              <div class="news-title"><a href="#">NASA впервые начало трансляцию запуска ракеты в 360°</a></div>
-            </div>
-          </div>
-          <!-- MORE--><a class="news-more line-link" href="#"><span>Читать все новости</span></a>
-        </section>
-        <div class="clearfix"></div>
-        <!-- *NewS Section END* -->
-      </div>
+        </div>
+      </section>
+      <!-- *Conference_section end* -->
     </div>
-  </div>
+    <div class="right-column">
+      <button class="btn btn-default addpost" type="button">Опубликовать запись</button>
+    </div>
+  </form>
   <footer>
     <div class="container">
       <div class="row">
@@ -448,6 +466,9 @@
   <!-- Social share-->
   <script src="js/social-share.js"></script>
   <!--Control ELEMENTS js-->
-  <script src="js/control_elements.js"></script>
+  <script src="js/actions.js"></script>
+  <script src="js/plugin.js"></script>
+  <script src="js/app.js"></script>
+  <script asyncб="asyncб" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9ybSWVLpaUvAqYhS1282Y6NLZVz4J9Q"></script>
   <!-- /++++++++++++++++++* SCRIPTS END *++++++++++++++++++++/-->
 </html>

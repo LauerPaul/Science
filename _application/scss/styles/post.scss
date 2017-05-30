@@ -463,3 +463,32 @@
 
 	}
 }
+#literature-input,
+#authors-mail-input,
+#authors-input,
+#organizers-input {
+	.bootstrap-tagsinput {
+		input[type="text"] {
+			width: 100% !important;
+		}
+		.tag {
+			display: block;
+			clear: both;
+			float: left;
+		}
+	}
+}
+#authors-input, #organizers-input {
+	.bootstrap-tagsinput {
+	    min-height: 75px;
+	}
+}
+button.addpost {
+	width: 100%;
+	height: 60px;
+    margin-top: 30px;
+    font-size: 15px;
+}
+#map {
+	height: 110px;
+}

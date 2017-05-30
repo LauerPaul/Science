@@ -1,0 +1,61 @@
+// Conference_section 
+section
+	.new-post-top-section.wrap
+		h2.title(data-toggle="collapse", data-target="#collapse_4", aria-expanded="true", aria-controls="collapseExample") Тип публикации: 
+			span Конференция
+			.slide-top.pull-right
+				a.toggle-slide
+					i.fa.fa-angle-up
+		.slide-hide-wrapper#collapse_4.collapse.in
+			h4.inputs-title Основные параметры
+			
+			.row
+				.col-md-6
+					.input-group.gray-label.left.right
+						span.input-group-addon.left Начало
+						input.form-control.datetimepicker-3(type="text", placeholder="1 января 2017", data-js-init="datetimepicker", datetimepicker-local="ru", datetimepicker-format="yyyy M dd в hh:ii")
+						span.input-group-addon.right
+							a.line-link(onclick="datetimepicker.show('.datetimepicker-3')")
+								span Изменить
+
+					.input-group.gray-label.left.right
+						span.input-group-addon.left Окончание
+						input.form-control.datetimepicker-4(type="text", placeholder="1 января 2017", data-js-init="datetimepicker", datetimepicker-local="ru", datetimepicker-format="yyyy M dd в hh:ii")
+						span.input-group-addon.right
+							a.line-link(onclick="datetimepicker.show('.datetimepicker-4')")
+								span Изменить
+
+					.row
+						.col-md-8
+							.input-group
+								input.form-control(type="text", placeholder="Стоимость")
+						.col-md-4(style="padding-left: 5px;")
+							.input-group.select-parent
+								select.selectpicker.form-control(title="", name="")
+									option(value="grn", selected) Грн
+									option(value="dollar") $
+
+					.input-group
+						label
+							input(type="checkbox", name="free", value="1")
+							|Бесплатный вход
+
+					.input-group#organizers-input
+						input.form-control.organizers(type="text", name="organizers" placeholder="Организаторы", data-role="tagsinput")
+
+				.col-md-6
+					.city-select-wrapper
+						.input-group.select-parent#country
+							select.selectpicker.form-control(title="Выберите страну", name="country")
+								option(value="ukraine" selected) Украинa
+								option(value="moldova") Молдова
+						.input-group.select-parent#city
+							select.selectpicker.form-control(title="Выберите город", name="city")
+								option(value="ukraine" selected) Киев
+								option(value="moldova") Простоквашино
+						.input-group
+							input.form-control#address(type="text", placeholder="Укажите адрес")
+						#map
+
+			.clearfix
+// *Conference_section end* 

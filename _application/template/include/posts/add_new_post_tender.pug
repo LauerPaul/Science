@@ -11,18 +11,18 @@ section
 				.col-md-6
 					h4.inputs-title Основные параметры
 
-					.input-group.gray-label.left.right(data-js-init="datetimepicker", data-js-value=".datetimepicker")
+					.input-group.gray-label.left.right
 						span.input-group-addon.left Начало
-						input.form-control.datetimepicker(type="text", placeholder="1 января 2017", datetimepicker-local="ru")
+						input.form-control.datetimepicker-1(type="text", placeholder="1 января 2017", data-js-init="datetimepicker", datetimepicker-local="ru", datetimepicker-format="yyyy M dd в hh:ii")
 						span.input-group-addon.right
-							a.line-link(data-action-click="datetimepicker.show('.datetimepicker')")
+							a.line-link(onclick="datetimepicker.show('.datetimepicker-1')")
 								span Изменить
 					
-					.input-group.gray-label.left.right(data-js-init="datetimepicker", data-js-value=".datetimepicker")
+					.input-group.gray-label.left.right
 						span.input-group-addon.left Окончание
-						input.form-control.datetimepicker(type="text", placeholder="1 января 2017", datetimepicker-local="ru")
+						input.form-control.datetimepicker-2(type="text", placeholder="1 января 2017", data-js-init="datetimepicker", datetimepicker-local="ru", datetimepicker-format="yyyy M dd в hh:ii")
 						span.input-group-addon.right
-							a.line-link(data-action-click="datetimepicker.show('.datetimepicker')")
+							a.line-link(onclick="datetimepicker.show('.datetimepicker-2')")
 								span Изменить
 					.row
 						.col-md-8
@@ -40,9 +40,8 @@ section
 						.input-group
 							input.form-control(type="text", placeholder="Укажите патент", name="patent-1")
 					.new-select-btn
-						a.add-block.link-gray(data-action-click="addPostPage.patent('.patents-wrap')")
+						a.add-block.link-gray(data-action-click="addPostPagePatent", data-placeholder="Укажите патент")
 							span.icon-add-block
 							|Добавить новый патент
-				
 				.clearfix
 // *Tender_section end* 
