@@ -196,7 +196,7 @@
                   </label>
                 </div>
                 <div class="input-group gray-label left right"><span class="input-group-addon left">Опубликовано</span>
-                  <input class="form-control datepicker" type="text" placeholder="1 января 2017" data-js-init="datepicker" datepicker-local="ru"/><span class="input-group-addon right"><a class="line-link" onclick="datepicker.show('.datepicker')"><span>Изменить</span></a></span>
+                  <input class="form-control datepicker" type="text" placeholder="1 января 2017" data-js-init="datepicker" datepicker-local="ru" datepicker-value="13.05.2017" datepicker-format="dd.mm.yy"/><span class="input-group-addon right"><a class="line-link" onclick="datepicker.show('.datepicker')"><span>Изменить</span></a></span>
                 </div>
               </div>
               <div class="clearfix"></div>
@@ -216,7 +216,7 @@
               <div class="col-md-6">
                 <h4 class="inputs-title">Основные параметры</h4>
                 <div class="input-group gray-label left right"><span class="input-group-addon left">Начало</span>
-                  <input class="form-control datetimepicker-1" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-1')"><span>Изменить</span></a></span>
+                  <input class="form-control datetimepicker-1" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii" value="2017-03-04 14:00"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-1')"><span>Изменить</span></a></span>
                 </div>
                 <div class="input-group gray-label left right"><span class="input-group-addon left">Окончание</span>
                   <input class="form-control datetimepicker-2" type="text" placeholder="1 января 2017" data-js-init="datetimepicker" datetimepicker-local="ru" datetimepicker-format="yyyy M dd в hh:ii"/><span class="input-group-addon right"><a class="line-link" onclick="datetimepicker.show('.datetimepicker-2')"><span>Изменить</span></a></span>
@@ -352,12 +352,12 @@
                   </div>
                   <div class="input-group select-parent" id="city">
                     <select class="selectpicker form-control" title="Выберите город" name="city">
-                      <option value="ukraine" selected="selected">Киев</option>
-                      <option value="moldova">Простоквашино</option>
+                      <option value="kiev" selected="selected">Киев</option>
+                      <option value="pr">Простоквашино</option>
                     </select>
                   </div>
                   <div class="input-group">
-                    <input class="form-control" id="address" type="text" placeholder="Укажите адрес"/>
+                    <input class="form-control" id="address" type="text" placeholder="Укажите адрес" data-action-focusout="AddPostPageGoogleMap"/>
                   </div>
                   <div id="map"></div>
                 </div>
@@ -371,6 +371,13 @@
     </div>
     <div class="right-column">
       <button class="btn btn-default addpost" type="button">Опубликовать запись</button>
+      <div class="desript_add-post">
+        <h4>Правила публикации</h4>
+        <p>
+          Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных процессов к дискретным. Узор молодых глазчатых ящериц описывается системой уравнений Тьюринга, в то время как лабиринтообразная окраска взрослых особей строится по принципу дискретной модели клеточного автомата фон Неймана — чешуйки меняют цвет в зависимости от их окружения.
+          
+        </p>
+      </div>
     </div>
   </form>
   <footer>
@@ -447,6 +454,8 @@
   <!-- /+++++++++++++++++++++ SCRIPTS +++++++++++++++++++++/-->
   <script src="js/_lib/Moment.min.js"></script>
   <script src="js/_lib/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/_lib/locales/bootstrap-datetimepicker.ua.js"></script>
+  <script src="js/_lib/locales/bootstrap-datetimepicker.ru.js"></script>
   <!-- SCRIPT ICHECK -->
   <script src="js/_lib/icheck.min.js"></script>
   <!--Bootstrap js include-->

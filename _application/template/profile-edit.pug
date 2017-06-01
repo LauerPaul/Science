@@ -1,0 +1,19 @@
+html(lang='ru')
+	include include/common/head
+	include include/common/header-logged
+
+	.container.profile-edit
+
+		h3.title-page Настройки профиля
+
+		// USER WRAPPER
+		.publications-wrapper.clearfix
+
+			.left-column
+				include include/user/user-menu-tab
+				include include/user/user-personal-edit
+			.right-column
+				.widgets-panel
+
+	include include/common/footer
+	include include/common/buttom-scripts

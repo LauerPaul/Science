@@ -62,7 +62,8 @@
 	}
 }
 
-.sceinceIcon.glyphicon-ok {
+.sceinceIcon.glyphicon-ok,
+#types .glyphicon-ok {
 	display: inline-block;
     margin-right: 5px;
 	
@@ -130,4 +131,9 @@ i.clock {
 	&:hover {
 		background: url(../../images/icons/add_block.png) no-repeat right top;
 	}
+}
+button > i.icon-plus {
+	margin-right: 10px;
+	position: relative;
+	top: 1px;
 }

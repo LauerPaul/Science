@@ -1,0 +1,85 @@
+// USER PERSONAL EDIT
+form(action="").wrapper-edit-form
+	// SECTION 
+	section
+		.row
+			// COLUMN
+			.col-md-6
+				// TITLE GROUP
+				h4.inputs-title Вход в аккаунт
+				// *TITLE GROUP* 
+
+				// USER LOGIN 
+				.input-group.gray-label.left
+					span.input-group-addon.left
+						i.user-icon
+					input.form-control(type="text", name="login" placeholder="Логин")
+				// *USER LOGIN END* 
+
+				// USER E-MAIL 
+				.input-group.gray-label.left
+					span.input-group-addon.left
+						i.mail-icon
+					input.form-control(type="email", name="mail" placeholder="E-mail")
+				// *USER E-MAIL END* 
+
+				// USER PASSWORD 
+				.input-group.gray-label.left.right
+					span.input-group-addon.left
+						i.pass-icon
+					input.form-control(type="password", name="password" placeholder="Пароль")
+					span.input-group-addon.right
+						a.line-link
+							span Изменить
+				// *USER PASSWORD END* 
+			// *COLUMN END* 
+
+			// COLUMN
+			.col-md-6
+				// TITLE GROUP
+				h4.inputs-title Персональные данные
+				// *TITLE GROUP* 
+
+				// FULL NAME 
+				.input-group
+					input.form-control(type="text", name="full_name" placeholder="Фамилия, имя, отчество")
+				// *FULL NAME END* 
+
+				// SEX RADIO
+				span.sex-group
+					.input-group
+						label
+							input(type="radio", value="man", name="sex")
+							|Мужчина
+					.input-group
+						label
+							input(type="radio", value="woman", name="sex")
+							|Женщина
+					.input-group
+						label
+							input(type="radio", value="vaguely", name="sex")
+							|Не указывать
+				// *SEX RADIO END* 
+
+				// BIRTHDAY 
+				.input-group.gray-label.left
+					span.input-group-addon.left Дата рождения: 
+					input.form-control.datepicker(type="text", placeholder="ДД.ММ.ГГГГ", data-js-init="datepicker", datepicker-local="ru", datepicker-value='', datepicker-format='dd.mm.yy', name="birthday")
+				// *BIRTHDAY END* 
+
+				// ADDRESS 
+				.input-group
+					input.form-control(type="text", name="address" placeholder="Ваш адрес")
+				// *ADDRESS* 
+
+				// TELEPHONE 
+				.input-group.gray-label.left
+					span.input-group-addon.left Контактный телефон 
+					input.form-control(type="text", name="telephone" placeholder="(063) 500-00-00")
+				// *TELEPHONE* 
+
+			// *COLUMN END* 
+
+	// *SECTION END* 
+
+// *USER PERSONAL EDIT END* 

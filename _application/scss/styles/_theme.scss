@@ -10,6 +10,10 @@
 h1, h2, h3, h4 {
     font-family: 'Rubik-Medium';
 }
+.title-page {
+	margin-top: 30px;
+	margin-bottom: -30px;
+}
 input {
 	font-size: 13px !important;
 	font-family: 'Rubik-Regular'
@@ -71,6 +75,13 @@ span.input-group-addon.tooltip-addon {
 		> span {
 			border-color: $link-border-bottom-color;
 			color: $link-color;
+		}
+	}
+
+	&.link-gray:hover {
+		> span {
+			border-color: #dedede;
+			color: #939393;
 		}
 	}
 }
@@ -301,7 +312,8 @@ a.ui-button:active,
 }
 
 // ICheck
-.icheckbox {
+.icheckbox,
+.iradio {
     width: 20px;
     height: 20px;
     border: 1px solid $input-border;
@@ -374,6 +386,11 @@ label {
 			border-color: $gray-dark;
 		}
 	}
+}
+.bootstrap-select.form-control button.btn > span {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 

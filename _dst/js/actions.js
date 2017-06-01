@@ -67,10 +67,11 @@ var click = {
 		app.developer('init', 'click.addNewSelectGroupScience()', 'Добавление групы выпадающих меню.');
 		// For add Post Page
 		var index_select_addNew = 'science-',
-			index_theme_select_addNew = 'science-theme-',
+			index_theme_select_addNew = 'hubs-',
 			last_empty_select,
 			data_selects_addNew = { 'selected': '', 'selected_count': ''},
 			addNew_ajax_url = '/ajax'+ window.location.pathname + '/directions_list';
+			addNew_ajax_url = addNew_ajax_url.replace('//', '/');
 
 		for (var i_ = 1; i_ < 6 ; i_++) {
 			if($(document).find('#science-'+i_).length == 0){
@@ -82,8 +83,10 @@ var click = {
 					for (var i = 1; i < i_; i++) {
 						data_selects_addNew.selected += (i) > 1 && $('select.selectpicker[name="'+index_select_addNew+i+'"]').val() !== '' ? ',' : '';
 						data_selects_addNew.selected += $(document).find('select.selectpicker[name="'+index_select_addNew+i+'"]').val();
+						console.log($(document).find('select.selectpicker[name="'+index_select_addNew+i+'"]'));
 					}
-				
+
+					app.developer('AJAX', 'click.addNewSelectGroupScience()', 'url - ' + addNew_ajax_url + '.');
 					jAjax.set("URL", addNew_ajax_url).set("dataType", "json").set("type", "POST").load(
 						data_selects_addNew,
 						function(success){
@@ -99,7 +102,7 @@ var click = {
 
 								$('.new-select-science-theme').attr('id', index_theme_select_addNew+i_)
 								.removeClass('new-select-science-theme')
-								.find('select.selectpicker').attr('name', index_theme_select_addNew+i_);
+								.find('select.selectpicker').attr('name', index_theme_select_addNew+i_+'[]');
 
 								addPostPage.selected(
 									['#'+index_select_addNew+i_], 
@@ -107,19 +110,20 @@ var click = {
 								);
 								$('select.selectpicker').selectpicker();
 							}else{
-								$('.bootstrap-select > button' ,last_empty_select)
+								$(last_empty_select)
 								.attr({"data-toggle": "tooltip", "data-placement": "right", "title": success.error})
 								.tooltip('show');
 
 								$(document).click(function(){
-									$('.bootstrap-select > button' ,last_empty_select).tooltip('destroy');
-									$('select.selectpicker').selectpicker();
+									$(last_empty_select).tooltip('destroy');
+									// $('select.selectpicker').selectpicker();
 								});
 							}
 						}
 					);
 				},500);
 				break
+				return false
 			}
 		}
 	},
@@ -163,6 +167,19 @@ focusOut = {
 	InputGroupRemoveFOCUS: function(obj){
 		app.developer('init', 'focusOut.InputGroupRemoveFOCUS()', 'Удаление класса focus.');
 		$(obj).parents('.input-group.gray-label').removeClass('focus');
+	},
+	AddPostPageGoogleMap(obj) {
+		var value_obj = $(obj).val();
+		if(value_obj !== '' && value_obj.length > 5){
+			app.developer('init', 'focusOut.AddPostPageGoogleMap()', 'Вызов инициализации карты гугл по адресу.');
+			
+			var country = $('#country select.selectpicker').val(),
+				city = $('#city select.selectpicker').val(),
+				value = country + ', ' + city + ', ' + value_obj;
+			
+			googleMap.codeAddress('map', value);
+			console.log(value);
+		}
 	}
 },
 
@@ -180,7 +197,9 @@ select_science = {
 			// ajax url
 			ss_post_data = { flow: ss_val_scince } ,
 			select_science_AJAX_URL = '/ajax'+ window.location.pathname + '/directions_list';
+			select_science_AJAX_URL = select_science_AJAX_URL.replace('//', '/');
 
+		app.developer('AJAX', 'select_science.init()', 'url - ' + select_science_AJAX_URL + '.');
 		jAjax.set("URL", select_science_AJAX_URL).set("dataType", "json").set("type", "POST").load(
 			ss_post_data,
 			function(success){
@@ -194,12 +213,18 @@ select_science = {
 					$.each(success.hubs, function(key, value) {
 						ss_select_themes.append('<option value="'+key+'" data-tokens="'+value+'">'+value+'</option>');
 					});
-					ss_select_themes.removeAttr('disabled').selectpicker('refresh');
+					ss_select_themes.removeAttr('disabled').selectpicker({ iconBase: 'sceinceIcon', }).selectpicker('refresh');
 				}
 				// ---------------------------------------
 			}
 		);
 	}
-}
+},
 // +++++++++++++++++++ *SELECT SCIENCE > THEME FUNCTIONS END* ++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+AddPageSectionTypeLoad = {
+	init: function(parent){
+		$('section.section-hide').hide('slow');
+		$('section.section-hide.' + $(parent + ' select.selectpicker').val()).show('slow');
+	}
+}

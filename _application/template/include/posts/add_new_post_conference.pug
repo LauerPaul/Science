@@ -51,10 +51,10 @@ section
 								option(value="moldova") Молдова
 						.input-group.select-parent#city
 							select.selectpicker.form-control(title="Выберите город", name="city")
-								option(value="ukraine" selected) Киев
-								option(value="moldova") Простоквашино
+								option(value="kiev" selected) Киев
+								option(value="pr") Простоквашино
 						.input-group
-							input.form-control#address(type="text", placeholder="Укажите адрес")
+							input.form-control#address(type="text", placeholder="Укажите адрес", data-action-focusout="AddPostPageGoogleMap")
 						#map
 
 			.clearfix

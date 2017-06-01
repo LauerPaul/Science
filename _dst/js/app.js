@@ -19,7 +19,7 @@ var app = {
 
 		// Checkbox styling
 		app.developer('init', 'app.init()', 'Инициализация плагина iCheck для стилизации checkbox.');
-		$('input[type="checkbox"]').iCheck();
+		$('input[type="checkbox"], input[type="radio"]').iCheck();
 
 		// Bootstrap select
 		if($('.selectpicker').length > 0){
@@ -53,6 +53,25 @@ var app = {
 				}else{
 					
 					app.developer('!!! ERROR !!!', 'app.data()', 'Событие $("' + $(this)[0].parentElement.localName + '.' + parentElementClassName + ' ' + $(this)[0].localName + '.' + thisClassName + '").click() не инициализировано - функция click.' + $(this).attr("data-action-click") + '() не найдена.');
+				}
+			});
+		}
+		// Focusout init
+		if($(document).find('[data-action-focusout]').length > 0){
+			app.developer('init', 'app.data()', 'Инициализация data-action-focusout.');
+			var data_action_focusout = $('[data-action-focusout]');
+
+			$('[data-action-focusout]').focusout(function(){
+				var parentElementClassName = ($(this)[0].parentElement.className).replace(' ', '.'),
+					thisClassName = ($(this)[0].className).replace(' ', '.');
+
+				app.developer('focusout', 'app.data()', 'объект - $("' + $(this)[0].parentElement.localName + '.' + parentElementClassName + ' ' + $(this)[0].localName + '.' + thisClassName + '").');
+				app.developer('init', 'focusout.'+$(this).attr('data-action-focusout')+'()', 'Запуск из события focusout - $("' + $(this)[0].parentElement.localName + '.' + parentElementClassName + ' ' + $(this)[0].localName + '.' + thisClassName + '").focusout().');
+				if (typeof(eval('focusOut.' + $(this).attr('data-action-focusout'))) !== 'undefined') {
+					eval('focusOut.' + $(this).attr('data-action-focusout') + '($(this))');
+				}else{
+					
+					app.developer('!!! ERROR !!!', 'app.data()', 'Событие $("' + $(this)[0].parentElement.localName + '.' + parentElementClassName + ' ' + $(this)[0].localName + '.' + thisClassName + '").focusout() не инициализировано - функция focusout.' + $(this).attr("data-action-click") + '() не найдена.');
 				}
 			});
 		}
@@ -147,12 +166,26 @@ var app = {
 addPostPage = {
 	init: function(){
 		app.developer('init', 'addPostPage.init()', 'Инициализация скрипта.');
-		editor.init('.text-reader');
+		var url_save = window.location.pathname + '/upload_file/ajax/';
+			url_save = url_save.replace('//', '/'),
+			parent_types = '#addPostType';
+		editor.init('.text-reader', url_save);
+		AddPageSectionTypeLoad.init(parent_types);
+		app.developer('value', 'addPostPage.init()', ' url_save = ' + url_save + '.');
 
 		var data_autocomplete = ['Статья', 'Научная статья', 'ученые', 'наука', 'тест']; // Autocomplete array
 		app.focus('#tags-input input[type="text"]', 'tagInputFocusClass');
-		addPostPage.selected( ['#science-1'], ['#science-theme-1'] );
+		addPostPage.selected( ['#science-1'], ['#hubs-1'] );
 		autocomplete.init('#tags-input input[type="text"]', data_autocomplete, 2, '#tags-input');
+
+		if($('#addPostType').length > 0){
+			$(document).on('changed.bs.select', parent_types+' .bootstrap-select', function(e){
+				app.developer('Change', 'addPostPage.init() - changed.bs.select', 'Выбор типа публикации.');
+				setTimeout(function(){
+					AddPageSectionTypeLoad.init(parent_types);
+				},500);
+			});
+		}
 	},
 	selected: function(selectors = [], selector_themes = []){
 		app.developer('init', 'addPostPage.selected()', 'Инициализация зависимости выпадающих меню.');

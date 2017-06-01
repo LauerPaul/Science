@@ -65,7 +65,8 @@ calendar_events = {
 // +++++++++++++++++++++++ TINYMCE EDITOR FUNCTION INIT ++++++++++++++++++++++++++++
 editor = { 
 	init: function(
-				selector, 
+				selector,
+				url_save,
 				height = 325, 
 				toolbar = 'bold italic underline | alignleft aligncenter alignright alignjustify | undo redo | link image ',
 				css,
@@ -79,9 +80,12 @@ editor = {
 			plugins: [plugins],
 			toolbar: toolbar,
 			image_dimensions: false,
+			relative_urls : false,
+			remove_script_host : false,
+			convert_urls : false,
 
 			file_picker_types: 'image',
-			images_upload_url: '/postAcceptor.php',
+			images_upload_url: url_save,
 			automatic_uploads: true,
 			file_picker_callback: function(callback, value, meta) {
 				
@@ -92,6 +96,7 @@ editor = {
 						var reader = new FileReader();
 
 						console.log(file);
+						console.log();
 						
 						// callback(file.name, {alt: file.type});
 
@@ -167,18 +172,21 @@ taginputs = {
 		var dp_local = $(obj).attr('datepicker-local') == '' || $(obj).attr('datepicker-local') == undefined ? 'en' : $(obj).attr('datepicker-local');
 			format = $(obj).attr('datepicker-format') == '' || $(obj).attr('datepicker-format') == undefined ? "d MM yy" : $(obj).attr('datepicker-format'),
 			value = $(obj).attr('datepicker-value') == '' || $(obj).attr('datepicker-value') == undefined ? false : $(obj).attr('datepicker-value');
+		console.log(value);
+		if(value !== '' && value !== undefined && value){
+			value_result = value.split('.');
+			value = new Date(value_result[1]+'.'+value_result[0]+'.'+value_result[2]);
+		}
+
 		$(obj).datepicker({
 			regional: dp_local,
 			dateFormat: format,
 			showOtherMonths: true,
 			selectOtherMonths: true,
-			minDate: "+ 1m",
+			// minDate: "+ 1m",
 		});
 		if(value){ 
-			value = value.split(',');
-			value[1] = parseInt(value[1]) + 12;
-			value = value.join(',')
-			$(obj).datepicker("setDate", new Date(value));
+			$(obj).datepicker("setDate", value);
 		}
 	},
 	show: function(obj){
@@ -198,12 +206,29 @@ datetimepicker = {
 	init: function(obj){
 		app.developer('init', 'datetimepicker.init()', 'Инициализация jQueray Date and time piker.');
 		var dp_local = $(obj).attr('datetimepicker-local') == '' || $(obj).attr('datetimepicker-local') == undefined ? 'en' : $(obj).attr('datetimepicker-local'),
-			format = $(obj).attr('datetimepicker-format') == '' || $(obj).attr('datetimepicker-format') == undefined ? 'yyyy M dd в hh:ii' : $(obj).attr('datetimepicker-format');
+			format = $(obj).attr('datetimepicker-format') == '' || $(obj).attr('datetimepicker-format') == undefined ? 'yyyy M dd в hh:ii' : $(obj).attr('datetimepicker-format'),
+			value = $(obj).val(),
+			initDate = value == '' || value == undefined ? '' : new Date(value);
+			
+			if(initDate !== ''){
+				value = value.split('-');
+				month = $.fn.datetimepicker.dates[dp_local]['monthsShort'][parseInt(value[1])];
+				var result_value = '';
+				for (var i = 0; i < value.length; i++) {
+					result_value += i !== 0 ? ' ' : '';
+					result_value += i !== 1 ? (i == 2 ? value[i].replace(' ', ' в ') : value[i]) : month;
+				}
+				$(obj).val(result_value);
+			}
+
+		$.fn.datetimepicker.dates;
 		$(obj).datetimepicker({
+			initialDate: initDate,
 			format: format,
 			autoclose: true,
 			startDate: null,
 			DaysOfWeekDisabled: [0,6],
+			language: dp_local,
 		}
 		);
 	},
@@ -213,6 +238,7 @@ datetimepicker = {
 },
 googleMap = {
 	init(obj, uluru) {
+		app.developer('init', 'googleMap.init()', 'Инициализация GoogleMap.');
         var	id = $(obj).attr('id');
 
         var map = new google.maps.Map(document.getElementById(id), {
@@ -225,6 +251,7 @@ googleMap = {
         });
     },
     codeAddress: function(id, value){
+		app.developer('init', 'googleMap.codeAddress()', 'Инициализация GoogleMap по адресу.');
     	var map,
     		geocoder = new google.maps.Geocoder(),
     		address = value;

@@ -1,0 +1,115 @@
+.users-list-wrapper {
+    background: #ffffff;
+    padding: 30px;
+    
+    .search-line {
+    	margin-top: 30px;
+    	
+    	.input-group {
+    		width: 100%;
+    	}
+    }
+
+    .users-list-wrapper-header {
+    	margin-top: 30px;
+		border-bottom: 1px solid #EFEFEF;
+		padding-bottom: 10px;
+	
+    	.name, .action {
+    		display: inline-block;
+    		color: #BABABA;
+    	}
+    }
+
+    .users-list-wrapper-body{
+		.user-item {
+			margin-top: 30px;
+			
+			.user-photo-wrapper {
+				display: inline-block;
+				width: 42px;
+				height: 42px;
+				overflow: hidden;
+				@include border-radius(50%);
+				margin-right: 20px;
+				float: left;
+				
+				img {
+					width: 100%;
+				}
+			}
+			
+			.user-name {
+				margin-bottom: 10px;
+			}
+
+			.user-name, .user-name a {
+				font-family: 'Rubik-Medium';
+				line-height: 16px;
+				font-size: 16px;
+				margin: 0px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				color: $gray-dark;
+			}
+
+			.user-work {
+				margin-top: 10px;	
+			}
+
+			.user-work,
+			.user-statistic {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-size: 13px;
+			}
+
+			.user-wrap {
+				width: 495px;
+				float: left;
+				display: inline-block;	
+			}
+
+			.user-statistic {
+				@extend .link-gray;
+				margin-top: 26px;
+				display: inline-block;
+			}
+		}
+
+		.column-left {
+			width: 690px;
+			float: left;
+		}
+		.column-right {
+			width: 90px;
+			float: right;
+			
+			.add-btn {
+				width: 24px;
+				height: 24px;
+				cursor: pointer;
+				padding: 0px;
+				margin-top: 10px;
+				
+				> span {
+					line-height: 24px;
+				}
+			}
+
+			.more-wrapper {
+				margin-top: 20px;
+				
+				.dropdown-menu {
+					min-width: 200px;
+				}
+			}
+		}
+    }
+}
+.container.users {
+	padding-bottom: 30px;
+	.widgets-panel {
+		margin-top: 70px;
+	}
+}

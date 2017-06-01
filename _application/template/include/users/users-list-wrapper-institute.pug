@@ -1,0 +1,50 @@
+// USERS WRAPPER
+.users-list-wrapper
+	.search-line
+		.row
+			.col-md-8
+				.input-group
+					input.search-user.form-control(type="text", placeholder="Поиск по имени, фамилии или отчеству")
+			.col-md-4
+				button.btn.btn-default.pull-right
+					i.icon-plus
+					|Добавить сотрудника
+	.users-list-wrapper-header
+		.row
+			.col-md-10
+				.name Имя
+			.col-md-2
+				.action.pull-right Действие
+	.users-list-wrapper-body
+
+		-for (var i = 0; i < 6; i++) {
+		.user-item
+			.column-left
+				a(href="#").user-photo-wrapper
+					img(src="images/test-content/user.png", alt="")
+				.user-wrap
+					.user-name
+						a(href="#") Васильев Иван Анатольевич
+					.user-work
+						span.gray-mini-description Работает в
+						a.line-link(href="#")
+							span Институт информационніх технологий им. А. Васильковского
+				a(href="#").user-statistic.line-link
+					span 20.5k подписчиков
+			.column-right
+				.more-wrapper
+					button.clear.more.pull-right.dropdown-toggle(data-toggle="dropdown")
+					.clearfix
+					ul.dropdown-menu.white.pull-right
+						li
+							span.line
+								a(href="#") Редактировать профиль
+						li
+							span.line
+								a(href="#") Редактировать права
+						li
+							span.line
+								a.red(href="#") Исключить из инстиута
+			.clearfix
+		-}
+// *USERS WRAPPER END*

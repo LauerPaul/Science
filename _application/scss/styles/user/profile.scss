@@ -1,0 +1,41 @@
+.container.profile-edit {
+	margin-top: 30px;
+}
+
+.wrapper-edit-form {
+	display: block;
+	padding: 30px 30px 30px;
+	margin: 0 auto;
+	background: #ffffff;
+	
+	section {
+		border-bottom: 1px solid #efefef;
+		margin: 0px -30px;
+		display: block;
+		padding: 30px 30px 15px;
+	}
+
+	.inputs-title {
+	    font-family: 'Rubik-Medium';
+	    margin: 0px;
+	    padding: 0px;
+	    font-size: 16px;
+	    margin-bottom: 15px;
+	}
+
+	.input-group {
+		width: 100%;
+	}
+
+	.sex-group {
+	    display: block;
+		padding-top: 9px;
+		padding-bottom: 8px;
+		
+		.input-group {
+			width: auto;
+			display: inline-block;
+			margin-right: 15px;
+		}
+	}
+}
