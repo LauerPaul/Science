@@ -129,14 +129,14 @@
                 <!-- MENU TABS -->
                 <div class="users-menu-tabs">
                   <ul class="list-inline">
-                    <li class="active"><span>Личные данные</span></li>
+                    <li><a href="#">Личные данные</a></li>
                     <li><a href="#">Аватар и обложка</a></li>
                     <li><a href="#">Подписки</a></li>
-                    <li><a href="#">Настройка уведомлений</a></li>
+                    <li class="active"><span>Настройка уведомлений</span></li>
                   </ul>
                 </div>
                 <!-- *MENU TABS END* -->
-        <!-- USER PERSONAL EDIT-->
+        <!-- USER NOTIFI EDIT-->
         <form class="wrapper-edit-form" action="">
           <!-- SECTION -->
           <section>
@@ -144,67 +144,59 @@
               <!-- COLUMN-->
               <div class="col-md-6">
                 <!-- TITLE GROUP-->
-                <h4 class="inputs-title">Вход в аккаунт</h4>
+                <h4 class="inputs-title">Получать уведомления</h4>
                 <!-- *TITLE GROUP* -->
-                <!-- USER LOGIN -->
-                <div class="input-group gray-label left"><span class="input-group-addon left"><i class="user-icon"></i></span>
-                  <input class="form-control" type="text" name="login" placeholder="Логин"/>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" value="1" name="news"/>Новости сайта
+                  </label>
                 </div>
-                <!-- *USER LOGIN END* -->
-                <!-- USER E-MAIL -->
-                <div class="input-group gray-label left"><span class="input-group-addon left"><i class="mail-icon"></i></span>
-                  <input class="form-control" type="email" name="mail" placeholder="E-mail"/>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" value="1" name="capabilities"/>О новых возможностях на сайте
+                  </label>
                 </div>
-                <!-- *USER E-MAIL END* -->
-                <!-- USER PASSWORD -->
-                <div class="input-group gray-label left right"><span class="input-group-addon left"><i class="pass-icon"></i></span>
-                  <input class="form-control" type="password" name="password" placeholder="Пароль"/><span class="input-group-addon right"><a class="line-link"><span>Изменить</span></a></span>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" value="1" name="messages"/>О новых сообщениях
+                  </label>
                 </div>
-                <!-- *USER PASSWORD END* -->
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" value="1" name="comments"/>О новых ответах на мои комментарии
+                  </label>
+                </div>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" value="1" name="me_in_public"/>При упоминании меня в публикациях
+                  </label>
+                </div>
+                <div class="input-group">
+                  <label>
+                    <input type="checkbox" value="1" name="new_sub"/>При добавлени нового подписчика
+                  </label>
+                </div>
               </div>
               <!-- *COLUMN END* -->
               <!-- COLUMN-->
               <div class="col-md-6">
                 <!-- TITLE GROUP-->
-                <h4 class="inputs-title">Персональные данные</h4>
+                <h4 class="inputs-title">Настройки</h4>
                 <!-- *TITLE GROUP* -->
-                <!-- FULL NAME -->
                 <div class="input-group">
-                  <input class="form-control" type="text" name="full_name" placeholder="Фамилия, имя, отчество"/>
+                  <label>
+                    <input type="checkbox" value="1" name="notifi_in_mail"/>Отправлять уведомления на почту
+                  </label>
                 </div>
-                <!-- *FULL NAME END* -->
-                <!-- SEX RADIO--><span class="sex-group">
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="man" name="sex"/>Мужчина
-                    </label>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="woman" name="sex"/>Женщина
-                    </label>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="vaguely" name="sex"/>Не указывать
-                    </label>
-                  </div></span>
-                <!-- *SEX RADIO END* -->
-                <!-- BIRTHDAY -->
-                <div class="input-group gray-label left"><span class="input-group-addon left">Дата рождения: </span>
-                  <input class="form-control datepicker" type="text" placeholder="ДД.ММ.ГГГГ" data-js-init="datepicker" datepicker-local="ru" datepicker-value="" datepicker-format="dd.mm.yy" name="birthday"/>
-                </div>
-                <!-- *BIRTHDAY END* -->
-                <!-- ADDRESS -->
                 <div class="input-group">
-                  <input class="form-control" type="text" name="address" placeholder="Ваш адрес"/>
+                  <input class="form-control" type="email"/>
                 </div>
-                <!-- *ADDRESS* -->
-                <!-- TELEPHONE -->
-                <div class="input-group gray-label left"><span class="input-group-addon left">Контактный телефон </span>
-                  <input class="form-control" type="text" name="telephone" placeholder="(063) 500-00-00"/>
+                <div class="input-group">
+                  <select class="form-control selectpicker" title="Как часто присылать уведомления?">
+                    <option value="1"> 1</option>
+                    <option value="2"> 2</option>
+                  </select>
                 </div>
-                <!-- *TELEPHONE* -->
               </div>
               <!-- *COLUMN END* -->
             </div>
@@ -213,7 +205,7 @@
           </section>
           <!-- *SECTION END* -->
         </form>
-        <!-- *USER PERSONAL EDIT END* -->
+        <!-- *USER NOTIFI EDIT END* -->
       </div>
       <div class="right-column">
         <div class="widgets-panel"></div>

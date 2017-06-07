@@ -13,6 +13,11 @@
 		margin: 0px -30px;
 		display: block;
 		padding: 30px 30px 15px;
+		
+		&:last-child {
+			border-bottom: 0px;
+			padding-bottom: 0px;
+		}
 	}
 
 	.inputs-title {
@@ -38,4 +43,53 @@
 			margin-right: 15px;
 		}
 	}
+
+	.wrapper-avatar {
+		width: 82px;
+		height: 82px;
+		@include border-radius(50%);
+		border: 1px dashed #bababa;
+		margin-right: 15px;
+	    padding: 20px 0;
+
+		
+		> i {
+			color: #c0c0c0;
+			font-size: 32px;
+		}
+	}
+	.file-loader-wrapper {
+		margin-top: 15px;
+		
+		> .gray-mini-description {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
+	}
+	.user-avatar {
+		margin-top: 5px;
+	}
+
+	.children {
+		margin-top: 15px;
+		margin-left: 10px;
+		border-left: 1px solid #E8E8E8;
+		padding-left: 25px;
+		
+		.row:last-child {
+			.input-group {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	.grayChecked {
+		> .icheckbox {
+			ins {
+		    	background: url(../../images/icons/check_black.png) no-repeat center !important;
+		    	transition: all 0.1s;
+		    	opacity: 0.4 !important;
+		    }
+		}
+	}
 }
+

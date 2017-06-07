@@ -1,0 +1,72 @@
+.companies-wrapper {
+	
+	.institute-photo-wrapper {
+		float: left;
+		display: inline-block;
+		margin-right: 20px;
+		width: 42px;
+		
+		img {
+			width: 100%;
+		}
+
+	}
+	.institute-list-wrapper-body {
+		.institute-item {
+			margin-top: 30px;
+		}
+
+		.column-left {
+			float: left;
+			width: 600px;
+		}
+
+		.institute-wrap {
+		    float: left;
+    		display: inline-block;
+   		    width: calc(100% - 62px);
+    
+			.institute-name,
+			.institute-name a{
+				font-family: 'Rubik-Medium';
+				line-height: 16px;
+				font-size: 16px;
+				margin: 0px;
+				color: #4e4e4e;
+				overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+			}
+
+			.institute-descript {
+				margin-top: 10px;
+				font-size: 13px;
+				
+				> span {
+					display: inline-block;
+					margin-right: 30px;
+					
+					&:last-child {
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+
+		.column-right {
+			.add-btn {
+				width: 24px;
+				height: 24px;
+				cursor: pointer;
+				padding: 0px;
+				margin-top: 10px;
+				
+				> span {
+				    line-height: 24px;
+				}
+			}
+		}
+	}
+}

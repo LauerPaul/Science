@@ -1,0 +1,47 @@
+// USERS WRAPPER
+.users-list-wrapper.companies-wrapper
+	.search-line
+		.row
+			.col-md-8
+				.input-group
+					input.search-user.form-control(type="text", placeholder="Поиск по имени, фамилии или отчеству")
+			.col-md-4
+				button.btn.btn-default.pull-right
+					i.icon-plus
+					|Добавить институт
+	.users-list-wrapper-header
+		.row
+			.col-md-10
+				.name Название
+			.col-md-2
+				.action.pull-right Действие
+	.institute-list-wrapper-body
+		-for (var i = 0; i < 6; i++) {
+			.institute-item
+				.column-left
+					a(href="#").institute-photo-wrapper
+						img(src="images/test-content/institute.jpg", alt="")
+					.institute-wrap
+						.institute-name
+							a(href="#") ИИПТ (Институт Импульсных Процессов и Технологий)
+						.institute-descript
+							span.science
+								a.line-link
+									span Химия, 
+								a.line-link
+									span Биология
+							span.abonement
+								a.line-link.link-gray
+									span 20.5k подписчиков
+							span.personal
+								a.line-link.link-gray
+									span 561 сотрудник
+
+				.column-right
+					a.add-btn.btn.btn-default.pull-right
+						span.icon-plus
+					a.add-btn.btn.btn-primary.pull-right.margin-right-mini
+						span.fa.fa-phone
+				.clearfix
+			-}
+// *USERS WRAPPER END*

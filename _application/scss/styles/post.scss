@@ -97,6 +97,8 @@
 				margin-bottom: -11px;
 				margin-right: 7px;
 				border-radius: 50%;
+				border: 1px solid #dedede;
+				background: white;
 			}
 			.post-authtor-name,
 			.post-institute-name {
@@ -105,6 +107,13 @@
 			}
 			.post-for {
 				font-family: 'Rubik-Light';
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 418px;
+				display: inline-block;
+				position: relative;
+				top: 5px;
 			}
 		}
 	}
@@ -183,7 +192,7 @@
     margin-top: 30px;
     
     .post-information {
-		max-width: 70%;
+		max-width: 65%;
 		float: left;
    	
 		.post-authtor-photo,
@@ -197,6 +206,8 @@
 			float: left;
 			margin-right: 15px;
 			text-align: center;
+			border: 1px solid #dedede;
+			background: white;
 			
 			img {
 				width: 100%;

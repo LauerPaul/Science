@@ -69,7 +69,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-image2 {
+  &:before {
+    content: $icon-image2;
+  }
+}
 .icon-box {
   &:before {
     content: $icon-box;
@@ -90,7 +94,16 @@
     content: $icon-plus;
   }
 }
-
+.icon-image {
+  &:before {
+    content: $icon-image;
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user;
+  }
+}
 
 
 

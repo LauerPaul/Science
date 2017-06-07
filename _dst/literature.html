@@ -121,99 +121,135 @@
       </div>
     </nav>
   </header>
-  <div class="container profile-edit">
-    <h3 class="title-page">Настройки профиля</h3>
-    <!-- USER WRAPPER-->
+  <div class="container users">
+        <!-- breadcrumbs-->
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#"><span>Главная</span></a><a class="breadcrumb-item" href="#"><span>База знаний</span></a><span class="breadcrumb-item active">Литература</span>
+        </nav>
+        <!-- *breadcrumbs end*-->
+    <div class="clearfix"></div>
+    <h3 class="title-page">Литература</h3>
+    <!-- Litearture WRAPPER-->
     <div class="publications-wrapper clearfix">
       <div class="left-column">
                 <!-- MENU TABS -->
                 <div class="users-menu-tabs">
                   <ul class="list-inline">
-                    <li class="active"><span>Личные данные</span></li>
-                    <li><a href="#">Аватар и обложка</a></li>
-                    <li><a href="#">Подписки</a></li>
-                    <li><a href="#">Настройка уведомлений</a></li>
+                    <li class="active"><span>Научные труды</span></li>
+                    <li><a href="#">Авторы</a></li>
                   </ul>
                 </div>
                 <!-- *MENU TABS END* -->
-        <!-- USER PERSONAL EDIT-->
-        <form class="wrapper-edit-form" action="">
-          <!-- SECTION -->
-          <section>
+        <div class="literature-wrapper">
+          <!-- LETTER FILTER -->
+          <div class="letter-filter-wrapper">
+            <ul class="list-inline">
+              <li><a class="line-link"><span>а</span></a></li>
+              <li><a class="line-link"><span>б</span></a></li>
+              <li><a class="line-link"><span>в</span></a></li>
+              <li><a class="line-link"><span>г</span></a></li>
+              <li><a class="line-link"><span>д</span></a></li>
+              <li>е</li>
+              <li><a class="line-link"><span>ё</span></a></li>
+              <li><a class="line-link"><span>ж</span></a></li>
+              <li><a class="line-link"><span>з</span></a></li>
+              <li><a class="line-link"><span>и</span></a></li>
+              <li><a class="line-link"><span>й</span></a></li>
+              <li><a class="line-link"><span>к</span></a></li>
+              <li><a class="line-link"><span>л</span></a></li>
+              <li><a class="line-link"><span>м</span></a></li>
+              <li><a class="line-link"><span>н</span></a></li>
+              <li><a class="line-link"><span>о</span></a></li>
+              <li><a class="line-link"><span>п</span></a></li>
+              <li><a class="line-link"><span>р</span></a></li>
+              <li><a class="line-link"><span>с</span></a></li>
+              <li><a class="line-link"><span>т</span></a></li>
+              <li><a class="line-link"><span>у</span></a></li>
+              <li><a class="line-link"><span>ф</span></a></li>
+              <li><a class="line-link"><span>х</span></a></li>
+              <li><a class="line-link"><span>ц</span></a></li>
+              <li><a class="line-link"><span>ч</span></a></li>
+              <li><a class="line-link"><span>ш</span></a></li>
+              <li><a class="line-link"><span>щ</span></a></li>
+              <li><a class="line-link"><span>э</span></a></li>
+              <li><a class="line-link"><span>ю</span></a></li>
+              <li><a class="line-link"><span>я</span></a></li>
+            </ul>
+          </div>
+          <!-- *LETTER FILTER END* -->
+          <!-- FILTERS LITERATURE -->
+          <div class="filres-literature-wrapper">
             <div class="row">
-              <!-- COLUMN-->
-              <div class="col-md-6">
-                <!-- TITLE GROUP-->
-                <h4 class="inputs-title">Вход в аккаунт</h4>
-                <!-- *TITLE GROUP* -->
-                <!-- USER LOGIN -->
-                <div class="input-group gray-label left"><span class="input-group-addon left"><i class="user-icon"></i></span>
-                  <input class="form-control" type="text" name="login" placeholder="Логин"/>
-                </div>
-                <!-- *USER LOGIN END* -->
-                <!-- USER E-MAIL -->
-                <div class="input-group gray-label left"><span class="input-group-addon left"><i class="mail-icon"></i></span>
-                  <input class="form-control" type="email" name="mail" placeholder="E-mail"/>
-                </div>
-                <!-- *USER E-MAIL END* -->
-                <!-- USER PASSWORD -->
-                <div class="input-group gray-label left right"><span class="input-group-addon left"><i class="pass-icon"></i></span>
-                  <input class="form-control" type="password" name="password" placeholder="Пароль"/><span class="input-group-addon right"><a class="line-link"><span>Изменить</span></a></span>
-                </div>
-                <!-- *USER PASSWORD END* -->
-              </div>
-              <!-- *COLUMN END* -->
-              <!-- COLUMN-->
-              <div class="col-md-6">
-                <!-- TITLE GROUP-->
-                <h4 class="inputs-title">Персональные данные</h4>
-                <!-- *TITLE GROUP* -->
-                <!-- FULL NAME -->
+              <div class="col-md-5">
                 <div class="input-group">
-                  <input class="form-control" type="text" name="full_name" placeholder="Фамилия, имя, отчество"/>
+                  <input class="form-control" type="text" name="search-book" placeholder="Поиск книги или автора"/>
                 </div>
-                <!-- *FULL NAME END* -->
-                <!-- SEX RADIO--><span class="sex-group">
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="man" name="sex"/>Мужчина
-                    </label>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="woman" name="sex"/>Женщина
-                    </label>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="vaguely" name="sex"/>Не указывать
-                    </label>
-                  </div></span>
-                <!-- *SEX RADIO END* -->
-                <!-- BIRTHDAY -->
-                <div class="input-group gray-label left"><span class="input-group-addon left">Дата рождения: </span>
-                  <input class="form-control datepicker" type="text" placeholder="ДД.ММ.ГГГГ" data-js-init="datepicker" datepicker-local="ru" datepicker-value="" datepicker-format="dd.mm.yy" name="birthday"/>
-                </div>
-                <!-- *BIRTHDAY END* -->
-                <!-- ADDRESS -->
-                <div class="input-group">
-                  <input class="form-control" type="text" name="address" placeholder="Ваш адрес"/>
-                </div>
-                <!-- *ADDRESS* -->
-                <!-- TELEPHONE -->
-                <div class="input-group gray-label left"><span class="input-group-addon left">Контактный телефон </span>
-                  <input class="form-control" type="text" name="telephone" placeholder="(063) 500-00-00"/>
-                </div>
-                <!-- *TELEPHONE* -->
               </div>
-              <!-- *COLUMN END* -->
+              <div class="col-md-4 no-padding">
+                <select class="form-control selectpicker" title="Выберите науку">
+                  <option value="1"> Физика</option>
+                  <option value="2"> Ботаника</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-control selectpicker" title="Выберите тип">
+                  <option value="1"> 1</option>
+                  <option value="2"> 2</option>
+                </select>
+              </div>
             </div>
-            <button class="btn btn-default margin-right">Сохранить изменения</button>
-            <button class="btn btn-primary" type="button" onclick="window.location.reload()">Не сохранять</button>
+          </div>
+          <!-- *FILTERS LITERATURE END* -->
+          <!-- Literature list wrapper-->
+          <section class="item-literature"><a class="photo-literature"><img src="images/test-content/book.jpg" alt=""/></a>
+            <div class="literature-information"><a class="title-literature" href="#">
+                <h4>Кроличья нора или Что мы знаем о себе и Вселенной (новое оформление)</h4></a>
+              <div class="authors-literature"><a class="line-link" href="#"><span>Вовченко А.И., </span></a><a class="line-link" href="#"><span>Шамко В.В., </span></a><a class="line-link" href="#"><span>Петриченко В.Н.</span></a></div><a class="descript-literature line-link link-gray"><span>Научные основы ЭГЭ и использование его в машиностроении и металлообработке</span></a>
+              <div class="bottom-line-literature"><span class="country">г. Николаев, Украина</span><span class="year">1973 год</span><span class="pages">ст. 23-26</span><span class="issn">xxxxx-xxx</span></div>
+            </div>
+            <div class="clearfix"></div>
           </section>
-          <!-- *SECTION END* -->
-        </form>
-        <!-- *USER PERSONAL EDIT END* -->
+          <section class="item-literature"><a class="photo-literature"><img src="images/test-content/book.jpg" alt=""/></a>
+            <div class="literature-information"><a class="title-literature" href="#">
+                <h4>Кроличья нора или Что мы знаем о себе и Вселенной (новое оформление)</h4></a>
+              <div class="authors-literature"><a class="line-link" href="#"><span>Вовченко А.И., </span></a><a class="line-link" href="#"><span>Шамко В.В., </span></a><a class="line-link" href="#"><span>Петриченко В.Н.</span></a></div><a class="descript-literature line-link link-gray"><span>Научные основы ЭГЭ и использование его в машиностроении и металлообработке</span></a>
+              <div class="bottom-line-literature"><span class="country">г. Николаев, Украина</span><span class="year">1973 год</span><span class="pages">ст. 23-26</span><span class="issn">xxxxx-xxx</span></div>
+            </div>
+            <div class="clearfix"></div>
+          </section>
+          <section class="item-literature"><a class="photo-literature"><img src="images/test-content/book.jpg" alt=""/></a>
+            <div class="literature-information"><a class="title-literature" href="#">
+                <h4>Кроличья нора или Что мы знаем о себе и Вселенной (новое оформление)</h4></a>
+              <div class="authors-literature"><a class="line-link" href="#"><span>Вовченко А.И., </span></a><a class="line-link" href="#"><span>Шамко В.В., </span></a><a class="line-link" href="#"><span>Петриченко В.Н.</span></a></div><a class="descript-literature line-link link-gray"><span>Научные основы ЭГЭ и использование его в машиностроении и металлообработке</span></a>
+              <div class="bottom-line-literature"><span class="country">г. Николаев, Украина</span><span class="year">1973 год</span><span class="pages">ст. 23-26</span><span class="issn">xxxxx-xxx</span></div>
+            </div>
+            <div class="clearfix"></div>
+          </section>
+          <section class="item-literature"><a class="photo-literature"><img src="images/test-content/book.jpg" alt=""/></a>
+            <div class="literature-information"><a class="title-literature" href="#">
+                <h4>Кроличья нора или Что мы знаем о себе и Вселенной (новое оформление)</h4></a>
+              <div class="authors-literature"><a class="line-link" href="#"><span>Вовченко А.И., </span></a><a class="line-link" href="#"><span>Шамко В.В., </span></a><a class="line-link" href="#"><span>Петриченко В.Н.</span></a></div><a class="descript-literature line-link link-gray"><span>Научные основы ЭГЭ и использование его в машиностроении и металлообработке</span></a>
+              <div class="bottom-line-literature"><span class="country">г. Николаев, Украина</span><span class="year">1973 год</span><span class="pages">ст. 23-26</span><span class="issn">xxxxx-xxx</span></div>
+            </div>
+            <div class="clearfix"></div>
+          </section>
+          <section class="item-literature"><a class="photo-literature"><img src="images/test-content/book.jpg" alt=""/></a>
+            <div class="literature-information"><a class="title-literature" href="#">
+                <h4>Кроличья нора или Что мы знаем о себе и Вселенной (новое оформление)</h4></a>
+              <div class="authors-literature"><a class="line-link" href="#"><span>Вовченко А.И., </span></a><a class="line-link" href="#"><span>Шамко В.В., </span></a><a class="line-link" href="#"><span>Петриченко В.Н.</span></a></div><a class="descript-literature line-link link-gray"><span>Научные основы ЭГЭ и использование его в машиностроении и металлообработке</span></a>
+              <div class="bottom-line-literature"><span class="country">г. Николаев, Украина</span><span class="year">1973 год</span><span class="pages">ст. 23-26</span><span class="issn">xxxxx-xxx</span></div>
+            </div>
+            <div class="clearfix"></div>
+          </section>
+          <section class="item-literature"><a class="photo-literature"><img src="images/test-content/book.jpg" alt=""/></a>
+            <div class="literature-information"><a class="title-literature" href="#">
+                <h4>Кроличья нора или Что мы знаем о себе и Вселенной (новое оформление)</h4></a>
+              <div class="authors-literature"><a class="line-link" href="#"><span>Вовченко А.И., </span></a><a class="line-link" href="#"><span>Шамко В.В., </span></a><a class="line-link" href="#"><span>Петриченко В.Н.</span></a></div><a class="descript-literature line-link link-gray"><span>Научные основы ЭГЭ и использование его в машиностроении и металлообработке</span></a>
+              <div class="bottom-line-literature"><span class="country">г. Николаев, Украина</span><span class="year">1973 год</span><span class="pages">ст. 23-26</span><span class="issn">xxxxx-xxx</span></div>
+            </div>
+            <div class="clearfix"></div>
+          </section>
+          <!-- *Literature list wrapper END*-->
+        </div>
       </div>
       <div class="right-column">
         <div class="widgets-panel"></div>

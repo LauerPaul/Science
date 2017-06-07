@@ -5,27 +5,30 @@ html(lang='ru')
 	.container.users
 		//- Хлебные крошки
 		include include/common/breadcrumbs
-		-var links = ['Главная', 'Участники', 'Ученые'];
+		-var links = ['Главная', 'База знаний', 'Литература'];
 		+breadcrumbs(links)
 		//- Хлебные крошки (конец)
 		.clearfix
 
-		h3.title-page Ученые
+		h3.title-page Литература
 
-		// USERS WRAPPER
+		// Litearture WRAPPER
 		.publications-wrapper.clearfix
 
 			.left-column
 				//- TABS
 				include include/common/menu-tabs
-				-var links = ['Все ученые', 'Новые'];
-				-var active = 'Все ученые';
+				-var links = ['Научные труды', 'Авторы'];
+				-var active = 'Научные труды';
 				+menuTabs(links, active)
 				//- TABS END
-				include include/users/users-list-wrapper
+				.literature-wrapper
+					include include/literature/letter-filter
+					include include/literature/filters-literature
+					
+					include include/literature/literature-list-wrapper
 			.right-column
 				.widgets-panel
-					include include/widget/users-Statistic
 
 	include include/common/footer
 	include include/common/buttom-scripts

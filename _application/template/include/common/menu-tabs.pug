@@ -1,0 +1,14 @@
+mixin menuTabs(tabs, active)
+	// MENU TABS 
+	- var i = 0;
+	.users-menu-tabs
+		ul.list-inline
+			each tab in tabs
+				- if (tab == active){
+					li.active
+						span= tab
+				- }else{
+					li
+						a(href="#")= tab
+				-}
+	// *MENU TABS END* 

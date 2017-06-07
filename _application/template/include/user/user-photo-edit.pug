@@ -1,0 +1,26 @@
+// USER PERSONAL EDIT
+.wrapper-edit-form
+	form(action="").dropzone
+		.row
+			// COLUMN
+			.col-md-12
+				.wrapper-cover-image
+					i.icon-image
+					input(type="file", name="cover", accept="image/jpeg,image/png")
+					h4.inputs-title Добавьте обложку в профиль
+					.gray-mini-description Размер файла не должен быть меньше 1200х227
+					button.btn.btn-primary(type="button", onclick="$('input[name=\"cover\"]').click()") Добавить
+			// *COLUMN END*
+	form(action="")
+		.row
+			// COLUMN
+			.col-md-12.user-avatar
+				.wrapper-avatar.pull-left.text-center(onclick="$('input[name=\"avatar\"]').click()")
+					i.icon-user
+				.file-loader-wrapper.pull-left
+					input(type="file", name="avatar", accept="image/jpeg,image/png").hidden
+					h4.inputs-title Ваша аватарка
+					.gray-mini-description Чтобы другие пользователи могли узнавать Вас
+					button.btn.btn-default(type="button", onclick="$('input[name=\"avatar\"]').click()") Загрузить файл
+			.clearfix
+			// *COLUMN END*

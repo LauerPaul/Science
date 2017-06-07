@@ -1,0 +1,109 @@
+// USER SUB EDIT
+form(action="").wrapper-edit-form
+	// SECTION 
+	section
+		.row
+			// COLUMN
+			.col-md-12
+
+				// TITLE GROUP
+				h4.inputs-title Дерево подписок
+				// *TITLE GROUP* 
+
+				span.sex-group
+					.row
+						.col-md-12
+							.input-group
+								input(type="checkbox", value="1", name="")
+								a.line-link(data-toggle="collapse", data-target="#chemistry")
+									span Химия
+								.children.collapse#chemistry(style="height: 0px;")
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Пункт 1
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Пункт 2
+					.row
+						.col-md-12
+							.input-group
+								input(type="checkbox", value="1", name="")
+								a.line-link(data-toggle="collapse", data-target="#mathematics")
+									span Математика
+								.children.collapse#mathematics(style="height: 0px;")
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Пункт 1
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Пункт 2
+					.row
+						.col-md-12
+							.input-group
+								input(type="checkbox", value="1", name="")
+								a.line-link(data-toggle="collapse", data-target="#bio")
+									span Биология
+								.children.collapse#bio(style="height: 0px;")
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Пункт 1
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Пункт 2
+					.row
+						.col-md-12
+							.input-group
+								input(type="checkbox", value="1", name="")
+								a.line-link(data-toggle="collapse", data-target="#physics")
+									span Физика
+								.children.collapse#physics(style="height: 0px;")
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Физика ядерных ударов
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Физика перемещения во времени
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Физика планеты
+									.row
+										.col-md-12
+											.input-group
+												label
+													input(type="checkbox", value="1", name="", checked)
+													|Межпланетное пространство и время
+		.row(style="margin-top: 30px;")
+			.col-md-12
+				button.btn.btn-default.margin-right Сохранить изменения
+				button.btn.btn-primary(type="button" onclick="window.location.reload()") Не сохранять
+
+	// *SECTION END* 
+
+// *USER SUB EDIT END* 

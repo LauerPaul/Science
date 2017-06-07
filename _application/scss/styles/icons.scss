@@ -37,42 +37,48 @@
 		background-position: right top;
 	}
 }
-.bootstrap-select.btn-group .dropdown-menu li{
-	a[aria-selected="false"] {
-		.sceinceIcon.check-mark {
-			&::before {
-				content: '';
-				width: 11px;
-				display: block;
-				height: 11px;
-				background: url('../../images/icons/check.png') no-repeat center bottom;
-			}
-		}
-	}
-	a[aria-selected="true"], a.select-main {
-		.sceinceIcon.check-mark {
-			&::before {
-				content: '';
-				width: 11px;
-				height: 11px;
-				display: block;
-				background: url('../../images/icons/check.png') no-repeat center top;
-			}
-		}
-	}
-}
 
-.sceinceIcon.glyphicon-ok,
-#types .glyphicon-ok {
+#types .glyphicon.glyphicon-ok {
+	font-family: 'science' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+			
 	display: inline-block;
     margin-right: 5px;
 	
 	&::before {
-		content: '';
-		width: 11px;
-		height: 11px;
-		display: block;
-		background: url('../../images/icons/check.png') no-repeat center top;
+		content: '\e901';
+	}
+}
+.bootstrap-select.btn-group .dropdown-menu li{
+	li{
+		.glyphicon.glyphicon-ok {
+			font-family: 'science' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			
+			&::before {
+				content: '\e900';
+			}			
+		}
+
+		&.selected {
+			&::before {
+				content: '\e901';
+			}	
+		}
 	}
 }
 .icon-favorite {

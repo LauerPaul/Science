@@ -1,0 +1,63 @@
+// USER NOTIFI EDIT
+form(action="").wrapper-edit-form
+	// SECTION 
+	section
+		.row
+			// COLUMN
+			.col-md-6
+				// TITLE GROUP
+				h4.inputs-title Получать уведомления
+				// *TITLE GROUP* 
+
+				.input-group
+					label
+						input(type="checkbox", value="1", name="news")
+						|Новости сайта
+				.input-group
+					label
+						input(type="checkbox", value="1", name="capabilities")
+						|О новых возможностях на сайте
+				.input-group
+					label
+						input(type="checkbox", value="1", name="messages")
+						|О новых сообщениях
+				.input-group
+					label
+						input(type="checkbox", value="1", name="comments")
+						|О новых ответах на мои комментарии
+				.input-group
+					label
+						input(type="checkbox", value="1", name="me_in_public")
+						|При упоминании меня в публикациях
+				.input-group
+					label
+						input(type="checkbox", value="1", name="new_sub")
+						|При добавлени нового подписчика
+			// *COLUMN END* 
+
+			// COLUMN
+			.col-md-6
+				// TITLE GROUP
+				h4.inputs-title Настройки
+				// *TITLE GROUP* 
+
+				.input-group
+					label
+						input(type="checkbox", value="1", name="notifi_in_mail")
+						|Отправлять уведомления на почту
+				.input-group
+					input(type="email").form-control
+				.input-group
+					select.form-control.selectpicker(title="Как часто присылать уведомления?")
+						option(value="1")  1
+						option(value="2")  2
+
+
+			// *COLUMN END* 
+
+		button.btn.btn-default.margin-right Сохранить изменения
+		button.btn.btn-primary(type="button" onclick="window.location.reload()") Не сохранять
+
+	// *SECTION END* 
+
+// *USER NOTIFI EDIT END* 

@@ -289,6 +289,7 @@ section.statistic {
 			width: 160px;
 			margin-right: 20px;
 			display: inline-block;
+			float: left;
 		}
 
 		span.value {
@@ -296,6 +297,8 @@ section.statistic {
 			color: $brand-success;
 			font-family: 'Rubik-Medium';
 			width: calc(100% - 180px);
+			display: inline-block;
+			float: right;
 		}
 	}
 }

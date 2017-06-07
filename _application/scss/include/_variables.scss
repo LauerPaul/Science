@@ -4,13 +4,14 @@ $bootstrap-sass-asset-helper: false !default;
 // --------------------------------------------------
 // SCIENCE FONT
 $icomoon-font-path: "../fonts/" !default;
-
+$icon-image: "\e90d";
+$icon-image2: "\e904";
 $icon-box: "\e900";
 $icon-check-box: "\e901";
 $icon-minus: "\e902";
 $icon-plus: "\e903";
+$icon-user: "\e905";
 //== Colors
-//
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000 !default;

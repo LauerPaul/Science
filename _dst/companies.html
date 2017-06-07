@@ -121,99 +121,112 @@
       </div>
     </nav>
   </header>
-  <div class="container profile-edit">
-    <h3 class="title-page">Настройки профиля</h3>
-    <!-- USER WRAPPER-->
+  <div class="container users">
+        <!-- breadcrumbs-->
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#"><span>Главная</span></a><a class="breadcrumb-item" href="#"><span>Участники</span></a><span class="breadcrumb-item active">Институты</span>
+        </nav>
+        <!-- *breadcrumbs end*-->
+    <div class="clearfix"></div>
+    <h3 class="title-page">Институты</h3>
+    <!-- Litearture WRAPPER-->
     <div class="publications-wrapper clearfix">
       <div class="left-column">
                 <!-- MENU TABS -->
                 <div class="users-menu-tabs">
                   <ul class="list-inline">
-                    <li class="active"><span>Личные данные</span></li>
-                    <li><a href="#">Аватар и обложка</a></li>
-                    <li><a href="#">Подписки</a></li>
-                    <li><a href="#">Настройка уведомлений</a></li>
+                    <li class="active"><span>Все институты</span></li>
+                    <li><a href="#">Новые</a></li>
                   </ul>
                 </div>
                 <!-- *MENU TABS END* -->
-        <!-- USER PERSONAL EDIT-->
-        <form class="wrapper-edit-form" action="">
-          <!-- SECTION -->
-          <section>
+        <!-- USERS WRAPPER-->
+        <div class="users-list-wrapper companies-wrapper">
+          <div class="search-line">
             <div class="row">
-              <!-- COLUMN-->
-              <div class="col-md-6">
-                <!-- TITLE GROUP-->
-                <h4 class="inputs-title">Вход в аккаунт</h4>
-                <!-- *TITLE GROUP* -->
-                <!-- USER LOGIN -->
-                <div class="input-group gray-label left"><span class="input-group-addon left"><i class="user-icon"></i></span>
-                  <input class="form-control" type="text" name="login" placeholder="Логин"/>
-                </div>
-                <!-- *USER LOGIN END* -->
-                <!-- USER E-MAIL -->
-                <div class="input-group gray-label left"><span class="input-group-addon left"><i class="mail-icon"></i></span>
-                  <input class="form-control" type="email" name="mail" placeholder="E-mail"/>
-                </div>
-                <!-- *USER E-MAIL END* -->
-                <!-- USER PASSWORD -->
-                <div class="input-group gray-label left right"><span class="input-group-addon left"><i class="pass-icon"></i></span>
-                  <input class="form-control" type="password" name="password" placeholder="Пароль"/><span class="input-group-addon right"><a class="line-link"><span>Изменить</span></a></span>
-                </div>
-                <!-- *USER PASSWORD END* -->
-              </div>
-              <!-- *COLUMN END* -->
-              <!-- COLUMN-->
-              <div class="col-md-6">
-                <!-- TITLE GROUP-->
-                <h4 class="inputs-title">Персональные данные</h4>
-                <!-- *TITLE GROUP* -->
-                <!-- FULL NAME -->
+              <div class="col-md-8">
                 <div class="input-group">
-                  <input class="form-control" type="text" name="full_name" placeholder="Фамилия, имя, отчество"/>
+                  <input class="search-user form-control" type="text" placeholder="Поиск по имени, фамилии или отчеству"/>
                 </div>
-                <!-- *FULL NAME END* -->
-                <!-- SEX RADIO--><span class="sex-group">
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="man" name="sex"/>Мужчина
-                    </label>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="woman" name="sex"/>Женщина
-                    </label>
-                  </div>
-                  <div class="input-group">
-                    <label>
-                      <input type="radio" value="vaguely" name="sex"/>Не указывать
-                    </label>
-                  </div></span>
-                <!-- *SEX RADIO END* -->
-                <!-- BIRTHDAY -->
-                <div class="input-group gray-label left"><span class="input-group-addon left">Дата рождения: </span>
-                  <input class="form-control datepicker" type="text" placeholder="ДД.ММ.ГГГГ" data-js-init="datepicker" datepicker-local="ru" datepicker-value="" datepicker-format="dd.mm.yy" name="birthday"/>
-                </div>
-                <!-- *BIRTHDAY END* -->
-                <!-- ADDRESS -->
-                <div class="input-group">
-                  <input class="form-control" type="text" name="address" placeholder="Ваш адрес"/>
-                </div>
-                <!-- *ADDRESS* -->
-                <!-- TELEPHONE -->
-                <div class="input-group gray-label left"><span class="input-group-addon left">Контактный телефон </span>
-                  <input class="form-control" type="text" name="telephone" placeholder="(063) 500-00-00"/>
-                </div>
-                <!-- *TELEPHONE* -->
               </div>
-              <!-- *COLUMN END* -->
+              <div class="col-md-4">
+                <button class="btn btn-default pull-right"><i class="icon-plus"></i>Добавить институт</button>
+              </div>
             </div>
-            <button class="btn btn-default margin-right">Сохранить изменения</button>
-            <button class="btn btn-primary" type="button" onclick="window.location.reload()">Не сохранять</button>
-          </section>
-          <!-- *SECTION END* -->
-        </form>
-        <!-- *USER PERSONAL EDIT END* -->
+          </div>
+          <div class="users-list-wrapper-header">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="name">Название</div>
+              </div>
+              <div class="col-md-2">
+                <div class="action pull-right">Действие</div>
+              </div>
+            </div>
+          </div>
+          <div class="institute-list-wrapper-body">
+            <div class="institute-item">
+              <div class="column-left"><a class="institute-photo-wrapper" href="#"><img src="images/test-content/institute.jpg" alt=""/></a>
+                <div class="institute-wrap">
+                  <div class="institute-name"><a href="#">ИИПТ (Институт Импульсных Процессов и Технологий)</a></div>
+                  <div class="institute-descript"><span class="science"><a class="line-link"><span>Химия, </span></a><a class="line-link"><span>Биология</span></a></span><span class="abonement"><a class="line-link link-gray"><span>20.5k подписчиков</span></a></span><span class="personal"><a class="line-link link-gray"><span>561 сотрудник</span></a></span></div>
+                </div>
+              </div>
+              <div class="column-right"><a class="add-btn btn btn-default pull-right"><span class="icon-plus"></span></a><a class="add-btn btn btn-primary pull-right margin-right-mini"><span class="fa fa-phone"></span></a></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="institute-item">
+              <div class="column-left"><a class="institute-photo-wrapper" href="#"><img src="images/test-content/institute.jpg" alt=""/></a>
+                <div class="institute-wrap">
+                  <div class="institute-name"><a href="#">ИИПТ (Институт Импульсных Процессов и Технологий)</a></div>
+                  <div class="institute-descript"><span class="science"><a class="line-link"><span>Химия, </span></a><a class="line-link"><span>Биология</span></a></span><span class="abonement"><a class="line-link link-gray"><span>20.5k подписчиков</span></a></span><span class="personal"><a class="line-link link-gray"><span>561 сотрудник</span></a></span></div>
+                </div>
+              </div>
+              <div class="column-right"><a class="add-btn btn btn-default pull-right"><span class="icon-plus"></span></a><a class="add-btn btn btn-primary pull-right margin-right-mini"><span class="fa fa-phone"></span></a></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="institute-item">
+              <div class="column-left"><a class="institute-photo-wrapper" href="#"><img src="images/test-content/institute.jpg" alt=""/></a>
+                <div class="institute-wrap">
+                  <div class="institute-name"><a href="#">ИИПТ (Институт Импульсных Процессов и Технологий)</a></div>
+                  <div class="institute-descript"><span class="science"><a class="line-link"><span>Химия, </span></a><a class="line-link"><span>Биология</span></a></span><span class="abonement"><a class="line-link link-gray"><span>20.5k подписчиков</span></a></span><span class="personal"><a class="line-link link-gray"><span>561 сотрудник</span></a></span></div>
+                </div>
+              </div>
+              <div class="column-right"><a class="add-btn btn btn-default pull-right"><span class="icon-plus"></span></a><a class="add-btn btn btn-primary pull-right margin-right-mini"><span class="fa fa-phone"></span></a></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="institute-item">
+              <div class="column-left"><a class="institute-photo-wrapper" href="#"><img src="images/test-content/institute.jpg" alt=""/></a>
+                <div class="institute-wrap">
+                  <div class="institute-name"><a href="#">ИИПТ (Институт Импульсных Процессов и Технологий)</a></div>
+                  <div class="institute-descript"><span class="science"><a class="line-link"><span>Химия, </span></a><a class="line-link"><span>Биология</span></a></span><span class="abonement"><a class="line-link link-gray"><span>20.5k подписчиков</span></a></span><span class="personal"><a class="line-link link-gray"><span>561 сотрудник</span></a></span></div>
+                </div>
+              </div>
+              <div class="column-right"><a class="add-btn btn btn-default pull-right"><span class="icon-plus"></span></a><a class="add-btn btn btn-primary pull-right margin-right-mini"><span class="fa fa-phone"></span></a></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="institute-item">
+              <div class="column-left"><a class="institute-photo-wrapper" href="#"><img src="images/test-content/institute.jpg" alt=""/></a>
+                <div class="institute-wrap">
+                  <div class="institute-name"><a href="#">ИИПТ (Институт Импульсных Процессов и Технологий)</a></div>
+                  <div class="institute-descript"><span class="science"><a class="line-link"><span>Химия, </span></a><a class="line-link"><span>Биология</span></a></span><span class="abonement"><a class="line-link link-gray"><span>20.5k подписчиков</span></a></span><span class="personal"><a class="line-link link-gray"><span>561 сотрудник</span></a></span></div>
+                </div>
+              </div>
+              <div class="column-right"><a class="add-btn btn btn-default pull-right"><span class="icon-plus"></span></a><a class="add-btn btn btn-primary pull-right margin-right-mini"><span class="fa fa-phone"></span></a></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="institute-item">
+              <div class="column-left"><a class="institute-photo-wrapper" href="#"><img src="images/test-content/institute.jpg" alt=""/></a>
+                <div class="institute-wrap">
+                  <div class="institute-name"><a href="#">ИИПТ (Институт Импульсных Процессов и Технологий)</a></div>
+                  <div class="institute-descript"><span class="science"><a class="line-link"><span>Химия, </span></a><a class="line-link"><span>Биология</span></a></span><span class="abonement"><a class="line-link link-gray"><span>20.5k подписчиков</span></a></span><span class="personal"><a class="line-link link-gray"><span>561 сотрудник</span></a></span></div>
+                </div>
+              </div>
+              <div class="column-right"><a class="add-btn btn btn-default pull-right"><span class="icon-plus"></span></a><a class="add-btn btn btn-primary pull-right margin-right-mini"><span class="fa fa-phone"></span></a></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!-- *USERS WRAPPER END*-->
       </div>
       <div class="right-column">
         <div class="widgets-panel"></div>

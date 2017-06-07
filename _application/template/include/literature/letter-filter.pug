@@ -1,0 +1,17 @@
+-var array_letter = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'э', 'ю', 'я'];
+
+// LETTER FILTER 
+.letter-filter-wrapper
+	ul.list-inline
+		- var i = 0;
+		each letter in array_letter
+			- i++;
+			-if(i == 6){
+				li= letter
+			-}else{
+				li
+					a.line-link
+						span= letter
+			-}
+		
+// *LETTER FILTER END* 

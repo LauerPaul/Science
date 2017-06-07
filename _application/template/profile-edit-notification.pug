@@ -13,10 +13,10 @@ html(lang='ru')
 				//- TABS
 				include include/common/menu-tabs
 				-var links = ['Личные данные', 'Аватар и обложка', 'Подписки', 'Настройка уведомлений'];
-				-var active = 'Личные данные';
+				-var active = 'Настройка уведомлений';
 				+menuTabs(links, active)
 				//- TABS END
-				include include/user/user-personal-edit
+				include include/user/user-notifi-edit
 			.right-column
 				.widgets-panel
 

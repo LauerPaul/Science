@@ -24,7 +24,7 @@ var app = {
 		// Bootstrap select
 		if($('.selectpicker').length > 0){
 			app.developer('init', 'app.init()', 'Инициализация плагина Bootstrap select для стилизации input select.');
-			$('.selectpicker').selectpicker({ iconBase: 'sceinceIcon', });
+			$('.selectpicker').selectpicker();
 		}
 	},
 	developer: function(action, func, text, log_status = true){
