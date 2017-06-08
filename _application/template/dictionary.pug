@@ -1,0 +1,29 @@
+html(lang='ru')
+	include include/common/head
+	include include/common/header-logged
+
+	.container.users
+		//- Хлебные крошки
+		include include/common/breadcrumbs
+		-var links = ['Главная', 'База знаний', 'Словарь'];
+		+breadcrumbs(links)
+		//- Хлебные крошки (конец)
+		.clearfix
+		
+		h3.title-page В нашем словаре более 2000 терминов
+	
+		.publications-wrapper.clearfix
+			.left-column
+				.dictionary-wrapper
+					include include/literature/letter-filter
+					.input-group.search-line
+						input.form-control(type="text", placeholder="Поиск слова в словаре")
+					include include/dictionary/list
+
+			.right-column
+				a.btn.btn-default.pull-right.add-new-dictionary(href="#") Добавить новый термин
+				.widgets-panel
+					include include/widget/news-widget
+
+	include include/common/footer
+	include include/common/buttom-scripts
