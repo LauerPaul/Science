@@ -1,0 +1,127 @@
+html(lang='ru')
+	include include/common/head
+	include include/common/header-logged
+
+	.container
+		.publications-wrapper.clearfix
+			.post-full-wrapper
+				.left-column
+
+					// NEW COMMENT FORM
+					form(action="", method="").new-comment-wrapper
+						.title Добавьте комментарий, Василий
+
+						.input-group
+							textarea.form-control(name="comment" rows="8", placeholder="Ваше сообщение")
+						button.btn.btn-default Добавить комментарий
+					// *NEW COMMENT FORM*
+
+					// ITEM COMMENT
+					.comments-wrapper
+						.title Комментарии (45)
+						
+						.comment-wrapper
+							.comment-header
+								span.hr
+								span.user-photo
+									img(src="images/test-content/user.png", alt="")
+								a.line-link.user-name
+									span Войченко С.И.
+								span.time-comment.gray-mini-description.
+									Сегодня, в 17:00
+								.pull-right.funcs
+									span.likes +5
+									a(href="#")
+										i.fa.fa-thumbs-o-up
+								.clearfix
+
+							.comment-body
+								p.
+									Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных процессов к дискретным. Узор молодых глазчатых ящериц описывается системой уравнений Тьюринга, в то время как лабиринтообразная окраска взрослых особей строится по принципу дискретной модели клеточного автомата фон Неймана — чешуйки меняют цвет в зависимости от их окружения.
+								a.answer.line-link
+									span Ответить
+						
+							// ANSWER WRAPPER
+							.answer-wrapper
+								// ITEM COMMENT
+								.comment-wrapper
+									.comment-header
+										span.hr
+										// IF ANSWER
+										span.answer-label
+											i.fa-share.fa
+											|Ответил
+										// *IF ANSWER*
+										span.user-photo
+											img(src="images/test-content/user.png", alt="")
+										a.line-link.user-name
+											span Батыр Л.С.
+										span.time-comment.gray-mini-description.
+											Сегодня, 5 минут назад
+										.pull-right.funcs
+											span.likes +15
+											a(href="#")
+												i.fa.fa-thumbs-o-up
+										.clearfix
+
+									.comment-body
+										p.
+											Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных.
+										a.answer.line-link
+											span Ответить
+
+									// ANSWER WRAPPER
+									.answer-wrapper
+										// ITEM COMMENT
+										.comment-wrapper
+											.comment-header
+												span.hr
+												// IF ANSWER
+												span.answer-label
+													i.fa-share.fa
+													|Ответил
+												// *IF ANSWER*
+												span.user-photo
+													img(src="images/test-content/user.png", alt="")
+												a.line-link.user-name
+													span Войченко С.И.
+												span.time-comment.gray-mini-description.
+													2 минуты назад
+												.pull-right.funcs
+													span.likes +1
+													a(href="#")
+														i.fa.fa-thumbs-o-up
+												.clearfix
+
+											.comment-body
+												p.
+													Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных.
+												a.answer.line-link
+													span Ответить
+
+
+						// ITEM COMMENT
+						.comment-wrapper
+							.comment-header
+								span.hr
+								span.user-photo
+									img(src="images/test-content/user.png", alt="")
+								a.line-link.user-name
+									span Войченко С.И.
+								span.time-comment.gray-mini-description.
+									Сегодня, в 17:00
+								.pull-right.funcs
+									// if count likes 0 - add class 'gray'
+									span.likes.gray 0
+									a(href="#")
+										i.fa.fa-thumbs-o-up
+								.clearfix
+
+							.comment-body
+								p.
+									Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных процессов к дискретным. Узор молодых глазчатых ящериц описывается системой уравнений Тьюринга, в то время как лабиринтообразная окраска взрослых особей строится по принципу дискретной модели клеточного автомата фон Неймана — чешуйки меняют цвет в зависимости от их окружения.
+								a.answer.line-link
+									span Ответить
+
+
+.right-column

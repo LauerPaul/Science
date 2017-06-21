@@ -23,7 +23,7 @@
 		float: left;
 		display: inline-block;
 		width: calc(100% - 100px);
-		overflow: hidden;
+		// overflow: hidden;
 	}
 
 	.title-literature,
@@ -55,6 +55,11 @@
 	.authors-literature {
 		margin-top: 10px;
 		font-size: 13px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 90%;
+		clear: both;
 	}
 
 	.descript-literature {
@@ -66,7 +71,7 @@
 		-webkit-box-orient: vertical;
 		margin-top: 10px;
 		display: block;
-		width: 100%;
+		width: 90%;
 	}
 
 	.bottom-line-literature {
@@ -96,5 +101,18 @@
 				margin-right: 0px;
 			}
 		}
+	}
+}
+.literature-wrapper a.title-literature {
+	float: left;
+	width: 83%;
+
+	 h4 {
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	    white-space: normal;
 	}
 }

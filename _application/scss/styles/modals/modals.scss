@@ -11,3 +11,31 @@
 		color: #939393;
 	}
 }
+
+form.auth-form {
+	input[name="lgn"] ~ .tooltip-addon {
+		.tooltip-inner {
+			width: 230px;
+		}
+	}
+	input[name="login"] ~ .tooltip-addon,
+	input[name="email"] ~ .tooltip-addon {
+		.tooltip-inner {
+			width: 200px;
+			text-align: left;
+		}
+	}
+	input[name="passwd"] ~ .tooltip-addon,
+	input[name="pass"] ~ .tooltip-addon {
+		.tooltip-inner {
+			width: 195px;
+			text-align: left;
+		}
+	}
+	input[name="pass2"] ~ .tooltip-addon {
+		.tooltip-inner {
+			width: 240px;
+			text-align: left;
+		}
+	}
+}

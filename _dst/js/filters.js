@@ -1,28 +1,3 @@
-var type_filter_status = false;
-
-var filters = {
-	init: function(){
-		var id_science = $('#science'),
-			id_science_themes = $('#science-theme'),
-			id_type_publication = $('#types');
-
-		if(log_status){
-			console.log('filters refresh by url (_filters.init()_)');
-		}
-
-		if(window.location.pathname !== '' && window.location.pathname !== '/' && id_science.length > 0){
-			var links_url_split = window.location.pathname.split('/'),
-	
-			links_url_split.forEach( function(element, index) {
-				if(element == 'type' || element == 'types'){
-					type_filter_status = true;
-				}
-				return false
-			});
-		}
-	}
-}
-
 // ========================================================================
 // ============================= FILTERS ACTION ====================================
 // =================================================================================
@@ -40,18 +15,18 @@ $(document).on('changed.bs.select', '.select-parent#science .bootstrap-select', 
 		ajax_url = select_.attr('data-url')+val_+'/'+types_select.attr('data-url')+types_filter+'/', // *URL FOR AJAX*
 		wrapper_result = $('.publications-wrapper .result-wrapper'); // Wrapper for html results
 
-	if(log_status){
-		console.log('on change событие - #science filter');
-	}
+	// if(log_status){
+	// 	console.log('on change событие - #science filter');
+	// }
 
 	jAjax.set("URL", ajax_url).set("dataType", "json").set("type", "GET").load(function(success){
-		if(log_status){
-			console.log('Успешный запрос ajax (filter science)');
-			console.log(success);
-		}
+		// if(log_status){
+		// 	console.log('Успешный запрос ajax (filter science)');
+		// 	console.log(success);
+		// }
 		// ------------ *success* ----------------
 		if($.trim(success.response_html) == 'Collection is empty' || success.response_html == ''){
-			if(log_status){ console.log(success.response_html);}
+			// if(log_status){ console.log(success.response_html);}
 			themes_select.html('');
 			$('#science-themes select.selectpicker').attr('disabled', 'disabled').selectpicker('refresh');
 		}else{
@@ -61,8 +36,8 @@ $(document).on('changed.bs.select', '.select-parent#science .bootstrap-select', 
 			});
 			$('#science-themes select.selectpicker').removeAttr('disabled').selectpicker('refresh');
 		}
-		application.print_result(wrapper_result, success.response_html);
-		application.setLocation(ajax_url);
+		app.print_result(wrapper_result, success.response_html);
+		app.setLocation(ajax_url);
 		// ---------------------------------------
 	});
 });
@@ -79,19 +54,19 @@ $(document).on('changed.bs.select', '.select-parent#science-themes .bootstrap-se
 		ajax_url = select_.attr('data-url')+val_+'/'+types_select.attr('data-url')+types_filter+'/', // *URL FOR AJAX*
 		wrapper_result = $('.publications-wrapper .result-wrapper'); // Wrapper for html results
 
-		if(log_status){
-			console.log('on change событие - #science-themes filter');
-			console.log(ajax_url);
-		}
+		// if(log_status){
+		// 	console.log('on change событие - #science-themes filter');
+		// 	console.log(ajax_url);
+		// }
 
 		jAjax.set("URL", ajax_url).set("dataType", "json").set("type", "GET").load(function(success){
-			if(log_status){
-				console.log('Успешный запрос ajax (filter science-themes)');
-				console.log(success);
-			}
+			// if(log_status){
+			// 	console.log('Успешный запрос ajax (filter science-themes)');
+			// 	console.log(success);
+			// }
 			// ------------ *success* ----------------
-			application.print_result(wrapper_result, success.response_html);
-			application.setLocation(ajax_url);
+			app.print_result(wrapper_result, success.response_html);
+			app.setLocation(ajax_url);
 			// ---------------------------------------
 		});
 });
@@ -111,9 +86,9 @@ $(document).on('changed.bs.select', '.select-parent#types .bootstrap-select', fu
 		science_themes_filter = themes_select.val(),// Science Themes filter value
 		wrapper_result = $('.publications-wrapper .result-wrapper'); // Wrapper for html results
 
-		if(log_status){
-			console.log('on change событие - #types filter');
-		}
+		// if(log_status){
+		// 	console.log('on change событие - #types filter');
+		// }
 
 	if($(select.children('option')[0]).prop('selected')){
 		$(select.children('option')[0]).prop('selected', false);
@@ -130,18 +105,18 @@ $(document).on('changed.bs.select', '.select-parent#types .bootstrap-select', fu
 		// ------------ *URL FOR AJAQ REQUEST* ----------------
 		ajax_url = science_themes_filter !== '' ? themes_select.attr('data-url')+science_themes_filter+'/'+select.attr('data-url')+val_+'/' : (science_filter !== '' ? science_select.attr('data-url')+science_filter+'/'+select.attr('data-url')+val_+'/' : select.attr('data-single-url')+select.attr('data-url')+val_+'/');
 		// ----------------------------------------------------
-		if(log_status){
-			console.log(ajax_url);
-		}
+		// if(log_status){
+		// 	console.log(ajax_url);
+		// }
 	
 	jAjax.set("URL", ajax_url).set("dataType", "json").set("type", "GET").load(function(success){
-		if(log_status){
-			console.log('Успешный запрос ajax (filter types)');
-			console.log(success);
-		}
+		// if(log_status){
+		// 	console.log('Успешный запрос ajax (filter types)');
+		// 	console.log(success);
+		// }
 		// ------------ *success* ----------------
-		application.print_result(wrapper_result, success.response_html);
-		application.setLocation(ajax_url);
+		app.print_result(wrapper_result, success.response_html);
+		app.setLocation(ajax_url);
 		// ---------------------------------------
 	});
 });
@@ -150,9 +125,9 @@ $(document).on('show.bs.select', '.select-parent#types .bootstrap-select', funct
 	var parent = $('.select-parent#types'), // parent block
 		select = $('select.selectpicker', parent); // $('select')
 
-		if(log_status){
-			console.log('on show событие - #types filter');
-		}
+		// if(log_status){
+		// 	console.log('on show событие - #types filter');
+		// }
 
 	if($(select.children('option')[0]).prop('selected')){
 		$('.dropdown-menu li a', parent).addClass('select-main');
@@ -166,3 +141,102 @@ $(document).on('show.bs.select', '.select-parent#types .bootstrap-select', funct
 // =================================================================================
 // ========================== *FILTERS ACTION END* =================================
 // =================================================================================
+var filters = {
+	init: function(){
+		var id_science = $('#science'),
+			id_science_themes = $('#science-theme'),
+			id_type_publication = $('#types');
+
+		// if(log_status){
+		// 	console.log('filters refresh by url (_filters.init()_)');
+		// }
+
+		if(window.location.pathname !== '' && window.location.pathname !== '/' && id_science.length > 0){
+			var links_url_split = window.location.pathname.split('/'),
+				array_filters = {flows: false, hub: false, type: false},
+				tmp_array;
+			
+			links_url_split.forEach( function(element, index) {
+				if(element == 'flows' || element == 'hub' || element == 'type' || element == 'types'){
+					tmp_array = (links_url_split[index + 1]).split(',');
+					if(element == 'flows'){
+						array_filters.flows = tmp_array;
+					}else if(element == 'hub'){
+						array_filters.hub = tmp_array;
+					}else if(element == 'type' || element == 'types'){
+						array_filters.type = tmp_array;
+					}
+				}
+			});
+			filters.refresh(array_filters);
+		}
+	},
+	refresh: function(array_filters){
+		var parent_s_types = $('.select-parent#types'),
+			parent_s_themes = $('.select-parent#sciencet-hemes'),
+			parent_s_science = $('.select-parent#science'),
+			select_,
+			aj_url;
+
+		// if(array_filters.flows){
+		// 	select_ = $('select.selectpicker', parent_s_science);
+
+		// 	if(log_status){
+		// 		console.log('Поиск выбранного элемента фильтрации в science');
+		// 	}
+
+		// 	array_filters.flows.forEach( function(element) {
+		// 		if(select_.find('option[value="'+element+'"]')){
+
+		// 			if(log_status){
+		// 				console.log('Выбранный элемент фильтрации в science найден!');
+		// 			}
+
+		// 			$('option', select_).removeAttr('selected');
+		// 			select_.find('option[value="'+element+'"]').attr('selected', 'selected');
+		// 			select_.selectpicker('refresh');
+		// 			console.log(window.location.pathname);
+
+		// 			aj_url = select_.attr('data-url')+element;
+		// 			console.log(aj_url);
+
+		// 			jAjax.set("URL", aj_url).set("dataType", "json").set("type", "GET").load(function(success){
+		// 				if(log_status){
+		// 					console.log('Успешный запрос ajax (filter science)');
+		// 					console.log(success);
+		// 				}
+		// 				// ------------ *success* ----------------
+		// 				select_.html('');
+		// 				$.each(success.hubs, function(key, value) {
+		// 					$('select.selectpicker', select_).append(
+		// 						'<option value="'+key+'" data-tokens="'+value+'">'+value+'</option>'
+		// 					);
+		// 				});
+		// 				$('#science-themes select.selectpicker').removeAttr('disabled').selectpicker('refresh');
+		// 				if(log_status){
+		// 					console.log('Список тем загружен в фильтр science-themes');
+		// 				}
+		// 				// ---------------------------------------
+		// 			});
+		// 			return false
+		// 		}
+		// 	});
+		// }
+		if(array_filters.hub){
+			select_ = $('select.selectpicker', parent_s_themes);
+
+			// if(log_status){
+			// 	console.log('Поиск выбранного элемента фильтрации в science-themes');
+			// }
+
+			select_.removeAttr('disabled').selectpicker('refresh');
+		}
+		if(array_filters.type){
+			select_ = $('select.selectpicker', parent_s_types);
+
+			if(array_filters.type.length == 1 && array_filters.type[0] == 'all'){
+				console.log('test');
+			}
+		}
+	}
+}

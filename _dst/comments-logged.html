@@ -1,0 +1,204 @@
+
+<html lang="ru">
+  <head>
+    <!-- /+++++++++++++++++++++ META +++++++++++++++++++++/-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="language" content="RU"/>
+    <!-- For Social Share-->
+    <!-- post link-->
+    <meta property="og:url" content="http://science.mysweetheart.link/post"/>
+    <!-- post title-->
+    <meta property="og:title" content="Институт информационніх технологий им. А. Васильковского"/>
+    <!-- post image-->
+    <meta property="og:image" content="http://science.mysweetheart.link/themes/default/images/test-content/news_1.jpg"/>
+    <!-- post description-->
+    <meta property="og:description" content="Test description"/>
+    <title>Science</title>
+    <!-- /+++++++++++++++++++++ STYLES +++++++++++++++++++++/-->
+    <!--bootstrap-select.min.css-->
+    <link rel="stylesheet" href="styles/css/_lib/bootstrap-select.min.css"/>
+    <!--font-awesome css-->
+    <link rel="stylesheet" href="styles/css/_lib/font-awesome.min.css"/>
+    <!--ui css-->
+    <link rel="stylesheet" href="styles/css/_lib/jquery-ui.css"/>
+    <!--bootstrap-tagsinput.css-->
+    <link rel="stylesheet" href="styles/css/_lib/bootstrap-tagsinput.css"/>
+    <!-- dropzone-->
+    <link rel="stylesheet" href="styles/css/_lib/dropzone.css"/>
+    <!--default styles-->
+    <link rel="stylesheet" href="styles/css/science.css"/>
+    <!-- /++++++++++++++++++* STYLES END *++++++++++++++++++/-->
+    <!-- /+++++++++++++++++++++ SCRIPT Jquery +++++++++++++++++++++/-->
+    <script src="js/_lib/jquery-3.1.1.min.js"></script>
+    <script src="js/_lib/jquery-ui.min.js"></script>
+    <!-- /++++++++++++++++++* SCRIPT Jquery END *++++++++++++++++++/-->
+  </head>
+  <!-- ************** HEADER ************** -->
+  <header>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#"><img src="images/logo/logo_science.png"/></a></div>
+        <div id="navbar">
+          <div class="nav navbar-nav navbar-right user-block">
+            <!-- PROFILE -->
+            <div class="profile">
+              <div class="user-wrapp">
+                <div class="user-icon"><img src="images/test-content/profile-photo.png" alt="user-name"/></div>
+                <div class="user-nick-name"><a href="#"> <span>alexander999</span></a></div>
+              </div>
+              <div class="profile-action-buttons"><a class="dropdown-toggle events" href="#" data-toggle="dropdown"></a>
+                <ul class="dropdown-menu">
+                  <li><span><a href="#"> <span>Настройки профиля</span></a></span></li>
+                  <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Создать запись">+</a><a href="#"> <span>Мой блог</span></a></span></li>
+                  <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">+</a><a href="#"> <span>Институт ИИПТ</span></a></span></li>
+                  <li><span><a href="#"> <span>Личные сообщения</span></a></span></li>
+                  <li><span><a href="#"> <span>Мое избранное</span></a></span></li>
+                  <li><span><a href="#"> <span>Подписка ленты</span></a></span></li>
+                </ul><span class="relative"><a class="dropdown-toggle settings" href="#" data-toggle="dropdown"></a>
+                  <ul class="dropdown-menu">
+                    <li><span><a href="#"> <span>Настройки профиля</span></a></span></li>
+                    <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Создать запись">+</a><a href="#"> <span>Мой блог</span></a></span></li>
+                    <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">+</a><a href="#"> <span>Институт ИИПТ</span></a></span></li>
+                    <li><span><a href="#"> <span>Личные сообщения</span></a></span></li>
+                    <li><span><a href="#"> <span>Мое избранное</span></a></span></li>
+                    <li><span><a href="#"> <span>Подписка ленты</span></a></span></li>
+                  </ul></span>
+              </div>
+            </div>
+          </div>
+          <div class="search-section nav navbar-nav navbar-right header-section-search">
+            <!-- SEARCH -->
+            <button class="header-button-search" type="button"></button>
+            <div class="searsh-wrapper">
+              <div class="input-group">
+                <input class="form-control" id="search" type="text" placeholder="Поиск..."/>
+                <div class="input-group-btn">
+                  <button class="btn close-serch" type="button">x</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- EVENT RIBBON -->
+          <ul class="nav navbar-nav navbar-right header-menu">
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Публикации</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Новости</span></a></li>
+                <li><a href="#"> <span>События</span></a></li>
+                <li><a href="#"> <span>Статьи</span></a></li>
+                <li class="all-records"><a href="#"> <span>Все записи</span></a></li>
+              </ul>
+            </li>
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Участники</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Институты</span></a></li>
+                <li><a href="#"> <span>Компании</span></a></li>
+                <li><a href="#"> <span>Ученые</span></a></li>
+              </ul>
+            </li>
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>Коммерция</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Технологии</span></a></li>
+                <li><a href="#"> <span>Услуги</span></a></li>
+                <li><a href="#"> <span>Тендеры</span></a></li>
+              </ul>
+            </li>
+            <!-- ITEM MENU -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span>База знаний</span><i class="dropdown-arrow"></i></a>
+              <!-- SUB MENU -->
+              <ul class="dropdown-menu">
+                <li><a href="#"> <span>Литература</span></a></li>
+                <li><a href="#"> <span>Словарь</span></a></li>
+                <li><a href="#"> <span>Исследования</span></a></li>
+                <li class="all-records"><a href="#"> <span>Все записи</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right event-ribbon">
+            <li><a href="#"> <span>Лента записей
+                  <div class="count">22</div></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="publications-wrapper clearfix">
+      <div class="post-full-wrapper">
+        <div class="left-column">
+          <!-- NEW COMMENT FORM-->
+          <form class="new-comment-wrapper" action="" method="">
+            <div class="title">Добавьте комментарий, Василий</div>
+            <div class="input-group">
+              <textarea class="form-control" name="comment" rows="8" placeholder="Ваше сообщение"></textarea>
+            </div>
+            <button class="btn btn-default">Добавить комментарий</button>
+          </form>
+          <!-- *NEW COMMENT FORM*-->
+          <!-- ITEM COMMENT-->
+          <div class="comments-wrapper">
+            <div class="title">Комментарии (45)</div>
+            <div class="comment-wrapper">
+              <div class="comment-header"><span class="hr"></span><span class="user-photo"><img src="images/test-content/user.png" alt=""/></span><a class="line-link user-name"><span>Войченко С.И.</span></a><span class="time-comment gray-mini-description">Сегодня, в 17:00</span>
+                <div class="pull-right funcs"><span class="likes">+5</span><a href="#"><i class="fa fa-thumbs-o-up"></i></a></div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="comment-body">
+                <p>Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных процессов к дискретным. Узор молодых глазчатых ящериц описывается системой уравнений Тьюринга, в то время как лабиринтообразная окраска взрослых особей строится по принципу дискретной модели клеточного автомата фон Неймана — чешуйки меняют цвет в зависимости от их окружения.</p><a class="answer line-link"><span>Ответить</span></a>
+              </div>
+              <!-- ANSWER WRAPPER-->
+              <div class="answer-wrapper">
+                <!-- ITEM COMMENT-->
+                <div class="comment-wrapper">
+                  <div class="comment-header"><span class="hr"></span>
+                    <!-- IF ANSWER--><span class="answer-label"><i class="fa-share fa"></i>Ответил</span>
+                    <!-- *IF ANSWER*--><span class="user-photo"><img src="images/test-content/user.png" alt=""/></span><a class="line-link user-name"><span>Батыр Л.С.</span></a><span class="time-comment gray-mini-description">Сегодня, 5 минут назад</span>
+                    <div class="pull-right funcs"><span class="likes">+15</span><a href="#"><i class="fa fa-thumbs-o-up"></i></a></div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="comment-body">
+                    <p>Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных.</p><a class="answer line-link"><span>Ответить</span></a>
+                  </div>
+                  <!-- ANSWER WRAPPER-->
+                  <div class="answer-wrapper">
+                    <!-- ITEM COMMENT-->
+                    <div class="comment-wrapper">
+                      <div class="comment-header"><span class="hr"></span>
+                        <!-- IF ANSWER--><span class="answer-label"><i class="fa-share fa"></i>Ответил</span>
+                        <!-- *IF ANSWER*--><span class="user-photo"><img src="images/test-content/user.png" alt=""/></span><a class="line-link user-name"><span>Войченко С.И.</span></a><span class="time-comment gray-mini-description">2 минуты назад</span>
+                        <div class="pull-right funcs"><span class="likes">+1</span><a href="#"><i class="fa fa-thumbs-o-up"></i></a></div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="comment-body">
+                        <p>Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных.</p><a class="answer line-link"><span>Ответить</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM COMMENT-->
+            <div class="comment-wrapper">
+              <div class="comment-header"><span class="hr"></span><span class="user-photo"><img src="images/test-content/user.png" alt=""/></span><a class="line-link user-name"><span>Войченко С.И.</span></a><span class="time-comment gray-mini-description">Сегодня, в 17:00</span>
+                <div class="pull-right funcs">
+                  <!-- if count likes 0 - add class 'gray'--><span class="likes gray">0</span><a href="#"><i class="fa fa-thumbs-o-up"></i></a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="comment-body">
+                <p>Швейцарские ученые в сотрудничестве с исследователями из СПбГУ и Сколково обнаружили в природе редкий пример перехода от непрерывных процессов к дискретным. Узор молодых глазчатых ящериц описывается системой уравнений Тьюринга, в то время как лабиринтообразная окраска взрослых особей строится по принципу дискретной модели клеточного автомата фон Неймана — чешуйки меняют цвет в зависимости от их окружения.</p><a class="answer line-link"><span>Ответить</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
+<div class="right-column"></div>

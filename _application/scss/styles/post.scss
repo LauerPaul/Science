@@ -99,6 +99,14 @@
 				border-radius: 50%;
 				border: 1px solid #dedede;
 				background: white;
+				
+				img {
+					height: 100%;
+					position: absolute;
+					left: -50%;
+					right: -50%;
+					margin: auto;
+				}
 			}
 			.post-authtor-name,
 			.post-institute-name {
@@ -166,6 +174,9 @@
 				}
 			}
 		}
+		.descript-authors {
+			margin-bottom: 30px;
+		}
 		.hubs {
 			margin-top: 15px;
 			
@@ -210,7 +221,17 @@
 			background: white;
 			
 			img {
-				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: -50%;
+				right: -50%;
+				top: 0;
+				margin: auto;
+			}
+
+			&.big {
+				width: 80px;
+				height: 80px;
 			}
 		}
 		.post-institute-photo {
@@ -221,6 +242,11 @@
     	min-height: 42px;
     	float: left;
 	    width: calc(100% - 57px);
+	    
+	    &.big {
+		    width: calc(100% - 95px);
+		    padding-top: 10px;
+	    }
     	
     	.post-authtor-name,
     	.post-institute-name {
@@ -230,6 +256,10 @@
     		margin-bottom: 10px;
    		    margin-top: -5px;
     		
+	   		&.big {
+    			font-size: 23px;
+    		}
+
     		a {
 	    		color: $gray-dark;
     		}

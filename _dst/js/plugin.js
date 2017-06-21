@@ -68,10 +68,14 @@ editor = {
 				selector,
 				url_save,
 				height = 325, 
-				toolbar = 'bold italic underline | alignleft aligncenter alignright alignjustify | undo redo | link image ',
+				toolbar = 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | fullpage | link image |',
 				css,
 				menubar = false,
-				plugins = 'image imagetools'
+				plugins = [
+					      'advlist link image imagetools lists preview anchor',
+					      'searchreplace visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+					      'save table contextmenu directionality emoticons template paste textcolor'
+					    ]
 			){
 		tinymce.init({
 			selector: selector,

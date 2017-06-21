@@ -107,5 +107,64 @@
 
 
 
+
+
+#types {
+  .glyphicon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'science' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    margin-right: 5px;
+    line-height: 0px;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .glyphicon-ok {
+    &:before {
+      content: $icon-check-box;
+    }
+  }
+}
+li {
+  .glyphicon-ok.glyphicon,
+  .glyphicon-ok.sceinceIcon {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'science' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      margin-right: 5px;
+      line-height: 0px;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      
+
+      &:before {
+        content: $icon-box;
+      }
+  }
+
+  &.selected {
+    .glyphicon-ok.glyphicon,
+    .glyphicon-ok.sceinceIcon {
+      &:before {
+        content: $icon-check-box;
+      }
+    }
+  }
+}
+
 /* ------------------------------------ */
 /* ------------*FONTS END*------------- */

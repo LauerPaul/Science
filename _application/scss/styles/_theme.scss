@@ -7,6 +7,11 @@
 * {
 	outline: none !important;
 }
+
+.body-science {
+	margin-top: 50px;	
+}
+
 h1, h2, h3, h4 {
     font-family: 'Rubik-Medium';
 }
@@ -59,6 +64,33 @@ input {
 		padding-top: 8px;
 	}
 }
+.input-group {
+	&.error {
+		
+		margin-top: 30px;
+		.form-control {
+			border-color: #e04f5f;
+		}
+		.error-text {
+		    position: absolute;
+		    bottom: calc(100%);
+		    font-size: 11px;
+		    color: white;
+		    background: #e04f5f;
+		    width: calc(100% + 3px);
+		    left: -4px;
+		    padding: 1px 10px;
+		}
+
+	}
+
+	&.success {
+		.form-control {
+			border-color: #69c93e;
+			color: #69c93e;
+		}
+	}
+}
 .input-group.whit-info {
 	.form-control {
 		padding-right: 40px;
@@ -106,6 +138,17 @@ span.input-group-addon.tooltip-addon {
     position: relative;
     left: 0px;
     margin-top: 3px;
+    display: inline-block;
+    float: left;
+    height: 12px;
+    line-height: 12px;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    display: inline-block;
+    float: right;
+	width: calc(100% - 25px);
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .btn-group.open .dropdown-toggle {
 	box-shadow: none;
@@ -409,11 +452,11 @@ label {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.dropzone {
-	border: none;
-	min-height: auto;
-	padding: 0px;
-	background: transparent;
+.dropzone-science, .dropzone {
+	border: none !important;
+	min-height: auto !important;
+	padding: 0px !important;
+	background: transparent !important;
 	
 	.dz-message, .dz-message * {
 	    // display: none;
@@ -421,14 +464,14 @@ label {
 	}
 
 	.dz-preview {
-	    margin-left: 0px;
+	    margin-left: 0px !important;
 	}
 
 	&.dz-drag-hover {
-		border: none;
+		border: none !important;
 		
 		.wrapper-cover-image {
-			border-style: solid;
+			border-style: solid !important;
 		}
 	}
 }
@@ -478,6 +521,9 @@ label {
 		color: #ffffff;
 	}
 }
+
+
+
 
 
 

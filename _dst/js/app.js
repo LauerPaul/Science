@@ -1,6 +1,6 @@
 $(document).ready(function(){app.init()});
 
-
+var dropzone;
 // APP JS
 var app = {
 	init: function(){
@@ -25,6 +25,20 @@ var app = {
 		if($('.selectpicker').length > 0){
 			app.developer('init', 'app.init()', 'Инициализация плагина Bootstrap select для стилизации input select.');
 			$('.selectpicker').selectpicker();
+		}
+
+		if($('.dropzone-science').length > 0){
+			app.developer('init', 'app.init()', 'Инициализация плагина Dropzone - photo uploader.');
+			// var name = $('.dropzone-science').attr('data-input-name');
+			dropzone = $('.dropzone-science').dropzone({
+				maxFiles: 1,
+				thumbnailMethod: 'contain',
+				parallelUploads: 1,
+				// paramName: name,
+				success: function(data){
+					window.location.reload();
+				}
+			});
 		}
 	},
 	developer: function(action, func, text, log_status = true){

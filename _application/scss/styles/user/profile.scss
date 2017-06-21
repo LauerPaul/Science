@@ -51,11 +51,22 @@
 		border: 1px dashed #bababa;
 		margin-right: 15px;
 	    padding: 20px 0;
-
+		overflow: hidden;
+		position: relative;
 		
 		> i {
 			color: #c0c0c0;
 			font-size: 32px;
+		}
+
+		> img {
+			height: 80px;
+			position: absolute;
+			left: -50%;
+			right: -50%;
+			margin: auto;
+			top: -50%;
+			bottom: -50%;
 		}
 	}
 	.file-loader-wrapper {
@@ -93,3 +104,7 @@
 	}
 }
 
+.dropzone-science .dz-preview.dz-image-preview img {
+    width: calc(100% + 70px);
+    margin: -35px;
+}

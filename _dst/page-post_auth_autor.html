@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="styles/css/_lib/jquery-ui.css"/>
     <!--bootstrap-tagsinput.css-->
     <link rel="stylesheet" href="styles/css/_lib/bootstrap-tagsinput.css"/>
-    <!--bootstrap-datetimepicker.min.css-->
-    <link rel="stylesheet" href="styles/css/_lib/bootstrap-datetimepicker.min.css"/>
     <!-- dropzone-->
     <link rel="stylesheet" href="styles/css/_lib/dropzone.css"/>
     <!--default styles-->
@@ -49,7 +47,15 @@
                 <div class="user-icon"><img src="images/test-content/profile-photo.png" alt="user-name"/></div>
                 <div class="user-nick-name"><a href="#"> <span>alexander999</span></a></div>
               </div>
-              <div class="profile-action-buttons"><a class="events" href="#"></a><span class="relative"><a class="dropdown-toggle settings" href="#" data-toggle="dropdown"></a>
+              <div class="profile-action-buttons"><a class="dropdown-toggle events" href="#" data-toggle="dropdown"></a>
+                <ul class="dropdown-menu">
+                  <li><span><a href="#"> <span>Настройки профиля</span></a></span></li>
+                  <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Создать запись">+</a><a href="#"> <span>Мой блог</span></a></span></li>
+                  <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">+</a><a href="#"> <span>Институт ИИПТ</span></a></span></li>
+                  <li><span><a href="#"> <span>Личные сообщения</span></a></span></li>
+                  <li><span><a href="#"> <span>Мое избранное</span></a></span></li>
+                  <li><span><a href="#"> <span>Подписка ленты</span></a></span></li>
+                </ul><span class="relative"><a class="dropdown-toggle settings" href="#" data-toggle="dropdown"></a>
                   <ul class="dropdown-menu">
                     <li><span><a href="#"> <span>Настройки профиля</span></a></span></li>
                     <li><span><a class="plus" href="#" data-toggle="tooltip" data-placement="left" title="Создать запись">+</a><a href="#"> <span>Мой блог</span></a></span></li>
@@ -57,7 +63,8 @@
                     <li><span><a href="#"> <span>Личные сообщения</span></a></span></li>
                     <li><span><a href="#"> <span>Мое избранное</span></a></span></li>
                     <li><span><a href="#"> <span>Подписка ленты</span></a></span></li>
-                  </ul></span></div>
+                  </ul></span>
+              </div>
             </div>
           </div>
           <div class="search-section nav navbar-nav navbar-right header-section-search">
@@ -126,6 +133,7 @@
         <nav class="breadcrumb"><a class="breadcrumb-item" href="#"><span>Главная</span></a><a class="breadcrumb-item" href="#"><span>Участники</span></a><a class="breadcrumb-item" href="#"><span>Институты</span></a><span class="breadcrumb-item active">ИИПТ (Институт Импульсных Процессов и Технологий)</span>
         </nav>
         <!-- *breadcrumbs end*-->
+    <!-- PUBLICATIONS WRAPPER-->
     <div class="publications-wrapper clearfix">
       <div class="post-full-wrapper">
         <!-- Section About author-->
@@ -211,7 +219,7 @@
                 </div>
                 <div class="col-md-12">
                   <div class="hubs"><span class="line-title">Наука</span><a class="line-link" href="#"><span>Химия</span></a><span>,</span><a class="line-link" href="#"><span>Биология</span></a><span>,</span><a class="line-link" href="#"><span>Химия</span></a><span>,</span><a class="line-link" href="#"><span>Математика</span></a></div>
-                  <div class="hubs"><span class="line-title">Тема публикации</span><a class="line-link" href="#"><span>Биологические особенности ящериц и других видов животных</span></a></div>
+                  <div class="hubs"><span class="line-title">Направления</span><a class="line-link" href="#"><span>Биологические особенности ящериц и других видов животных</span></a></div>
                   <div class="tags"><a class="line-link"><span>#publication</span></a><a class="line-link"><span>#nationalgeographic</span></a><a class="line-link"><span>#окрасящерицы</span></a><a class="line-link"><span>#фоннейман</span></a></div>
                 </div>
               </div>
@@ -378,6 +386,5 @@
   <script src="js/actions.js"></script>
   <script src="js/plugin.js"></script>
   <script src="js/app.js"></script>
-  <script asyncб="asyncб" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9ybSWVLpaUvAqYhS1282Y6NLZVz4J9Q"></script>
   <!-- /++++++++++++++++++* SCRIPTS END *++++++++++++++++++++/-->
 </html>
