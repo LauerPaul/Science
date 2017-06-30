@@ -90,6 +90,13 @@ input {
 			color: #69c93e;
 		}
 	}
+
+	.inputs-title-group {
+		font-size: 14px;
+		color: #939393;
+		margin-top: 15px;
+	    margin-bottom: 5px;
+	}
 }
 .input-group.whit-info {
 	.form-control {
@@ -122,6 +129,16 @@ span.input-group-addon.tooltip-addon {
 			border-color: #dedede;
 			color: #939393;
 		}
+	}
+}
+
+.day-select {
+	width: 105px;
+	display: inline-block;
+	
+	.bootstrap-select.btn-group .dropdown-menu li a span.text {
+		width: auto !important;
+		float: none !important;
 	}
 }
 

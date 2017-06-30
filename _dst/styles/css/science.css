@@ -6464,6 +6464,12 @@ input {
   border-color: #69c93e;
   color: #69c93e; }
 
+.input-group .inputs-title-group {
+  font-size: 14px;
+  color: #939393;
+  margin-top: 15px;
+  margin-bottom: 5px; }
+
 .input-group.whit-info .form-control {
   padding-right: 40px; }
 
@@ -6482,6 +6488,13 @@ span.input-group-addon.tooltip-addon {
   .line-link.link-gray:hover > span, .input-group.gray-label .line-link.input-group-addon:hover > span, .users-list-wrapper .users-list-wrapper-body .user-item .line-link.user-statistic:hover > span {
     border-color: #dedede;
     color: #939393; }
+
+.day-select {
+  width: 105px;
+  display: inline-block; }
+  .day-select .bootstrap-select.btn-group .dropdown-menu li a span.text {
+    width: auto !important;
+    float: none !important; }
 
 /* BOOTSTRAP SELECT */
 .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
@@ -7560,6 +7573,9 @@ a.opt.all_list .glyphicon.glyphicon-ok.check-mark {
 .bootstrap-select.btn-group .dropdown-menu li a.opt {
   padding-left: 20px; }
 
+.add-button-widget {
+  padding-top: 15px; }
+
 /* ------------------------------------ */
 /* ------ *filters styles end* -------- */
 /* ------------------------------------ */
@@ -8528,9 +8544,16 @@ section.statistic p {
       -ms-border-radius: 50%;
       border-radius: 50%;
       margin-right: 20px;
-      float: left; }
+      float: left;
+      position: relative; }
       .users-list-wrapper .users-list-wrapper-body .user-item .user-photo-wrapper img {
-        width: 100%; }
+        height: 100%;
+        margin: auto;
+        left: -50%;
+        right: -50%;
+        top: -50%;
+        bottom: -50%;
+        position: absolute; }
     .users-list-wrapper .users-list-wrapper-body .user-item .user-name {
       margin-bottom: 10px; }
     .users-list-wrapper .users-list-wrapper-body .user-item .user-name, .users-list-wrapper .users-list-wrapper-body .user-item .user-name a {
