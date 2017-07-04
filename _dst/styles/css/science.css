@@ -8215,6 +8215,22 @@ section.statistic p {
     display: inline-block;
     float: right; }
 
+.week-select {
+  display: block; }
+  .week-select a {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #bebebe;
+    margin-left: -1px;
+    cursor: pointer;
+    color: #4e4e4e; }
+    .week-select a:first-child {
+      margin-left: 0px; }
+    .week-select a:hover, .week-select a.selectedDay {
+      background: #25b6d2;
+      color: #ffffff;
+      border-color: #25b6d2; }
+
 /* ------------------------------------ */
 /* ------ *news-widget styles end* ---- */
 /* ------------------------------------ */

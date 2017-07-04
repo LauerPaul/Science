@@ -303,3 +303,31 @@ section.statistic {
 		}
 	}
 }
+
+.week-select{
+    display: block;
+   
+	a {
+		display: inline-block;
+		padding: 10px;
+		border: 1px solid #bebebe;
+		margin-left: -1px;
+		cursor: pointer;
+		color: #4e4e4e;
+		
+		&:first-child {
+			margin-left: 0px;
+		}
+
+		&:hover, &.selectedDay {
+			background: $default-color;
+			color: #ffffff;
+			border-color: $default-color;
+			// padding-right: 11px;
+			
+			& ~ a {
+				// border-left: 0px;
+			}
+		}
+	}
+}
