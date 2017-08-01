@@ -540,6 +540,57 @@ label {
 }
 
 
+.miModal-wrap {
+	position: fixed !important;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+
+	.miModal {
+		position: absolute;
+		top: -50%;
+		bottom: -50%;
+		right: -50%;
+		left: -50%;
+		margin: auto;
+		width: 80vw;
+		height: 80vh;
+		background: #fff;
+		padding: 20px;
+
+		#mapAdressGoogle {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+		}
+
+		.miModal-footer {
+			position: absolute;
+			top: 1px;
+			right: 2px;
+
+			button {
+				padding: 2px;
+				font-size: 12px;
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				line-height: 0;
+				background: transparent;
+				color: black;
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+}
+
 
 
 
