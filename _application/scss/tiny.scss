@@ -1,0 +1,14 @@
+/* ---------------------------------------
+-----Copyright 2016-2017 Science
+---------- Font-end dev. Pavel Ugrynovych
+------------------------------------------ */
+@import "include/variables";
+@import "include/_mixin";
+@import "styles/postWrapper";
+
+.clearfix {
+	&::before, &::after {
+	    content: " ";
+   		display: table;
+	}
+}

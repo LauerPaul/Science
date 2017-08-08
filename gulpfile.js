@@ -18,7 +18,7 @@ var fonts = {
     };
 // css source file: .scss files
 var css = {
-    in: source + 'scss/science.scss',
+    in: [source + 'scss/science.scss', source + 'scss/tiny.scss'],
     out: dest + 'styles/css/',
     watch: source + 'scss/**/*',
     sassOpts: {

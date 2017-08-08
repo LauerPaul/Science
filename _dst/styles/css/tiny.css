@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* ---------------------------------------
+-----Copyright 2016-2017 Science
+---------- Font-end dev. Pavel Ugrynovych
+------------------------------------------ */
+.post-wrapper {
+  margin-top: 0px; }
+  .post-wrapper .post .icon-favorite {
+    float: left;
+    display: inline-block;
+    margin-top: 4px;
+    margin-right: 10px; }
+  .post-wrapper .post .post-header .post-title {
+    margin-bottom: 0px; }
+  .post-wrapper .post .post-body {
+    margin-top: 20px; }
+    .post-wrapper .post .post-body .post-banner img {
+      width: 100%; }
+  .post-wrapper .post .post-footer {
+    margin-top: 15px; }
+    .post-wrapper .post .post-footer .hubs span {
+      font-size: 13px; }
+    .post-wrapper .post .post-footer .hubs .line-title {
+      color: #32bea6;
+      font-size: 13px;
+      margin-right: 20px; }
+    .post-wrapper .post .post-footer .hubs a:hover, .post-wrapper .post .post-footer .hubs a:hover > span {
+      color: #939393 !important; }
+    .post-wrapper .post .post-footer .tags {
+      margin-top: 15px; }
+      .post-wrapper .post .post-footer .tags a {
+        font-size: 13px;
+        font-family: 'Rubik-Light';
+        margin-right: 10px; }
+        .post-wrapper .post .post-footer .tags a:hover {
+          color: #25b6d2; }
+
+.post-text {
+  margin-top: 15px; }
+  .post-text p {
+    margin-bottom: 15px;
+    line-height: 21px; }
+  .post-text h2, .post-text h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    clear: both;
+    display: inline-block; }
+  .post-text h4 {
+    font-size: 14px;
+    color: #32bea6;
+    margin: 15px 0; }
+  .post-text a {
+    border-bottom: 1px solid transparent; }
+    .post-text a:hover {
+      border-color: #bde9f1; }
+  .post-text ul, .post-text ol {
+    margin-top: -9px;
+    margin-bottom: 15px;
+    display: inline-block;
+    min-width: 49%;
+    margin-right: 0.7%;
+    padding-left: 0px; }
+    .post-text ul > li, .post-text ol > li {
+      padding: 9px 0;
+      list-style: none; }
+      .post-text ul > li:last-child, .post-text ol > li:last-child {
+        padding-bottom: 0px; }
+      .post-text ul > li::before, .post-text ol > li::before {
+        color: #32bea6;
+        margin-right: 10px;
+        line-height: 0px;
+        display: inline-block; }
+  .post-text ul > li::before {
+    content: '•';
+    top: 4px;
+    font-size: 24px;
+    position: relative; }
+  .post-text ol {
+    counter-reset: myCounter; }
+    .post-text ol li:before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      font-size: 14px; }
+  .post-text img {
+    margin-bottom: 15px;
+    max-width: 100%; }
+
+.fileUpload-post {
+  position: relative;
+  margin-left: 45px; }
+  .fileUpload-post::before {
+    content: url(../../images/icons/pdf.png);
+    margin-right: 10px;
+    position: absolute;
+    top: 1px;
+    right: 100%; }
+
+.clearfix::before, .post-text p::before, .post-text h2::before, .post-text h3::before, .post-text h4::before, .clearfix::after, .post-text p::after, .post-text h2::after, .post-text h3::after, .post-text h4::after {
+  content: " ";
+  display: table; }

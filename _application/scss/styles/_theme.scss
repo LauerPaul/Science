@@ -605,3 +605,10 @@ label {
 body {
 	min-width: 1230px;
 }
+
+.mce-ico.mce-i-pdf {
+	width: 35px;
+}
+.mce-i-pdf:before {
+    content: url(../../images/icons/pdf.png);
+}
