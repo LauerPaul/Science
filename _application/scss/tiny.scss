@@ -4,6 +4,7 @@
 ------------------------------------------ */
 @import "include/variables";
 @import "include/_mixin";
+@import "include/fonts";
 @import "styles/postWrapper";
 
 .clearfix {
@@ -12,3 +13,8 @@
    		display: table;
 	}
 }
+
+body {
+	color: #4e4e4e;
+}
+

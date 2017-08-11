@@ -24,7 +24,7 @@ header {
 				    
 			    	.count {
 			    		position: absolute;
-						width: 19px;
+						width: 18px;
 						height: 18px;
 						border-radius: 50%;
 						background: #e04f5f;
@@ -33,8 +33,10 @@ header {
 						text-align: center;
 						top: -9px;
 						right: -17px;
-						line-height: 20px;
+						line-height: 18px;
 						z-index: 2;
+						letter-spacing: 0.5px;
+						padding-right: 1px;
 			    	}
 			    }
 
@@ -361,7 +363,7 @@ header {
 								float: none;
 								color: $gray-dark;
 								font-size: 13px;
-								font-family: 'Rubik-Light';
+								font-family: 'Rubik-Regular';
 								padding: 10px 0px;
 								
 								&::before {
@@ -381,6 +383,10 @@ header {
 								top: 1px;
 								line-height: 5px;
 								margin-right: 10px;
+								
+								&.second ~ .tooltip.left {
+									left: -190px !important;
+								}
 							}
 						}
 					}

@@ -3,53 +3,164 @@
 -----Copyright 2016-2017 Science
 ---------- Font-end dev. Pavel Ugrynovych
 ------------------------------------------ */
-.post-wrapper {
+/* ---------------FONTS---------------- */
+/* ------------------------------------ */
+/* SCIENCE FONT */
+@font-face {
+  font-family: 'science';
+  src: url("../fonts//science.eot?rxrcul");
+  src: url("../fonts//science.eot?rxrcul#iefix") format("embedded-opentype"), url("../fonts//science.ttf?rxrcul") format("truetype"), url("../fonts//science.woff?rxrcul") format("woff"), url("../fonts//science.svg?rxrcul#science") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'science' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-image2:before {
+  content: ""; }
+
+.icon-box:before {
+  content: ""; }
+
+.icon-check-box:before {
+  content: ""; }
+
+.icon-minus:before {
+  content: ""; }
+
+.icon-plus:before {
+  content: ""; }
+
+.icon-image:before {
+  content: ""; }
+
+.icon-user:before {
+  content: ""; }
+
+#types .glyphicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'science' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-right: 5px;
+  line-height: 0px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+#types .glyphicon-ok:before {
+  content: ""; }
+
+li .glyphicon-ok.glyphicon,
+li .glyphicon-ok.sceinceIcon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'science' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-right: 5px;
+  line-height: 0px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  li .glyphicon-ok.glyphicon:before,
+  li .glyphicon-ok.sceinceIcon:before {
+    content: ""; }
+
+li.selected .glyphicon-ok.glyphicon:before,
+li.selected .glyphicon-ok.sceinceIcon:before {
+  content: ""; }
+
+/* ------------------------------------ */
+/* ------------*FONTS END*------------- */
+strong {
+  font-family: 'Rubik-Medium' !important;
+  font-weight: normal !important; }
+
+.post-full-wrapper .post-wrapper {
   margin-top: 0px; }
-  .post-wrapper .post .icon-favorite {
-    float: left;
-    display: inline-block;
-    margin-top: 4px;
-    margin-right: 10px; }
-  .post-wrapper .post .post-header .post-title {
-    margin-bottom: 0px; }
-  .post-wrapper .post .post-body {
-    margin-top: 20px; }
-    .post-wrapper .post .post-body .post-banner img {
-      width: 100%; }
-  .post-wrapper .post .post-footer {
+
+.post-wrapper .post .icon-favorite {
+  float: left;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 10px; }
+
+.post-wrapper .post .post-header .post-title {
+  margin-bottom: 0px; }
+
+.post-wrapper .post .post-body {
+  margin-top: 20px; }
+  .post-wrapper .post .post-body .post-banner img {
+    width: 100%; }
+
+.post-wrapper .post .post-footer {
+  margin-top: 15px; }
+  .post-wrapper .post .post-footer .hubs span {
+    font-size: 13px; }
+  .post-wrapper .post .post-footer .hubs .line-title {
+    color: #32bea6;
+    font-size: 13px;
+    margin-right: 20px;
+    font-family: 'Rubik-Medium'; }
+  .post-wrapper .post .post-footer .hubs a:hover, .post-wrapper .post .post-footer .hubs a:hover > span {
+    color: #939393 !important; }
+  .post-wrapper .post .post-footer .tags {
     margin-top: 15px; }
-    .post-wrapper .post .post-footer .hubs span {
-      font-size: 13px; }
-    .post-wrapper .post .post-footer .hubs .line-title {
-      color: #32bea6;
+    .post-wrapper .post .post-footer .tags a {
       font-size: 13px;
-      margin-right: 20px; }
-    .post-wrapper .post .post-footer .hubs a:hover, .post-wrapper .post .post-footer .hubs a:hover > span {
-      color: #939393 !important; }
-    .post-wrapper .post .post-footer .tags {
-      margin-top: 15px; }
-      .post-wrapper .post .post-footer .tags a {
-        font-size: 13px;
-        font-family: 'Rubik-Light';
-        margin-right: 10px; }
-        .post-wrapper .post .post-footer .tags a:hover {
-          color: #25b6d2; }
+      font-family: 'Rubik-Regular';
+      margin-right: 10px; }
+      .post-wrapper .post .post-footer .tags a:hover {
+        color: #25b6d2; }
 
 .post-text {
   margin-top: 15px; }
   .post-text p {
-    margin-bottom: 15px;
-    line-height: 21px; }
-  .post-text h2, .post-text h3 {
+    padding-bottom: 15px;
+    line-height: 21px;
+    margin-bottom: 0px; }
+  .post-text h2, .post-text h3, .post-text h4 {
+    font-family: 'Rubik-Medium' !important;
+    font-weight: normal !important; }
+  .post-text a, .post-text a[data-mce-selected] {
+    color: #25b6d2;
+    text-decoration: none; }
+  .post-text p, .post-text span, .post-text a, .post-text ul, .post-text ol, .post-text li, .post-text div, .post-text table, .post-text tr, .post-text td {
+    font-family: 'Rubik-Regular';
+    font-weight: normal !important; }
+  .post-text span, .post-text a, .post-text ul, .post-text ol, .post-text li, .post-text div, .post-text table, .post-text tr, .post-text td {
+    line-height: 1.1; }
+  .post-text h2 {
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
     clear: both;
     display: inline-block; }
-  .post-text h4 {
-    font-size: 14px;
-    color: #32bea6;
+  .post-text h4, .post-text h3 {
+    font-size: 15px;
     margin: 15px 0; }
+  .post-text h4 {
+    color: #4e4e4e; }
+  .post-text h3 {
+    color: #32bea6; }
   .post-text a {
     border-bottom: 1px solid transparent; }
     .post-text a:hover {
@@ -83,7 +194,6 @@
       content: counter(myCounter);
       font-size: 14px; }
   .post-text img {
-    margin-bottom: 15px;
     max-width: 100%; }
 
 .fileUpload-post {
@@ -96,6 +206,9 @@
     top: 1px;
     right: 100%; }
 
-.clearfix::before, .post-text p::before, .post-text h2::before, .post-text h3::before, .post-text h4::before, .clearfix::after, .post-text p::after, .post-text h2::after, .post-text h3::after, .post-text h4::after {
+.clearfix::before, .post-text p::before, .post-text h2::before, .clearfix::after, .post-text p::after, .post-text h2::after {
   content: " ";
   display: table; }
+
+body {
+  color: #4e4e4e; }

@@ -1,6 +1,13 @@
-.post-wrapper {
+strong {
+	font-family: 'Rubik-Medium' !important;
+	font-weight: normal !important;
+}
+
+.post-full-wrapper .post-wrapper {
 	margin-top: 0px;
-	
+}
+
+.post-wrapper {
 	.post {
 		.icon-favorite {
 			float: left;
@@ -23,7 +30,7 @@
 		}
 		.post-footer {
 			margin-top: 15px;
-			
+			 
 			.hubs {
 				span {
 					font-size: 13px;	
@@ -32,6 +39,7 @@
 					color: $brand-success;
 					font-size: 13px;
 					margin-right: 20px;
+				    font-family: 'Rubik-Medium';
 				}
 				a {
 					&:hover, &:hover > span {
@@ -44,7 +52,7 @@
 				
 				a {
 					font-size: 13px;
-					font-family: 'Rubik-Light';
+					font-family: 'Rubik-Regular';
 					margin-right: 10px;
 					
 					&:hover {
@@ -58,12 +66,34 @@
 .post-text {
 	margin-top: 15px;
 
-	p{
+	p {
 		@extend .clearfix;
-		margin-bottom: 15px;
+		padding-bottom: 15px;
 		line-height: 21px;
+		margin-bottom: 0px;
 	}
-	h2, h3 {
+
+	h2, h3, h4 {
+	    font-family: 'Rubik-Medium' !important;
+		font-weight: normal !important;
+	}
+	
+	a, a[data-mce-selected]{
+		color: #25b6d2;
+		text-decoration: none;
+	}
+
+	p, span, a, ul, ol, li, div, table, tr, td {
+		font-family: 'Rubik-Regular';
+		font-weight: normal !important;
+	}
+	span, a, ul, ol, li, div, table, tr, td {
+		line-height: 1.1;
+	}
+
+	
+
+	h2 {
 		font-size: 20px;
 		margin-top: 15px;
 		margin-bottom: 15px;
@@ -71,12 +101,19 @@
 		display: inline-block;			
 		@extend .clearfix;
 	}
-	h4 {
-		font-size: 14px;
-		color: $brand-success;
+	h4, h3 {
+		font-size: 15px;
 		margin: 15px 0;
-		@extend .clearfix;
 	}
+
+	h4 {
+		color: $gray-dark;
+	}
+
+	h3 {
+		color: $brand-success;
+	}
+
 	a {
 		border-bottom: 1px solid transparent;
 
@@ -128,7 +165,6 @@
 		}
 	}
 	img {
-		margin-bottom: 15px;
 		max-width: 100%;
 	}
 }
