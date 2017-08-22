@@ -23,6 +23,10 @@
 		.widget-image {
 			margin-bottom: 15px;
 			display: block;
+			
+			img {
+				max-width: 100%;
+			}
 		}
 
 		.widget-description {

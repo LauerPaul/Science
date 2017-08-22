@@ -8119,6 +8119,8 @@ section.section-hide {
     .widgets-panel section .widget-image {
       margin-bottom: 15px;
       display: block; }
+      .widgets-panel section .widget-image img {
+        max-width: 100%; }
     .widgets-panel section .widget-description {
       font-family: 'Rubik-Medium';
       color: #4e4e4e; }
