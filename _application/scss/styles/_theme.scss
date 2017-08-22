@@ -670,3 +670,14 @@ body {
 		}
 	}
 }
+.btn-default.unSubscribe {
+	background: transparent;
+	color: $default-color;
+	border: 1px solid $default-color;
+	
+	&:hover {
+		background: $default-color;
+		border-color: $default-color;
+		color: #ffffff;	
+	}
+}

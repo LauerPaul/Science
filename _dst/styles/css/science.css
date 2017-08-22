@@ -6878,6 +6878,15 @@ body {
     background-size: cover !important;
     background-repeat: no-repeat !important; }
 
+.btn-default.unSubscribe {
+  background: transparent;
+  color: #25b6d2;
+  border: 1px solid #25b6d2; }
+  .btn-default.unSubscribe:hover {
+    background: #25b6d2;
+    border-color: #25b6d2;
+    color: #ffffff; }
+
 .user-icon {
   width: 10px;
   height: 13px;
@@ -7684,8 +7693,7 @@ a.opt.all_list .glyphicon.glyphicon-ok.check-mark {
       color: #4e4e4e;
       line-height: 29px;
       font-size: 23px;
-      margin: 0px;
-      max-width: 80%; }
+      margin: 0px; }
     .post .post-header .post-title .post-label {
       font-size: 7px;
       color: #ffffff;
@@ -8143,17 +8151,23 @@ section.section-hide {
   .news-widget .news-image-wrapper img {
     width: 100%; }
 
+.news-widget .news-date {
+  margin-bottom: 10px; }
+
 .news-widget .news-content {
   float: left;
   width: 175px; }
-  .news-widget .news-content .news-date {
-    margin-top: -5px; }
   .news-widget .news-content .news-title {
     font-family: 'Rubik-Medium';
-    font-size: 15px;
     color: #4e4e4e;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 52px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 13px; }
     .news-widget .news-content .news-title a {
       color: #4e4e4e; }
     .news-widget .news-content .news-title:hover {
@@ -8169,7 +8183,10 @@ section.news-single {
   margin-top: 15px;
   margin-bottom: 15px;
   background: #ffffff;
-  padding: 30px; }
+  padding: 30px;
+  padding-bottom: 0px; }
+  section.news-single .news-item {
+    margin-bottom: 30px; }
   section.news-single .news-banner {
     margin-top: -30px;
     margin-left: -30px;
@@ -8181,7 +8198,7 @@ section.news-single {
     margin-bottom: 15px;
     display: block; }
     section.news-single .news-banner img {
-      min-width: 100%; }
+      width: 100%; }
   section.news-single .news-title {
     color: #32bea6;
     text-transform: uppercase;
@@ -8194,7 +8211,14 @@ section.news-single {
     margin-top: 15px;
     font-family: 'Rubik-Medium';
     color: #4e4e4e;
-    display: block; }
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    max-height: 52px; }
     section.news-single .news-description:hover {
       text-decoration: underline; }
 
