@@ -1,5 +1,9 @@
 .post-wrapper {
 	margin-top: 30px;
+
+	img {
+		max-width: 100%;
+	}
 }
 .more-wrapper {
 	position: relative;
@@ -30,6 +34,7 @@
 	border-bottom: 1px solid #efefef;
 	
 	.post-header {
+		margin-bottom: 20px;
 
 		.post-title {
 			margin-top: 6px;
