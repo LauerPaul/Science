@@ -1,0 +1,1 @@
+{"E:\\WORK\\Projects\\Science\\Science\\gulpfile.js":{"sha1":"b90b8e5fceba15a88aeed1479654c8dc7c709140","tasks":{"fonts":{"name":"fonts","dependencies":""},"sass":{"name":"sass","dependencies":"fonts"},"pug":{"name":"pug","dependencies":""},"default":{"name":"default","dependencies":"sass pug"}}}}
