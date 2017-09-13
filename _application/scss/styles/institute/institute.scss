@@ -157,3 +157,29 @@
 		}
 	}
 }
+.institute-direction-status {
+	color: #32bea6;
+    font-family: 'Rubik-Medium';
+    margin-bottom: 10px;
+}
+.institute-direction-description {
+    font-size: 13px;
+    float: left;
+    width: 55%;
+    color: #939393;
+    margin-top: -2px;
+    margin-bottom: -10px;
+    
+    a {
+    	color: #939393;
+    }
+
+	strong {
+    	color: #4e4e4e;
+	}
+}
+.institute-direction-photo {
+    max-width: 45%;
+    float: left;
+    padding-right: 15px;
+}

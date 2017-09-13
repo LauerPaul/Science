@@ -15,6 +15,11 @@ header {
 		    	    
 		    a {
 			    padding: 14px 0px 17px 0px;
+			    
+			    &.active-item {
+			    	font-weight: 600;
+			    	color: $brand-success;
+			    }
 			     
 		    	> span {
 					border-bottom: 1px solid transparent;
@@ -41,6 +46,8 @@ header {
 			    }
 
 				&:hover {
+					font-weight: normal;
+
 					> span {
 						border-color: $link-border-bottom-color;
 					}
@@ -54,12 +61,18 @@ header {
 		> li > a {
 	      padding: 14px 20px;
 	      letter-spacing: -0.4px;
+			
+			&.active-item {
+				font-weight: 600;
+				color: $brand-success;
+			}
 	      
 	      &:hover {
 	      	color: #ffffff;
 	      	background: $default-color-bg-menu;
 			margin: -1px 0;
 			padding: 15px 20px;
+			font-weight: normal;
 	      }
 	    }
 		li.dropdown{

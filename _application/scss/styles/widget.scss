@@ -37,7 +37,8 @@
 		    display: -webkit-box;
 		    -webkit-line-clamp: 2;
 		    -webkit-box-orient: vertical;
-			
+			max-height: 42px;
+
 			&:hover {
 				text-decoration: underline;
 			}
@@ -91,6 +92,7 @@
 				    display: -webkit-box;
 				    -webkit-line-clamp: 2;
 				    -webkit-box-orient: vertical;
+				    max-height: 38px;
 			}
 			&:hover {
 				text-decoration: underline;
@@ -151,7 +153,7 @@ section.news-single {
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		font-size: 13px;
-		max-height: 52px;
+		max-height: 53px;
 		
 		&:hover {
 			text-decoration: underline;
