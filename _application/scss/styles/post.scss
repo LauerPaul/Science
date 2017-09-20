@@ -85,7 +85,38 @@
 					border-left: 6px solid #c243a0;
 					top: 0px;
 				}
+
+				&.news {
+				    background: #ffd352;
+
+					&::before {
+						border-bottom: 6px solid #ffd352;
+						border-left: 6px solid #ffd352;
+					}
+
+					&::after {
+						border-top: 6px solid #ffd352;
+						border-left: 6px solid #ffd352;
+					}
+					    
+				}
+
+				&.event {
+				    background: #6fd03f;
+
+					&::before {
+						border-bottom: 6px solid #6fd03f;
+						border-left: 6px solid #6fd03f;
+					}
+
+					&::after {
+						border-top: 6px solid #6fd03f;
+						border-left: 6px solid #6fd03f;
+					}
+
+				}
 			}
+			
 			a:hover {
 				h2 {
 					text-decoration: underline;
@@ -175,6 +206,89 @@
 			a {
 				color: #939393;
 				font-family: 'Rubik-Regular';
+
+				&.user-base {
+					position: relative;
+
+					.user-photo {
+						width: 35px;
+						height: 34px;
+						display: inline-block;
+					    overflow: hidden;
+						position: absolute;
+						@include border-radius(50%);
+						top: -50%;
+						bottom: -50%;
+						margin: auto;
+
+					    img {
+							height: 100%;
+							margin: auto;
+							left: -50%;
+							right: -50%;
+							top: -50%;
+							bottom: -50%;
+							position: absolute;
+							max-width: none;
+					    }
+					}
+
+					span:not(.user-photo) {
+						margin-left: 44px;
+						color: $default-color;
+					}
+
+					&:hover {
+						span:not(.user-photo) {
+							text-decoration: underline;
+							color: $default-color !important;
+						}
+					}
+				}
+			}
+
+			.wrapper-literature-list {
+				color: #939393;
+				width: calc(100% - 105px);
+				position: relative;
+				
+				&:not(.hideWrap) {
+					.hide-toggle {
+						display: none;
+					}
+				}
+
+				&.hideWrap {
+					height: 80px;
+					overflow: hidden;
+					
+					.hide-toggle {
+						height: 45px;
+						width: 100%;
+						cursor: pointer;
+						bottom: 0;
+						position: absolute;
+						text-align: center;
+						background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+						background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+						
+						i {
+							@include transition(all 0.1s);
+							font-size: 26px;
+							line-height: 75px;
+							color: $default-color;
+						}
+
+						&:hover {
+							i {
+								line-height: 78px;
+							}
+						}
+					}
+
+				}
 			}
 
 			.line-link {
